@@ -1,4 +1,4 @@
-package edu.utc.arcade;
+package edu.utc.arcade.game;
 
 
 import com.google.gson.JsonObject;
@@ -56,5 +56,17 @@ public class Game {
         jsonObject.addProperty(RATING_COUNT, ratingCount);
 
         return jsonObject;
+    }
+
+    public String getGitAddress() {
+        return gitAddress;
+    }
+
+    public String getLocalDirectory() {
+        return localDirectory;
+    }
+
+    public void setLocalDirectory(String directory) {
+        localDirectory = directory;
     }
 }

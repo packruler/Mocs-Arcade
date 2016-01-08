@@ -1,4 +1,4 @@
-package edu.utc.arcade;
+package edu.utc.arcade.game;
 
 import java.util.ArrayList;
 
