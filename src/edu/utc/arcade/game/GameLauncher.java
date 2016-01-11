@@ -9,6 +9,7 @@ public class GameLauncher {
 
     /**
      * This is used to launch a game's exe and makes this system wait until the game's exe is completed(finished)
+     *
      * @param file The file that is intended to be executed
      * @return The length of time the game ran.
      */
@@ -22,5 +23,9 @@ public class GameLauncher {
             e.printStackTrace();
         }
         return System.currentTimeMillis() - startTime;
+    }
+
+    public static long LAUNCH(Game game) {
+        return LAUNCH(game.getExecutablePath());
     }
 }

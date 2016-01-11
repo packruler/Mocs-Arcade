@@ -11,7 +11,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * Created by packruler on 1/8/16.
+ * Created by Ethan Leisinger on 1/8/16.
  */
 public class Settings {
 

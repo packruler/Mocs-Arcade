@@ -20,6 +20,7 @@ public class Game {
     private static final String TIME_PLAYED = "Time Played";
     private static final String RATING_TOTAL = "Rating Total";
     private static final String RATING_COUNT = "Rating Count";
+    private static final String OPERATING_SYSTEM = "Operating System";
 
     private String title;
     private String developer;
@@ -30,6 +31,9 @@ public class Game {
     private long timePlayed;
     private int ratingTotal;
     private int ratingCount;
+    private String operatingSystem;
+
+    private JsonObject jsonObject;
 
     public void Game(JsonObject jsonObject) {
         title = jsonObject.get(TITLE).getAsString();
@@ -41,10 +45,12 @@ public class Game {
         timePlayed = jsonObject.get(TIME_PLAYED).getAsLong();
         ratingTotal = jsonObject.get(RATING_TOTAL).getAsInt();
         ratingCount = jsonObject.get(RATING_COUNT).getAsInt();
+        operatingSystem = jsonObject.get(OPERATING_SYSTEM).getAsString();
     }
 
     public JsonObject toJsonObject() {
         JsonObject jsonObject = new JsonObject();
+
         jsonObject.addProperty(TITLE, title);
         jsonObject.addProperty(DEVELOPER, developer);
         jsonObject.addProperty(GIT_ADDRESS, gitAddress);
@@ -54,8 +60,17 @@ public class Game {
         jsonObject.addProperty(TIME_PLAYED, timePlayed);
         jsonObject.addProperty(RATING_TOTAL, ratingTotal);
         jsonObject.addProperty(RATING_COUNT, ratingCount);
+        jsonObject.addProperty(OPERATING_SYSTEM, operatingSystem);
 
         return jsonObject;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDeveloper() {
+        return developer;
     }
 
     public String getGitAddress() {
@@ -68,5 +83,13 @@ public class Game {
 
     public void setLocalDirectory(String directory) {
         localDirectory = directory;
+    }
+
+    public String getExecutablePath() {
+        return executablePath;
+    }
+
+    public String getFormat() {
+        return format;
     }
 }
