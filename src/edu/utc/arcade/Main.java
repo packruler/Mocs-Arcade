@@ -9,7 +9,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 
 public class Main extends Application {
@@ -28,7 +27,7 @@ public class Main extends Application {
 
         //If settings file does not exist make a new one
         if (!settingsFile.exists())
-            Log.out("Settings file created: " + settingsFile.createNewFile());
+            Log.i("Settings file created: " + settingsFile.createNewFile());
     }
 
     public static void main(String[] args) {
