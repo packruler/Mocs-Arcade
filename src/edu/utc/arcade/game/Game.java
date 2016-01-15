@@ -15,13 +15,11 @@ public class Game {
     private String title;
     private String developer;
     private String gitAddress;
+    private String gitBranch;
     private String localDirectory;
     private String executablePath;
     private String format;
-    private long timePlayed;
-    private int ratingTotal;
-    private int ratingCount;
-    private String operatingSystem;
+    private String[] operatingSystem;
 
     public Game() {
     }
@@ -36,6 +34,10 @@ public class Game {
 
     public String getDeveloper() {
         return developer;
+    }
+
+    public void setDeveloper(String developer) {
+        this.developer = developer;
     }
 
     public String getGitAddress() {

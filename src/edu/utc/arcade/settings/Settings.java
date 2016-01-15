@@ -1,31 +1,28 @@
 package edu.utc.arcade.settings;
 
-import com.google.gson.JsonObject;
-import edu.utc.arcade.logging.Log;
-
-import java.io.File;
-import java.io.IOException;
-
 /**
- * Created by Ethan Leisinger on 1/8/16.
+ * Created by Ethan Leisinger on 1/15/16.
  */
 public class Settings {
+    private boolean kioskMode;
+    private String kioskPassword;
 
-    private JsonObject values;
-    private File settingsFile = new File("./settings.json");
-
-    private File standardGameDir;
-
-    public Settings() throws IOException {
-
-        //If settings file does not exist make a new one
-        if (!settingsFile.exists())
-            Log.i("Settings file created: " + settingsFile.createNewFile());
-        else
-            load();
+    public boolean isKioskMode() {
+        return kioskMode;
     }
 
-    private void load() throws IOException{
-//        JsonR
+    public boolean enterKioskMode(String password) {
+        if (!kioskMode) {
+            kioskPassword = password;
+            return true;
+        }
+        return false;
     }
+
+    public boolean exitKioskMode(String password) {
+        if (kioskMode && password.equals(kioskPassword))
+            return true;
+        return false;
+    }
+
 }
