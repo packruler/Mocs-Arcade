@@ -1,22 +1,15 @@
 package edu.utc.arcade.game;
 
-
-import com.google.gson.JsonObject;
-import com.google.gson.internal.Streams;
-
-import javax.print.DocFlavor;
-
 /**
  * Created by Ethan Leisinger on 1/5/2016.
  */
-//TODO Setup what information will be contained in the game class to handle creating each individual game JSON string
 public class Game implements Comparable {
     //All values will load save and load from JSON using GSON
-    private String title;
-    private String developer;
+    private String title = "";
+    private String developer = "";
     private String gitAddress;
     private String gitBranch;
-    private String localDirectory;
+    private boolean local;
     private String executablePath;
     private String format;
     private String[] operatingSystem;
@@ -56,12 +49,12 @@ public class Game implements Comparable {
         this.gitBranch = gitBranch;
     }
 
-    public String getLocalDirectory() {
-        return localDirectory;
+    public boolean getLocal() {
+        return local;
     }
 
-    public void setLocalDirectory(String directory) {
-        localDirectory = directory;
+    public void setLocal(boolean local) {
+        this.local = local;
     }
 
     public String getExecutablePath() {
@@ -102,7 +95,7 @@ public class Game implements Comparable {
         assert o instanceof Game;
 
         if (((Game) o).getTitle().equals(getTitle()))
-            return ((Game) o).getDeveloper().compareTo(getDeveloper());
-        return ((Game) o).getTitle().compareTo(getTitle());
+            return getDeveloper().compareTo(((Game) o).getDeveloper());
+        return getTitle().compareTo(((Game) o).getTitle());
     }
 }

@@ -12,7 +12,7 @@ public class TestGson {
     public static void main(String[] args) {
         GameLibrary library = new GameLibrary();
         Game game = new Game();
-        game.setTitle("Test1");
+        game.setTitle("Test3");
         library.addGame(game);
         game = new Game();
         game.setTitle("Test2");

@@ -13,9 +13,11 @@ import java.util.*;
 //TODO define how the GameLibrary will handle loading and saving various game JSON strings
 public class GameLibrary {
     private static final File LIBRARY_DIRECTORY = new File("./local/");
-    private static final File LOCAL_LIBRARY = new File(LIBRARY_DIRECTORY.getPath() + "/library");
+    private static final File LOCAL_LIBRARY = new File(LIBRARY_DIRECTORY.getPath() + "/library.json");
     private static final File REMOTE_LIBRARY = new File("./gameLibrary.json");
 
+    //Store Games in TreeSet to allow them to be sorted
+    //It also allows loading local and remote libraries without duplicates
     private TreeSet<Game> library = new TreeSet<>();
 
     public GameLibrary() {
@@ -29,10 +31,12 @@ public class GameLibrary {
             reader.close();
 
             //Load info for all games in remote library
-            reader = new FileReader(REMOTE_LIBRARY);
-            gameArray = gson.fromJson(reader, Game[].class);
-            library.addAll(Arrays.asList(gameArray));
-            reader.close();
+            if (REMOTE_LIBRARY.exists()) {
+                reader = new FileReader(REMOTE_LIBRARY);
+                gameArray = gson.fromJson(reader, Game[].class);
+                library.addAll(Arrays.asList(gameArray));
+                reader.close();
+            }
 
             Log.i("Library count: " + library.size());
         } catch (IOException e) {
