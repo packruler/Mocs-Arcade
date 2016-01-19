@@ -14,8 +14,8 @@ import java.util.Arrays;
 //TODO define how the GameLibrary will handle loading and saving various game JSON strings
 public class GameLibrary {
     private ArrayList<Game> gameList = new ArrayList<>();
-    private static final String libraryPath = "./local/library";
-    private static final File library = new File(libraryPath);
+    private static final File libraryDirectory = new File("./local/");
+    private static final File library = new File(libraryDirectory.getPath() + "/library");
 
     public GameLibrary() {
         try {
@@ -30,6 +30,9 @@ public class GameLibrary {
     }
 
     public void saveGson() throws IOException {
+        if (!libraryDirectory.exists())
+            Log.i("Game Directory Created" + libraryDirectory.mkdir());
+
         if (!library.exists())
             Log.i("New File created: " + library.createNewFile());
 
