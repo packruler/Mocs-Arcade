@@ -37,8 +37,6 @@ public class GameLibrary {
                 library.addAll(Arrays.asList(gameArray));
                 reader.close();
             }
-
-            Log.i("Library count: " + library.size());
         } catch (IOException e) {
             e.printStackTrace();
         }
