@@ -13,8 +13,8 @@ import java.util.Arrays;
 
 //TODO define how the GameLibrary will handle loading and saving various game JSON strings
 public class GameLibrary {
-    private ArrayList gameList = new ArrayList();
-    private static final String libraryPath = "./Games/library";
+    private ArrayList<Game> gameList = new ArrayList<>();
+    private static final String libraryPath = "./local/library";
     private static final File library = new File(libraryPath);
 
     public GameLibrary() {

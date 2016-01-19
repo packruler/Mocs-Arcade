@@ -1,3 +1,6 @@
+#Ignore local directory
+local/
+
 *.class
 
 # Mobile Tools for Java (J2ME)
