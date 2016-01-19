@@ -4,8 +4,7 @@ import com.google.gson.Gson;
 import edu.utc.arcade.logging.Log;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * Created by Ethan Leisinger on 1/5/2016.
@@ -13,35 +12,51 @@ import java.util.Arrays;
 
 //TODO define how the GameLibrary will handle loading and saving various game JSON strings
 public class GameLibrary {
-    private ArrayList<Game> gameList = new ArrayList<>();
-    private static final File libraryDirectory = new File("./local/");
-    private static final File library = new File(libraryDirectory.getPath() + "/library");
+    private static final File LIBRARY_DIRECTORY = new File("./local/");
+    private static final File LOCAL_LIBRARY = new File(LIBRARY_DIRECTORY.getPath() + "/library");
+    private static final File REMOTE_LIBRARY = new File("./gameLibrary.json");
+
+    private TreeSet<Game> library = new TreeSet<>();
 
     public GameLibrary() {
         try {
-            FileReader reader = new FileReader(library);
             Gson gson = new Gson();
-            Game[] games = gson.fromJson(reader, Game[].class);
-            gameList.addAll(Arrays.asList(games));
-            Log.i("Library count: " + gameList.size());
+
+            //Load info for games that are stored locally
+            FileReader reader = new FileReader(LOCAL_LIBRARY);
+            Game[] gameArray = gson.fromJson(reader, Game[].class);
+            library.addAll(Arrays.asList(gameArray));
+            reader.close();
+
+            //Load info for all games in remote library
+            reader = new FileReader(REMOTE_LIBRARY);
+            gameArray = gson.fromJson(reader, Game[].class);
+            library.addAll(Arrays.asList(gameArray));
+            reader.close();
+
+            Log.i("Library count: " + library.size());
         } catch (IOException e) {
-            Log.i("No Library");
+            e.printStackTrace();
         }
     }
 
     public void saveGson() throws IOException {
-        if (!libraryDirectory.exists())
-            Log.i("Game Directory Created" + libraryDirectory.mkdir());
+        if (!LIBRARY_DIRECTORY.exists())
+            Log.i("Game Directory Created" + LIBRARY_DIRECTORY.mkdir());
 
-        if (!library.exists())
-            Log.i("New File created: " + library.createNewFile());
+        if (!LOCAL_LIBRARY.exists())
+            Log.i("New File created: " + LOCAL_LIBRARY.createNewFile());
 
-        FileWriter writer = new FileWriter(library);
-        writer.write(new Gson().toJson(gameList.toArray()));
+        FileWriter writer = new FileWriter(LOCAL_LIBRARY);
+        writer.write(new Gson().toJson(library.toArray()));
         writer.close();
     }
 
     public void addGame(Game game) {
-        gameList.add(game);
+        library.add(game);
+    }
+
+    public Set<Game> getLibrary() {
+        return library;
     }
 }

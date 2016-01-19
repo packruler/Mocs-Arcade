@@ -1,9 +1,7 @@
 package edu.utc.arcade;
 
-import com.google.gson.Gson;
 import edu.utc.arcade.game.Game;
 import edu.utc.arcade.game.GameLibrary;
-import edu.utc.arcade.logging.Log;
 
 import java.io.IOException;
 

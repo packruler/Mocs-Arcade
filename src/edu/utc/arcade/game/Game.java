@@ -10,7 +10,7 @@ import javax.print.DocFlavor;
  * Created by Ethan Leisinger on 1/5/2016.
  */
 //TODO Setup what information will be contained in the game class to handle creating each individual game JSON string
-public class Game {
+public class Game implements Comparable {
     //All values will load save and load from JSON using GSON
     private String title;
     private String developer;
@@ -44,6 +44,18 @@ public class Game {
         return gitAddress;
     }
 
+    public void setGitAddress(String gitAddress) {
+        this.gitAddress = gitAddress;
+    }
+
+    public String getGitBranch() {
+        return gitBranch;
+    }
+
+    public void setGitBranch(String gitBranch) {
+        this.gitBranch = gitBranch;
+    }
+
     public String getLocalDirectory() {
         return localDirectory;
     }
@@ -56,7 +68,41 @@ public class Game {
         return executablePath;
     }
 
+    public void setExecutablePath(String executablePath) {
+        this.executablePath = executablePath;
+    }
+
     public String getFormat() {
         return format;
+    }
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
+
+    public String[] getOperatingSystem() {
+        return operatingSystem;
+    }
+
+    public void setOperatingSystem(String[] operatingSystem) {
+        this.operatingSystem = operatingSystem;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Game) {
+            return ((Game) obj).getDeveloper().equals(developer)
+                    && ((Game) obj).getTitle().equals(title);
+        }
+        return super.equals(obj);
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        assert o instanceof Game;
+
+        if (((Game) o).getTitle().equals(getTitle()))
+            return ((Game) o).getDeveloper().compareTo(getDeveloper());
+        return ((Game) o).getTitle().compareTo(getTitle());
     }
 }
