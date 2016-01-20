@@ -71,7 +71,7 @@ public class GitHandler {
 
         try {
             Git git = Git.open(directory);
-            Collection<Ref> refs = git.fetch().call().getAdvertisedRefs();
+            git.fetch().call();
             BranchTrackingStatus status = BranchTrackingStatus.of(git.getRepository(), git.getRepository().getBranch());
             return status.getBehindCount();
         } catch (Exception e) {
