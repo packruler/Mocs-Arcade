@@ -12,7 +12,7 @@ import java.util.*;
 
 //TODO define how the GameLibrary will handle loading and saving various game JSON strings
 public class GameLibrary {
-    private static final File LIBRARY_DIRECTORY = new File("./local/");
+    public static final File LIBRARY_DIRECTORY = new File("./local/");
     private static final File LOCAL_LIBRARY = new File(LIBRARY_DIRECTORY.getPath() + "/library.json");
     private static final File REMOTE_LIBRARY = new File("./gameLibrary.json");
 
@@ -24,11 +24,16 @@ public class GameLibrary {
         try {
             Gson gson = new Gson();
 
+            FileReader reader;
+            Game[] gameArray;
+
             //Load info for games that are stored locally
-            FileReader reader = new FileReader(LOCAL_LIBRARY);
-            Game[] gameArray = gson.fromJson(reader, Game[].class);
-            library.addAll(Arrays.asList(gameArray));
-            reader.close();
+            if (LOCAL_LIBRARY.exists()) {
+                reader = new FileReader(LOCAL_LIBRARY);
+                gameArray = gson.fromJson(reader, Game[].class);
+                library.addAll(Arrays.asList(gameArray));
+                reader.close();
+            }
 
             //Load info for all games in remote library
             if (REMOTE_LIBRARY.exists()) {
@@ -60,5 +65,14 @@ public class GameLibrary {
 
     public Set<Game> getLibrary() {
         return library;
+    }
+
+    public Game getGame(String title, String developer) {
+        for (Game cur : library) {
+            if (cur.getTitle().equals(title)
+                    && cur.getDeveloper().equals(developer))
+                return cur;
+        }
+        return null;
     }
 }

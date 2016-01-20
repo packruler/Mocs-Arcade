@@ -2,6 +2,7 @@ package edu.utc.arcade;
 
 import edu.utc.arcade.game.Game;
 import edu.utc.arcade.game.GameLibrary;
+import edu.utc.arcade.logging.Log;
 
 import java.io.IOException;
 
@@ -11,12 +12,12 @@ import java.io.IOException;
 public class TestGson {
     public static void main(String[] args) {
         GameLibrary library = new GameLibrary();
-        Game game = new Game();
-        game.setTitle("Test3");
-        library.addGame(game);
-        game = new Game();
-        game.setTitle("Test2");
-        library.addGame(game);
+        for (Game game : library.getLibrary()) {
+            if (game.getDeveloper().equals("Packruler")) {
+                Log.i("Update: " + GitHandler.countBehind(game));
+                break;
+            }
+        }
         try {
             library.saveGson();
         } catch (IOException e) {
