@@ -15,6 +15,7 @@ public class TestGson {
         for (Game game : library.getLibrary()) {
             if (game.getDeveloper().equals("Packruler")) {
                 Log.i("Update: " + GitHandler.countBehind(game));
+                Log.i("Updated? " + GitHandler.pull(game));
                 break;
             }
         }
