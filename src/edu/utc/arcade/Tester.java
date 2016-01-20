@@ -11,7 +11,7 @@ import java.util.ArrayList;
 /**
  * Created by Ethan Leisinger on 1/11/16.
  */
-public class TestGson {
+public class Tester {
     public static void main(String[] args) {
         GameLibrary library = new GameLibrary();
 
