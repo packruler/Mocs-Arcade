@@ -22,7 +22,13 @@ import java.util.Iterator;
  * Created by Ethan Leisinger on 1/8/16.
  */
 public class GitHandler {
-
+    /**
+     * Clone remote repo for Game to local directory.
+     * Directory will be ./local/<i>Developer</i>/<i>Title</i>
+     *
+     * @param game Game to be cloned to local directory
+     * @return True if cloned successfully
+     */
     public static boolean clone(Game game) {
         File directory = new File(GameLibrary.LIBRARY_DIRECTORY.getPath()
                 + "/" + game.getDeveloper()
@@ -38,14 +44,22 @@ public class GitHandler {
                     .setURI(game.getGitAddress())
                     .call();
             Log.i("Cloned");
+            //Set Game 'local' value to true indicating that the game is available locally
             game.setLocal(true);
+            return true;
         } catch (GitAPIException e) {
             e.printStackTrace();
             return false;
         }
-        return true;
     }
 
+    /**
+     * Pull remote repo to local directory
+     *
+     * @param game Game to be updated
+     * @return true if the pull completed successfully.
+     * Possible no updates were made if local repo was already up to date
+     */
     public static boolean pull(Game game) {
         File directory = new File(GameLibrary.LIBRARY_DIRECTORY.getPath()
                 + "/" + game.getDeveloper()
@@ -62,6 +76,13 @@ public class GitHandler {
         return false;
     }
 
+    /**
+     * Get number of commits behind the remote repo the local directory is
+     *
+     * @param game Game that will be checked on
+     * @return number of commits behind remote repo the local repo is.
+     * will return -1 if any errors occur
+     */
     public static int countBehind(Game game) {
         File directory = new File(GameLibrary.LIBRARY_DIRECTORY.getPath()
                 + "/" + game.getDeveloper()
