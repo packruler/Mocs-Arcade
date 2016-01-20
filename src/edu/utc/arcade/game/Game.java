@@ -165,6 +165,11 @@ public class Game implements Comparable {
      * -Should only be used for easy setup of adding a game to remote library-
      *
      * @param operatingSystem Array of Operating Systems supported
+     *                        Example unit: 'Windows.amd64'
+     *                        Supported OS:
+     *                        'Windows', 'Linux', 'Mac OSX'
+     *                        Supported Architecture:
+     *                        'amd64', 'i386'
      */
     public void setOperatingSystem(String[] operatingSystem) {
         this.operatingSystem = operatingSystem;
