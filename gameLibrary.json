@@ -1,1 +1,29 @@
-[{"title":"Hockey","developer":"Packruler","gitAddress":"https://github.com/packruler/Video-Game-Design.git","local":false},{"title":"Test1","developer":"","local":false},{"title":"Test2","developer":"","local":false},{"title":"Test3","developer":"","local":false}]
+[
+  {
+    "title": "Hockey",
+    "developer": "Packruler",
+    "gitAddress": "https://github.com/packruler/Video-Game-Design.git",
+    "local": false,
+    "operatingSystem": [
+      "Windows.i386",
+      "Windows.amd64",
+      "Linux.i386",
+      "Linux.amd64"
+    ]
+  },
+  {
+    "title": "Test1",
+    "developer": "",
+    "local": false
+  },
+  {
+    "title": "Test2",
+    "developer": "",
+    "local": false
+  },
+  {
+    "title": "Test3",
+    "developer": "",
+    "local": false
+  }
+]
