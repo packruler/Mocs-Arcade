@@ -15,20 +15,5 @@
       "Linux.amd64"
     ],
     "dataUpdateTime": 0
-  },
-  {
-    "title": "Test1",
-    "developer": "",
-    "local": false
-  },
-  {
-    "title": "Test2",
-    "developer": "",
-    "local": false
-  },
-  {
-    "title": "Test3",
-    "developer": "",
-    "local": false
   }
 ]

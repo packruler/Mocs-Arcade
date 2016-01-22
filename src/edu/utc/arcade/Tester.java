@@ -6,10 +6,7 @@ import edu.utc.arcade.game.GameLibrary;
 import edu.utc.arcade.game.OSCheck;
 import edu.utc.arcade.logging.Log;
 
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
 
 /**
  * Created by Ethan Leisinger on 1/11/16.
@@ -20,6 +17,7 @@ public class Tester {
 
         for (Game game : library.getLibrary()) {
             if (game.getDeveloper().equals("Packruler")) {
+//                Log.i("Install: " + GitHandler.clone(game));
                 Log.i("Update: " + GitHandler.countBehind(game));
                 Log.i("Is compatible? " + OSCheck.IS_COMPATIBLE(game));
                 Log.i("Updated? " + GitHandler.pull(game));
