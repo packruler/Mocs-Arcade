@@ -23,8 +23,6 @@ public class Tester {
                 Log.i("Update: " + GitHandler.countBehind(game));
                 Log.i("Is compatible? " + OSCheck.IS_COMPATIBLE(game));
                 Log.i("Updated? " + GitHandler.pull(game));
-                game.setFormat("Jar");
-                game.setLibraryPath("libs");
                 GameLauncher.LAUNCH(game);
                 break;
             }

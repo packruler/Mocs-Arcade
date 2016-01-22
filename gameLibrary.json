@@ -2,14 +2,19 @@
   {
     "title": "Hockey",
     "developer": "Packruler",
+    "description": "",
     "gitAddress": "https://github.com/packruler/Video-Game-Design.git",
-    "local": false,
+    "local": true,
+    "executablePath": "Video Game Design.jar",
+    "libraryPath": "libs",
+    "format": "Jar",
     "operatingSystems": [
       "Windows.i386",
       "Windows.amd64",
       "Linux.i386",
       "Linux.amd64"
-    ]
+    ],
+    "dataUpdateTime": 0
   },
   {
     "title": "Test1",
