@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Ethan Leisinger on 1/22/16.
+ * Created by Nathan Neff on 1/22/16.
  */
 public class LibraryArray {
     //TODO: Design an class that handles building a list of all Games.
