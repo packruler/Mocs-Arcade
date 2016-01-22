@@ -7,12 +7,15 @@ public class Game implements Comparable {
     //All values will load save and load from JSON using GSON
     private String title = "";
     private String developer = "";
+    private String description = "";
     private String gitAddress;
     private String gitBranch;
     private boolean local;
     private String executablePath;
+    private String libraryPath;
     private String format;
-    private String[] operatingSystem;
+    private String[] operatingSystems;
+    private long dataUpdateTime;
 
     public Game() {
     }
@@ -53,6 +56,25 @@ public class Game implements Comparable {
      */
     public void setDeveloper(String developer) {
         this.developer = developer;
+    }
+
+    /**
+     * Get the description of the Game
+     *
+     * @return Description of the Game
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Set the description of the Game
+     * -Should only be used for easy setup of adding a game to remote library-
+     *
+     * @param description description of the game
+     */
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**
@@ -131,9 +153,17 @@ public class Game implements Comparable {
         this.executablePath = executablePath;
     }
 
+    public String getLibraryPath() {
+        return libraryPath;
+    }
+
+    public void setLibraryPath(String libraryPath) {
+        this.libraryPath = libraryPath;
+    }
+
     /**
      * -Unsure if will be used-
-     * Will specify the format of a Game ie Java vs .exe
+     * Will specify the format of a Game ie Jar vs .exe
      *
      * @return
      */
@@ -143,7 +173,7 @@ public class Game implements Comparable {
 
     /**
      * -Unsure if will be used-
-     * Will specify the format of a Game ie Java vs .exe
+     * Will specify the format of a Game ie Jar vs .exe
      *
      * @param format
      */
@@ -157,22 +187,44 @@ public class Game implements Comparable {
      * @return Array of Operating Systems supported
      */
     public String[] getOperatingSystems() {
-        return operatingSystem;
+        return operatingSystems;
     }
 
     /**
      * Set array of Operating Systems supported by this Game
      * -Should only be used for easy setup of adding a game to remote library-
      *
-     * @param operatingSystem Array of Operating Systems supported
+     * @param operatingSystems Array of Operating Systems supported
      *                        Example unit: 'Windows.amd64'
      *                        Supported OS:
      *                        'Windows', 'Linux', 'Mac OSX'
      *                        Supported Architecture:
      *                        'amd64', 'i386'
      */
-    public void setOperatingSystem(String[] operatingSystem) {
-        this.operatingSystem = operatingSystem;
+    public void setOperatingSystems(String[] operatingSystems) {
+        this.operatingSystems = operatingSystems;
+    }
+
+    /**
+     * To be used to allow locally stored Game information to be updated when information in the library JSON is updated
+     *
+     * @return Most recent time of this instance data being updated
+     */
+    public long getDataUpdateTime() {
+        return dataUpdateTime;
+    }
+
+    /**
+     * Set the time of most recent data update of the Game
+     *
+     * @param dataUpdateTime
+     */
+    public void setDataUpdateTime(long dataUpdateTime) {
+        this.dataUpdateTime = dataUpdateTime;
+    }
+
+    public void updateData(Game game) {
+        //TODO: Handle updating local Game info from updated remote Game info
     }
 
     @Override

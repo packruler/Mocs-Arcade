@@ -1,11 +1,14 @@
 package edu.utc.arcade;
 
 import edu.utc.arcade.game.Game;
+import edu.utc.arcade.game.GameLauncher;
 import edu.utc.arcade.game.GameLibrary;
 import edu.utc.arcade.game.OSCheck;
 import edu.utc.arcade.logging.Log;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 /**
@@ -19,7 +22,10 @@ public class Tester {
             if (game.getDeveloper().equals("Packruler")) {
                 Log.i("Update: " + GitHandler.countBehind(game));
                 Log.i("Is compatible? " + OSCheck.IS_COMPATIBLE(game));
-//                Log.i("Updated? " + GitHandler.pull(game));
+                Log.i("Updated? " + GitHandler.pull(game));
+                game.setFormat("Jar");
+                game.setLibraryPath("libs");
+                GameLauncher.LAUNCH(game);
                 break;
             }
         }

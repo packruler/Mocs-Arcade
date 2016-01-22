@@ -4,7 +4,7 @@
     "developer": "Packruler",
     "gitAddress": "https://github.com/packruler/Video-Game-Design.git",
     "local": false,
-    "operatingSystem": [
+    "operatingSystems": [
       "Windows.i386",
       "Windows.amd64",
       "Linux.i386",
