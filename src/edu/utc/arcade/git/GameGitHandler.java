@@ -1,4 +1,4 @@
-package edu.utc.arcade;
+package edu.utc.arcade.git;
 
 import com.sun.org.apache.regexp.internal.RE;
 import edu.utc.arcade.game.Game;
@@ -21,7 +21,7 @@ import java.util.Iterator;
 /**
  * Created by Ethan Leisinger on 1/8/16.
  */
-public class GitHandler {
+public class GameGitHandler {
     /**
      * Clone remote repo for Game to local directory.
      * Directory will be ./local/<i>Developer</i>/<i>Title</i>
