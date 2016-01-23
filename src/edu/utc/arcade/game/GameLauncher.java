@@ -18,10 +18,11 @@ public class GameLauncher {
      * @return The length of time the game ran.
      */
     public static long LAUNCH(Game game) {
+        //Use Format class to get a command String array to pass to Runtime.exec()
         String[] cmdArray = Format.getExecutable(game);
-        Log.i(Arrays.toString(cmdArray));
         long runTime = System.currentTimeMillis();
         try {
+            //Launch Game using command array from Format
             Process process = Runtime.getRuntime().exec(cmdArray);
 
             InputStream outputStream = null, errorStream = null;
@@ -54,10 +55,10 @@ public class GameLauncher {
             }
 
             runTime = System.currentTimeMillis() - runTime;
-            Log.i("Runtime: " + runTime);
             System.out.println(outputBuffer.toString("ASCII"));
             System.err.println(errorBuffer.toString("ASCII"));
             System.err.println("exit code: " + process.exitValue());
+            Log.i("Runtime: " + runTime);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -74,8 +75,8 @@ public class GameLauncher {
         }
     }
 
-    private static int readAvailablOnce(
-            InputStream inputStream, OutputStream outputStream, byte[] buffer)
+    //From http://stackoverflow.com/questions/8751651/handling-output-error-of-process-separately-in-java-without-extra-threads
+    private static int readAvailablOnce(InputStream inputStream, OutputStream outputStream, byte[] buffer)
             throws IOException {
         int bytesRead = 0;
         if (inputStream.available() > 0) {
@@ -85,8 +86,8 @@ public class GameLauncher {
         return bytesRead;
     }
 
-    private static void readAvailableAll(
-            InputStream inputStream, OutputStream outputStream, byte[] buffer)
+    //From http://stackoverflow.com/questions/8751651/handling-output-error-of-process-separately-in-java-without-extra-threads
+    private static void readAvailableAll(InputStream inputStream, OutputStream outputStream, byte[] buffer)
             throws IOException {
         if (inputStream.available() > 0) {
             int bytesRead = 0;
