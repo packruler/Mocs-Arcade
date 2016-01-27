@@ -15,6 +15,8 @@ public class Game implements Comparable {
     private String libraryPath;
     private String format;
     private String[] operatingSystems;
+    private String[] osSpecificExecutablePath;
+    private String[] osSpecificLibraryPath;
     private long dataUpdateTime;
 
     public Game() {
@@ -195,14 +197,55 @@ public class Game implements Comparable {
      * -Should only be used for easy setup of adding a game to remote library-
      *
      * @param operatingSystems Array of Operating Systems supported
-     *                        Example unit: 'Windows.amd64'
-     *                        Supported OS:
-     *                        'Windows', 'Linux', 'Mac OSX'
-     *                        Supported Architecture:
-     *                        'amd64', 'i386'
+     *                         Example unit: 'Windows.amd64'
+     *                         Supported OS:
+     *                         'Windows', 'Linux', 'Mac OSX'
+     *                         Supported Architecture:
+     *                         'amd64', 'i386'
      */
     public void setOperatingSystems(String[] operatingSystems) {
         this.operatingSystems = operatingSystems;
+    }
+
+    /**
+     * Get array of Operating System specific executable path.
+     * This should be arranged so that required paths are ordered according to the Operating Systems array
+     *
+     * @return Array of Operating System specific executable paths.
+     */
+    public String[] getOsSpecificExecutablePath() {
+        return osSpecificExecutablePath;
+    }
+
+    /**
+     * Set array of Operating System specific executable path.
+     * <p>
+     * -Should only be used for easy setup of adding a game to remote library-
+     *
+     * @param osSpecificExecutablePath This should be arranged so that required paths are ordered according to the Operating Systems array
+     */
+    public void setOsSpecificExecutablePath(String[] osSpecificExecutablePath) {
+        this.osSpecificExecutablePath = osSpecificExecutablePath;
+    }
+
+    /**
+     * Get array of Operating System specific library path
+     * This should be arranged so that required paths are ordered according to the Operating Systems array
+     *
+     * @return Array of Operating Systems supported
+     */
+    public String[] getOsSpecificLibraryPath() {
+        return osSpecificLibraryPath;
+    }
+
+    /**
+     * Set array of Operating System specific library path
+     * -Should only be used for easy setup of adding a game to remote library-
+     *
+     * @param osSpecificLibraryPath This should be arranged so that required paths are ordered according to the Operating Systems array
+     */
+    public void setOsSpecificLibraryPath(String[] osSpecificLibraryPath) {
+        this.osSpecificLibraryPath = osSpecificLibraryPath;
     }
 
     /**
