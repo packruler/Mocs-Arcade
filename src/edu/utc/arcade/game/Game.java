@@ -223,6 +223,7 @@ public class Game implements Comparable {
      * -Should only be used for easy setup of adding a game to remote library-
      *
      * @param osSpecificExecutablePath This should be arranged so that required paths are ordered according to the Operating Systems array
+     *                                 If no OS specific executable required use <i>null</i> or "" for that position
      */
     public void setOsSpecificExecutablePath(String[] osSpecificExecutablePath) {
         this.osSpecificExecutablePath = osSpecificExecutablePath;
@@ -243,6 +244,7 @@ public class Game implements Comparable {
      * -Should only be used for easy setup of adding a game to remote library-
      *
      * @param osSpecificLibraryPath This should be arranged so that required paths are ordered according to the Operating Systems array
+     *                              If no OS specific library required use <i>null</i> or "" for that position
      */
     public void setOsSpecificLibraryPath(String[] osSpecificLibraryPath) {
         this.osSpecificLibraryPath = osSpecificLibraryPath;

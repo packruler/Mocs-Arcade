@@ -17,6 +17,10 @@ public class OSCheck {
      * @return True if and only if Game supports current OS and Architecture
      */
     public static boolean IS_COMPATIBLE(Game game) {
+        return GET_PROPER_OS_ARRAY_POSITION(game) != -1;
+    }
+
+    public static int GET_PROPER_OS_ARRAY_POSITION(Game game) {
         String[] osArray = game.getOperatingSystems();
         String os = System.getProperty("os.name");
 
@@ -25,11 +29,11 @@ public class OSCheck {
             os = WINDOWS;
         String arch = System.getProperty("os.arch");
 
-        for (String cur : osArray) {
+        for (int x = 0; x < osArray.length; x++) {
             //If current supported OS in array contains the System OS name and System architecture current system is supported
-            if (cur.contains(os) && cur.contains(arch))
-                return true;
+            if (osArray[x].contains(os) && osArray[x].contains(arch))
+                return x;
         }
-        return false;
+        return -1;
     }
 }
