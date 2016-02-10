@@ -2,6 +2,8 @@ package edu.utc.arcade.game;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by Nathan Neff on 1/22/16.
@@ -18,6 +20,12 @@ public class LibraryArray {
          * This will be a time that will be similar to System.currentTimeMillis(). If the remote time > local time run
          * LocalGame.dataUpdate(RemoteGame). I will design a data update method soon.
          */
+        int pos = libraryList.indexOf(newGame);
+        if (pos != -1)
+            updateGame(libraryList.get(pos), newGame);
+        else
+            libraryList.add(newGame);
+
     }
 
     public Game get(int index) {
@@ -28,11 +36,20 @@ public class LibraryArray {
         return libraryList;
     }
 
+    public Set<Game> getSet() {
+        return new TreeSet<>(libraryList);
+    }
+
     public Game remove(int index) {
         return libraryList.remove(index);
     }
 
     public boolean contains(Object o) {
         return libraryList.contains(o);
+    }
+
+    public void updateGame(Game current, Game updatedData) {
+        if (current.getDataUpdateTime() < updatedData.getDataUpdateTime())
+            current.updateData(updatedData);
     }
 }
