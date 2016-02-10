@@ -36,6 +36,17 @@ public class LibraryArray {
         return libraryList;
     }
 
+    public List<Game> getList(boolean localOnly) {
+        if (!localOnly)
+            return getList();
+        ArrayList<Game> out = new ArrayList<>();
+        for (Game game : libraryList) {
+            if (game.isLocal())
+                out.add(game);
+        }
+        return out;
+    }
+
     public Set<Game> getSet() {
         return new TreeSet<>(libraryList);
     }
