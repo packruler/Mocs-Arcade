@@ -48,6 +48,10 @@ public class LibraryArray {
         return new TreeSet<>(libraryList);
     }
 
+    public Set<Game> getSet(boolean localOnly) {
+        return new TreeSet<>(getList(localOnly));
+    }
+
     public Game remove(int index) {
         return libraryList.remove(index);
     }
