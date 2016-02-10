@@ -18,7 +18,7 @@ public class GameLibrary {
 
     //Store Games in TreeSet to allow them to be sorted
     //It also allows loading local and remote libraries without duplicates
-    private TreeSet<Game> library = new TreeSet<>();
+    private LibraryArray library = new LibraryArray();
 
     public GameLibrary() {
         try {
@@ -55,7 +55,7 @@ public class GameLibrary {
             Log.i("New File created: " + LOCAL_LIBRARY.createNewFile());
 
         FileWriter writer = new FileWriter(LOCAL_LIBRARY);
-        writer.write(new Gson().toJson(library.toArray()));
+        writer.write(new Gson().toJson(library.getList().toArray()));
         writer.close();
     }
 
@@ -64,11 +64,11 @@ public class GameLibrary {
     }
 
     public Set<Game> getLibrary() {
-        return library;
+        return library.getSet();
     }
 
     public Game getGame(String title, String developer) {
-        for (Game cur : library) {
+        for (Game cur : library.getList()) {
             if (cur.getTitle().equals(title)
                     && cur.getDeveloper().equals(developer))
                 return cur;
