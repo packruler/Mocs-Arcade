@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.control.Label?>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox fx:id="title_dev_box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+            <children>
+                <Label fx:id="title"/>
+                <Label fx:id="developer"/>
+            </children>
+        </VBox>
+        <VBox fx:id="download_box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+            <children>
+                <Label fx:id="download_status"/>
+            </children>
+        </VBox>
+    </children>
+</HBox>
