@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
 
@@ -17,6 +16,7 @@
         <VBox fx:id="download_box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
             <children>
                 <Label fx:id="download_status"/>
+                <Label fx:id="update_status"/>
             </children>
         </VBox>
     </children>
