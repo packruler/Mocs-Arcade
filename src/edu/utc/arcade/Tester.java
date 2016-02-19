@@ -7,6 +7,7 @@ import edu.utc.arcade.game.OSCheck;
 import edu.utc.arcade.git.GameGitHandler;
 import edu.utc.arcade.git.SystemGitUpdater;
 import edu.utc.arcade.logging.Log;
+import net.java.games.input.*;
 
 import java.io.IOException;
 
@@ -16,15 +17,23 @@ import java.io.IOException;
 public class Tester {
     public static void main(String[] args) {
         GameLibrary library = new GameLibrary();
+        net.java.games.input.Controller[] controllers = ControllerEnvironment.getDefaultEnvironment().getControllers();
 
-        SystemGitUpdater systemGitUpdater = new SystemGitUpdater();
-        Log.i("Count system behind: " + systemGitUpdater.countBehind());
+        Log.i("Number of devices " + controllers.length);
+        Log.i("Count system behind: " + SystemGitUpdater.countBehind());
         for (Game game : library.getLibrary()) {
             if (game.getDeveloper().equals("Packruler")) {
-                Log.i("Update: " + GameGitHandler.countBehind(game));
+                Log.i("Update: " + game.isUpdateable());
+                Log.i("Updated: " + game.update());
+
                 Log.i("Is compatible? " + OSCheck.IS_COMPATIBLE(game));
                 Log.i("Updated? " + GameGitHandler.pull(game));
-                GameLauncher.LAUNCH(game);
+                try {
+                    Process process = GameLauncher.LAUNCH(game);
+                    process.waitFor();
+                } catch (IOException | InterruptedException e) {
+                    e.printStackTrace();
+                }
                 break;
             }
         }

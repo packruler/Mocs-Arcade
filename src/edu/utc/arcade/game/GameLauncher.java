@@ -17,52 +17,17 @@ public class GameLauncher {
      * @param game The game that should be launched
      * @return The length of time the game ran.
      */
-    public static long LAUNCH(Game game) {
+    public static Process LAUNCH(Game game) throws IOException {
         //Use Format class to get a command String array to pass to Runtime.exec()
         String[] cmdArray = Format.getExecutable(game);
-        long runTime = System.currentTimeMillis();
-        try {
-            //Launch Game using command array from Format
-            Process process = Runtime.getRuntime().exec(cmdArray);
 
-            InputStream outputStream = null, errorStream = null;
-            ByteArrayOutputStream outputBuffer = new ByteArrayOutputStream();
-            ByteArrayOutputStream errorBuffer = new ByteArrayOutputStream();
-            try {
-                outputStream = process.getInputStream();
-                errorStream = process.getErrorStream();
+        //Launch Game using command array from Format
+        ProcessBuilder builder = new ProcessBuilder(cmdArray);
+        builder.redirectError(ProcessBuilder.Redirect.INHERIT);
+        builder.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+        builder.redirectInput(ProcessBuilder.Redirect.INHERIT);
 
-                byte[] tmp = new byte[1024];
-
-                while (true) {
-                    int outputBytes = readAvailablOnce(outputStream, outputBuffer, tmp);
-                    int errorBytes = readAvailablOnce(errorStream, errorBuffer, tmp);
-                    if (outputBytes == 0 && errorBytes == 0) {
-                        try {
-                            process.exitValue();
-                            break;
-                        } catch (IllegalThreadStateException e) {
-                            // keep on looping
-                        }
-                    }
-                }
-                readAvailableAll(outputStream, outputBuffer, tmp);
-                readAvailableAll(errorStream, errorBuffer, tmp);
-
-            } finally {
-                closeQuietly(outputStream);
-                closeQuietly(errorStream);
-            }
-
-            runTime = System.currentTimeMillis() - runTime;
-            System.out.println(outputBuffer.toString("ASCII"));
-            System.err.println(errorBuffer.toString("ASCII"));
-            System.err.println("exit code: " + process.exitValue());
-            Log.i("Runtime: " + runTime);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return runTime;
+        return builder.start();
     }
 
     private static void closeQuietly(InputStream in) {

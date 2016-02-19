@@ -1,5 +1,7 @@
 package edu.utc.arcade.game;
 
+import edu.utc.arcade.git.GameGitHandler;
+
 /**
  * Created by Ethan Leisinger on 1/5/2016.
  */
@@ -8,6 +10,7 @@ public class Game implements Comparable {
     private String title = "";
     private String developer = "";
     private String description = "";
+    private String shortDescription = "";
     private String gitAddress;
     private String gitBranch;
     private boolean local;
@@ -77,6 +80,25 @@ public class Game implements Comparable {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * Get the short description of the game
+     *
+     * @return Short description of the game
+     */
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    /**
+     * Set the short description of the Game
+     * -Should only be used for easy setup of adding a game to remote library-
+     *
+     * @param shortDescription Short description of the game
+     */
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
     }
 
     /**
@@ -269,7 +291,15 @@ public class Game implements Comparable {
     }
 
     public void updateData(Game game) {
-        //TODO: Handle updating local Game info from updated remote Game info
+        //TODO: Setup how updates occur
+    }
+
+    public boolean isUpdateable() {
+        return GameGitHandler.countBehind(this) > 0;
+    }
+
+    public boolean update() {
+        return GameGitHandler.pull(this);
     }
 
     @Override

@@ -11,7 +11,7 @@ import java.io.File;
  */
 public class SystemGitUpdater {
 
-    public int countBehind() {
+    public static int countBehind() {
         try {
             File directory = new File("");
             Git git = Git.open(directory);

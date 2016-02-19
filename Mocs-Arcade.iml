@@ -10,5 +10,7 @@
     <orderEntry type="library" name="com.google.code.gson:gson:2.5" level="project" />
     <orderEntry type="library" name="org.eclipse.jgit:org.eclipse.jgit:4.1.1.201511131810-r" level="project" />
     <orderEntry type="library" name="org.slf4j:slf4j-nop:1.6.2" level="project" />
+    <orderEntry type="library" name="net.java.jinput:jinput:2.0.6" level="project" />
+    <orderEntry type="library" name="jinput-native" level="project" />
   </component>
 </module>
