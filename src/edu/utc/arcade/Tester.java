@@ -23,7 +23,7 @@ public class Tester {
         Log.i("Count system behind: " + SystemGitUpdater.countBehind());
         for (Game game : library.getLibrary()) {
             if (game.getDeveloper().equals("Packruler")) {
-                Log.i("Update: " + game.isUpdateable());
+                Log.i("Update: " + game.needUpdate());
                 Log.i("Updated: " + game.update());
 
                 Log.i("Is compatible? " + OSCheck.IS_COMPATIBLE(game));

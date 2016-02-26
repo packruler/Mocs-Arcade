@@ -294,8 +294,12 @@ public class Game implements Comparable {
         //TODO: Setup how updates occur
     }
 
-    public boolean isUpdateable() {
-        return GameGitHandler.countBehind(this) > 0;
+    public int countBehind() {
+        return GameGitHandler.countBehind(this);
+    }
+
+    public boolean needUpdate() {
+        return countBehind() > 0;
     }
 
     public boolean update() {

@@ -67,6 +67,18 @@ public class GameLibrary {
         return library.getSet();
     }
 
+    public List<Game> getLibraryList(boolean localOnly) {
+        if (!localOnly)
+            return library.getList();
+        List<Game> list = new LinkedList<>(library.getList());
+        Iterator<Game> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            if (!iterator.next().isLocal())
+                iterator.remove();
+        }
+        return list;
+    }
+
     public Game getGame(String title, String developer) {
         for (Game cur : library.getList()) {
             if (cur.getTitle().equals(title)
