@@ -4,14 +4,20 @@ import com.google.gson.JsonObject;
 import com.sun.javafx.collections.ObservableListWrapper;
 import edu.utc.arcade.game.Game;
 import edu.utc.arcade.game.GameLibrary;
+import edu.utc.arcade.gui.GameInformation;
 import edu.utc.arcade.gui.GameListViewCell;
 import edu.utc.arcade.logging.Log;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
@@ -23,6 +29,7 @@ public class Main extends Application {
     private ScrollPane root;
     private ListView<Game> listView;
     private GameLibrary library = new GameLibrary();
+    private Game selectedGame;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -54,6 +61,23 @@ public class Main extends Application {
 
 
         root.setContent(listView);
+        listView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Game>() {
+            @Override
+            public void changed(ObservableValue<? extends Game> observable, Game oldValue, Game newValue) {
+//                Log.i(observable.toString());
+                selectedGame = newValue;
+            }
+        });
+
+        listView.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+                Log.i(event.toString());
+                if (event.getCode().equals(KeyCode.ENTER) && selectedGame != null) {
+                    root.setContent(GameInformation.load(selectedGame, root, listView));
+                }
+            }
+        });
     }
 
     private void loadLibrary(boolean localOnly) {
