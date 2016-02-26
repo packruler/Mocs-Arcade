@@ -11,6 +11,9 @@ public class GameListViewCell extends ListCell<Game> {
     @Override
     protected void updateItem(Game item, boolean empty) {
         super.updateItem(item, empty);
+        if (item == null)
+            return;
+
         GameCellData data = new GameCellData();
         data.loadData(item);
         setGraphic(data.getMainBox());

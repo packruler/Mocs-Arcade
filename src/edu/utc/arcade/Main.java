@@ -28,10 +28,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
 //        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         setupLayout();
+        loadLibrary(false);
         primaryStage.setTitle("Mocs Arcade");
         primaryStage.setScene(new Scene(root, 1980, 1080));
         primaryStage.show();
-        loadLibrary(true);
         Log.i("Height: " + (listView != null ? listView.getHeight() : "NULL"));
     }
 
@@ -49,8 +49,8 @@ public class Main extends Application {
         root.fitToHeightProperty().setValue(true);
         root.fitToWidthProperty().setValue(true);
 
+
         listView = new ListView<>();
-        listView.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
 
 
         root.setContent(listView);
