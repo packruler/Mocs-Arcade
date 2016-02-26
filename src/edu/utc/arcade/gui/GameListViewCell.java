@@ -11,7 +11,7 @@ public class GameListViewCell extends ListCell<Game> {
     @Override
     protected void updateItem(Game item, boolean empty) {
         super.updateItem(item, empty);
-        if (item == null)
+        if (empty)
             return;
 
         GameCellData data = new GameCellData();

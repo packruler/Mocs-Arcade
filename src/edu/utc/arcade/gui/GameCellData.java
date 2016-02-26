@@ -25,7 +25,7 @@ public class GameCellData {
         Log.i("New data");
         mainBox = new HBox();
         mainBox.setAlignment(Pos.CENTER);
-        mainBox.setFillHeight(true);
+//        mainBox.setFillHeight(true);
         mainBox.setPadding(MAIN_PADDING);
 
         VBox titleDev = new VBox();
@@ -41,6 +41,12 @@ public class GameCellData {
         titleDev.getChildren().add(title);
         titleDev.getChildren().add(developer);
 
+        mainBox.getChildren().add(titleDev);
+
+        VBox spacer = new VBox();
+        spacer.setMinWidth(50);
+        mainBox.getChildren().add(spacer);
+
         VBox statusBox = new VBox();
         statusBox.setSpacing(5d);
         statusBox.setPadding(INTERNAL_PADDING);
@@ -52,8 +58,6 @@ public class GameCellData {
         statusBox.getChildren().add(downloadStatus);
         statusBox.setAlignment(Pos.TOP_RIGHT);
 
-
-        mainBox.getChildren().add(titleDev);
         mainBox.getChildren().add(statusBox);
     }
 

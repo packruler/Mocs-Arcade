@@ -17,6 +17,14 @@
     "dataUpdateTime": 0
   },
   {
+    "title": "REALLLY LONG TITLE",
+    "developer": "",
+    "description": "",
+    "shortDescription": "",
+    "local": false,
+    "dataUpdateTime": 0
+  },
+  {
     "title": "Test1",
     "developer": "",
     "description": "",
@@ -26,14 +34,6 @@
   },
   {
     "title": "Test2",
-    "developer": "",
-    "description": "",
-    "shortDescription": "",
-    "local": false,
-    "dataUpdateTime": 0
-  },
-  {
-    "title": "Test3",
     "developer": "",
     "description": "",
     "shortDescription": "",
