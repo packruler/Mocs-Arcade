@@ -7,9 +7,11 @@ import edu.utc.arcade.logging.Log;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.util.Callback;
 
 import java.io.IOException;
@@ -23,6 +25,8 @@ public class BrowseGamesController {
     private VBox mainBox;
     @FXML
     private ListView browseGamesView;
+    @FXML
+    private Label title;
 
     public BrowseGamesController() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/res/BrowseGamesView.fxml"));
@@ -30,6 +34,8 @@ public class BrowseGamesController {
         try {
             fxmlLoader.load();
             setListView();
+            title.setFont(new Font(30));
+            title.setText("Browse Games");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -50,16 +56,6 @@ public class BrowseGamesController {
     }
 
     public Node getMainBox() {
-        return browseGamesView;
+        return mainBox;
     }
-
-    //TODO: i have to figure out how to initialize these resources and URL
-//
-//    @FXML
-//    void initialize(URL location, ResourceBundle resources) {
-//        System.out.println("BrowseGamesView loaded.");
-//        assert listView != null : "fx:id=\"listView\" was not injected: check your FXML file 'CustomList.fxml'.";
-//
-//        setListView();
-//    }
 }

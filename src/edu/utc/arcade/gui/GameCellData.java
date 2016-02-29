@@ -31,43 +31,6 @@ public class GameCellData {
         } catch (IOException e) {
             e.printStackTrace();
         }
-//
-//        mainBox = new HBox();
-//        mainBox.setAlignment(Pos.CENTER);
-////        mainBox.setFillHeight(true);
-//        mainBox.setPadding(MAIN_PADDING);
-//
-//        VBox titleDev = new VBox();
-//        titleDev.setPadding(INTERNAL_PADDING);
-//        titleDev.setSpacing(5d);
-//        titleDev.setFillWidth(true);
-//
-//        title.setFont(new Font("Ariel", 30));
-////        title.setPadding(INTERNAL_PADDING);
-//        developer.setFont(new Font("Ariel", 20));
-////        developer.setPadding(INTERNAL_PADDING);
-//
-//        titleDev.getChildren().add(title);
-//        titleDev.getChildren().add(developer);
-//
-//        mainBox.getChildren().add(titleDev);
-//
-//        VBox spacer = new VBox();
-//        spacer.setMinWidth(50);
-//        mainBox.getChildren().add(spacer);
-//
-//        VBox statusBox = new VBox();
-//        statusBox.setSpacing(5d);
-//        statusBox.setPadding(INTERNAL_PADDING);
-//        updateStatus.setFont(new Font("Ariel", 20));
-////        updateStatus.setPadding(INTERNAL_PADDING);
-//        downloadStatus.setFont(new Font("Arel", 20));
-////        downloadStatus.setPadding(INTERNAL_PADDING);
-//        statusBox.getChildren().add(updateStatus);
-//        statusBox.getChildren().add(downloadStatus);
-//        statusBox.setAlignment(Pos.TOP_RIGHT);
-//
-//        mainBox.getChildren().add(statusBox);
     }
 
 
