@@ -4,21 +4,24 @@
 
 
 <?import javafx.scene.control.Label?>
-<HBox xmlns:fx="http://javafx.com/fxml" fx:id="mainBox"
-      maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-      prefWidth="600.0" xmlns="http://javafx.com/javafx/8">
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml" fx:id="mainBox">
+    <!--maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"-->
+    <!--prefWidth="600.0">-->
     <children>
-        <VBox fx:id="title_dev_box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-              minWidth="-Infinity">
+        <VBox fx:id="title_dev_box">
+            <!--maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"-->
+            <!--minWidth="-Infinity">-->
             <children>
                 <Label fx:id="title"/>
                 <Label fx:id="developer"/>
             </children>
         </VBox>
-        <VBox fx:id="download_box" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-              minWidth="-Infinity">
+        <VBox fx:id="download_box"
+              alignment="TOP_RIGHT">
+            <!--maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"-->
+            <!--minWidth="-Infinity">-->
             <children>
-                <Label fx:id="downloadStats"/>
+                <Label fx:id="downloadStatus"/>
                 <Label fx:id="updateStatus"/>
             </children>
         </VBox>

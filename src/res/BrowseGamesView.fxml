@@ -3,9 +3,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 
-<VBox fx:controller="edu.utc.arcade.gui.Controllers.BrowseGamesController"
-      xmlns:fx="http://javafx.com/fxml">
+<VBox
+        xmlns:fx="http://javafx.com/fxml" fx:id="mainBox">
     <children>
-        <ListView fx:id="BrowseGamesView"/>
+        <ListView fx:id="browseGamesView"/>
     </children>
 </VBox>

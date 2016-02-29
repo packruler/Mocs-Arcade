@@ -77,7 +77,7 @@ public class GameCellData {
         title.setText(game.getTitle());
         developer.setText(game.getDeveloper());
 
-//        setStatus(game);
+        setStatus(game);
     }
 
     private void setStatus(Game game) {
