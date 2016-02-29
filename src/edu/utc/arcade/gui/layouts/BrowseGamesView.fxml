@@ -1,0 +1,11 @@
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="edu.utc.arcade.gui.Controllers.BrowseGamesController"
+      xmlns:fx="http://javafx.com/fxml">
+    <children>
+        <ListView fx:id="BrowseGamesView"/>
+    </children>
+</VBox>
