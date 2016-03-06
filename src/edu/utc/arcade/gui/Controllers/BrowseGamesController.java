@@ -36,6 +36,7 @@ public class BrowseGamesController {
             setListView();
             title.setFont(new Font(30));
             title.setText("Browse Games");
+            browseGamesView.setPrefWidth(1920);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -56,6 +57,7 @@ public class BrowseGamesController {
     }
 
     public Node getMainBox() {
+
         return mainBox;
     }
 }
