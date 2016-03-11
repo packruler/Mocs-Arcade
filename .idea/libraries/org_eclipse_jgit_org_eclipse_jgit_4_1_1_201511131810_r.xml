@@ -1,6 +1,5 @@
 <component name="libraryTable">
-  <library name="org.eclipse.jgit:org.eclipse.jgit:4.1.1.201511131810-r" type="repository">
-    <properties maven-id="org.eclipse.jgit:org.eclipse.jgit:4.1.1.201511131810-r" />
+  <library name="org.eclipse.jgit:org.eclipse.jgit:4.1.1.201511131810-r">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/org.eclipse.jgit-4.1.1.201511131810-r.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/jsch-0.1.53.jar!/" />
