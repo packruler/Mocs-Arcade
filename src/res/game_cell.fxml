@@ -5,11 +5,15 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Accordion?>
+<?import java.net.URL?>
+
 <HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml" fx:id="mainBox" maxWidth="Infinity">
     <!--maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"-->
     <!--prefWidth="600.0">-->
+
     <children>
-        <VBox fx:id="title_dev_box"
+
+        <VBox  fx:id="title_dev_box"
               maxHeight="-Infinity" maxWidth="Infinity" minHeight="-Infinity"
               minWidth="-Infinity">
             <children>
@@ -17,7 +21,9 @@
                 <Label fx:id="developer"/>
             </children>
         </VBox>
-        <VBox fx:id="download_box"
+
+        <!--the vbox below needs to be in a list of columns-->
+        <VBox prefWidth="1920" fx:id="download_box"
               alignment="TOP_RIGHT"
               maxHeight="-Infinity" maxWidth="Infinity" minHeight="-Infinity"
               minWidth="-Infinity">
@@ -28,4 +34,7 @@
         </VBox>
 
     </children>
+    <stylesheets>
+        <URL value="@game_cell.css"/>
+    </stylesheets>
 </HBox>

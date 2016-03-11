@@ -14,8 +14,8 @@ import java.io.IOException;
  * Created by Ethan Leisinger on 2/26/16.
  */
 public class GameCellData {
-    private static final Insets MAIN_PADDING = new Insets(10);
-    private static final Insets INTERNAL_PADDING = new Insets(5);
+    //private static final Insets MAIN_PADDING = new Insets(50);
+    //private static final Insets INTERNAL_PADDING = new Insets(50);
 
     @FXML
     private HBox mainBox;
@@ -28,6 +28,7 @@ public class GameCellData {
         fxmlLoader.setController(this);
         try {
             fxmlLoader.load();
+            mainBox.setPrefWidth(1920);
         } catch (IOException e) {
             e.printStackTrace();
         }
