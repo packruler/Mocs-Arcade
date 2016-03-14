@@ -2,6 +2,7 @@ package edu.utc.arcade.game;
 
 import com.google.gson.Gson;
 import edu.utc.arcade.logging.Log;
+import edu.utc.arcade.settings.Settings;
 
 import java.io.*;
 import java.util.*;
@@ -64,17 +65,17 @@ public class GameLibrary {
     }
 
     public Set<Game> getLibrary() {
-        return library.getSet();
+        return new TreeSet<>(getLibraryList());
     }
 
-    public List<Game> getLibraryList(boolean localOnly) {
-        if (!localOnly)
+    public List<Game> getLibraryList() {
+        if (!Settings.getInstance().isKioskMode())
             return library.getList();
-        List<Game> list = new LinkedList<>(library.getList());
-        Iterator<Game> iterator = list.iterator();
-        while (iterator.hasNext()) {
-            if (!iterator.next().isLocal())
-                iterator.remove();
+
+        List<Game> list = new LinkedList<>();
+        for (Game game : library.getList()) {
+            if (game.isLocal())
+                list.add(game);
         }
         return list;
     }

@@ -307,6 +307,11 @@ public class Game implements Comparable {
     }
 
     @Override
+    public String toString() {
+        return title + " | " + developer;
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (obj instanceof Game) {
             return ((Game) obj).getDeveloper().equals(developer)

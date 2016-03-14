@@ -1,10 +1,10 @@
 package edu.utc.arcade.game;
 
 import edu.utc.arcade.game.format.Format;
-import edu.utc.arcade.logging.Log;
 
-import java.io.*;
-import java.util.Arrays;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * Created by Ethan Leisinger on 1/5/2016.

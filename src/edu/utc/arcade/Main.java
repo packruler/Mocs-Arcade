@@ -38,33 +38,32 @@ public class Main extends Application {
     @Override
     public void start(Stage mainScreen) throws Exception {
 
-        stage=mainScreen;
-        btn1=new Button("Kiosk Mode");
-        btn2=new Button("Admin Mode");
-        btn3=new Button("Settings");
-        btn4=new Button("Exit");
-        btn5=new Button("Main Menu");
+        stage = mainScreen;
+        btn1 = new Button("Kiosk Mode");
+        btn2 = new Button("Admin Mode");
+        btn3 = new Button("Settings");
+        btn4 = new Button("Exit");
+        btn5 = new Button("Main Menu");
 
-        btn1.setOnAction(e->handleButtonAction(e));
-        btn2.setOnAction(e->handleButtonAction(e));
-        btn3.setOnAction(e->handleButtonAction(e));
-        btn5.setOnAction(e->handleButtonAction(e));
+        btn1.setOnAction(e -> handleButtonAction(e));
+        btn2.setOnAction(e -> handleButtonAction(e));
+        btn3.setOnAction(e -> handleButtonAction(e));
+        btn5.setOnAction(e -> handleButtonAction(e));
 
         Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
-        VBox vb=new VBox(btn1, btn2, btn3, btn4, btn5);
+        VBox vb = new VBox(btn1, btn2, btn3, btn4, btn5);
         vb.setSpacing(30);
         vb.setPadding(new Insets(250));
 
-        flowpane1=new FlowPane();
-        flowpane2=new FlowPane();
+        flowpane1 = new FlowPane();
+        flowpane2 = new FlowPane();
         flowpane1.setVgap(10);
         flowpane2.setVgap(10);
         flowpane1.setStyle("-fx-background-image: url('res/backgrounds/mainScreenBG.jpg')");
         flowpane1.getChildren().add(vb);
 
-        scene1=new Scene(flowpane1, 800, 600);
-        scene2=new Scene(flowpane2, 800, 600);
-
+        scene1 = new Scene(flowpane1, 800, 600);
+        scene2 = new Scene(flowpane2, 800, 600);
 
 
         setupLayout();
@@ -92,7 +91,7 @@ public class Main extends Application {
         root = new Pane();
         root.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         root.setPrefWidth(1920);
-        browseGamesController.setGames(library.getLibraryList(false));
+        browseGamesController.setGames(library.getLibraryList());
         root.getChildren().add(browseGamesController.getMainBox());
 
     }
@@ -108,13 +107,14 @@ public class Main extends Application {
 //
 //        listView.setItems(observableList);
     }
-    private void handleButtonAction(ActionEvent e){
-        if (e.getSource()==btn5)
+
+    private void handleButtonAction(ActionEvent e) {
+        if (e.getSource() == btn5)
             stage.setScene(scene1);
         else
             //TODO: need to make this scene more passable/dynamic
             stage.setScene(new Scene(root, 1980, 1080));
-            //stage.setScene(scene2);
+        //stage.setScene(scene2);
     }
 
 
