@@ -26,7 +26,7 @@ public class Main extends Application {
     private JsonObject settings;
     private Pane root;
     private ListView<Game> listView;
-    private GameLibrary library = new GameLibrary();
+    private GameLibrary library = GameLibrary.getInstance();
     private Game selectedGame;
     private BrowseGamesController browseGamesController = new BrowseGamesController();
 

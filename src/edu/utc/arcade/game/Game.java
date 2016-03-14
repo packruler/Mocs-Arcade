@@ -1,6 +1,7 @@
 package edu.utc.arcade.game;
 
 import edu.utc.arcade.git.GameGitHandler;
+import edu.utc.arcade.logging.Log;
 
 /**
  * Created by Ethan Leisinger on 1/5/2016.
@@ -303,7 +304,11 @@ public class Game implements Comparable {
     }
 
     public boolean update() {
-        return GameGitHandler.pull(this);
+        boolean updatedGit = GameGitHandler.pull(this);
+        boolean updatedData = GameLibrary.getInstance().updateGameData(this);
+        Log.i("Updated Git? " + updatedGit);
+        Log.i("Updated Data? " + updatedData);
+        return updatedGit || updatedData;
     }
 
     @Override

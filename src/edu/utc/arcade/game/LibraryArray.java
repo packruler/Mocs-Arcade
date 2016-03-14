@@ -10,11 +10,12 @@ import java.util.*;
 public class LibraryArray {
 
     private ArrayList<Game> libraryList = new ArrayList<>();
+    private LinkedList<Game> updatedDataList = new LinkedList<>();
 
     public void add(Game newGame) {
         int pos = libraryList.indexOf(newGame);
         if (pos != -1)
-            updateGame(libraryList.get(pos), newGame);
+            updatedDataList.add(newGame);
         else
             libraryList.add(newGame);
     }
@@ -44,14 +45,6 @@ public class LibraryArray {
         return out;
     }
 
-    public Set<Game> getSet() {
-        return new TreeSet<>(libraryList);
-    }
-
-    public Set<Game> getSet(boolean localOnly) {
-        return new TreeSet<>(getList(localOnly));
-    }
-
     public Game remove(int index) {
         return libraryList.remove(index);
     }
@@ -60,9 +53,15 @@ public class LibraryArray {
         return libraryList.contains(o);
     }
 
-    private void updateGame(Game current, Game updatedData) {
+    public boolean updateGameData(Game current) {
         Log.i("Update check");
-        if (current.getDataUpdateTime() < updatedData.getDataUpdateTime())
-            current.updateData(updatedData);
+        for (Game updatedData : updatedDataList) {
+            if (updatedData.equals(current) &&
+                    (current.getDataUpdateTime() < updatedData.getDataUpdateTime())) {
+                current.updateData(updatedData);
+                return true;
+            }
+        }
+        return false;
     }
 }

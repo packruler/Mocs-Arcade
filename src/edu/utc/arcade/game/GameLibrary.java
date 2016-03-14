@@ -16,12 +16,19 @@ public class GameLibrary {
     public static final File LIBRARY_DIRECTORY = new File("./local/");
     private static final File LOCAL_LIBRARY = new File(LIBRARY_DIRECTORY.getPath() + "/library.json");
     private static final File REMOTE_LIBRARY = new File("./gameLibrary.json");
+    private static GameLibrary INSTANCE;
+
+    public static GameLibrary getInstance() {
+        if (INSTANCE == null)
+            INSTANCE = new GameLibrary();
+        return INSTANCE;
+    }
 
     //Store Games in TreeSet to allow them to be sorted
     //It also allows loading local and remote libraries without duplicates
     private LibraryArray library = new LibraryArray();
 
-    public GameLibrary() {
+    private GameLibrary() {
         try {
             Gson gson = new Gson();
 
@@ -87,5 +94,9 @@ public class GameLibrary {
                 return cur;
         }
         return null;
+    }
+
+    public boolean updateGameData(Game game) {
+        return library.updateGameData(game);
     }
 }

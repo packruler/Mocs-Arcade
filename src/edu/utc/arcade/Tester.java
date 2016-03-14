@@ -2,6 +2,8 @@ package edu.utc.arcade;
 
 import edu.utc.arcade.game.Game;
 import edu.utc.arcade.game.GameLibrary;
+import edu.utc.arcade.game.OSCheck;
+import edu.utc.arcade.git.GameGitHandler;
 import edu.utc.arcade.logging.Log;
 import edu.utc.arcade.settings.Settings;
 
@@ -12,7 +14,7 @@ import java.io.IOException;
  */
 public class Tester {
     public static void main(String[] args) {
-        GameLibrary library = new GameLibrary();
+        GameLibrary library = GameLibrary.getInstance();
 
         Settings settings = Settings.getInstance();
         assert (settings != null);
@@ -23,15 +25,14 @@ public class Tester {
 
 //        Log.i("Count system behind: " + SystemGitUpdater.countBehind());
 
-        Log.i((settings.isKioskMode() ? "KIOSK MODE" : "Regular"));
         for (Game game : library.getLibrary()) {
             Log.i(game.toString());
-//            if (game.getDeveloper().equals("Packruler")) {
-//                Log.i("Update: " + game.needUpdate());
-//                Log.i("Updated: " + game.update());
-//
-//                Log.i("Is compatible? " + OSCheck.IS_COMPATIBLE(game));
-//                Log.i("Updated? " + GameGitHandler.pull(game));
+            if (game.getDeveloper().equals("Packruler")) {
+                Log.i("Update: " + game.needUpdate());
+                Log.i("Updated: " + game.update());
+
+                Log.i("Is compatible? " + OSCheck.IS_COMPATIBLE(game));
+                Log.i("Updated? " + GameGitHandler.pull(game));
 //                try {
 //                    Process process = GameLauncher.LAUNCH(game);
 //                    process.waitFor();
@@ -39,7 +40,7 @@ public class Tester {
 //                    e.printStackTrace();
 //                }
 //                break;
-//            }
+            }
         }
         try {
             library.saveGson();
