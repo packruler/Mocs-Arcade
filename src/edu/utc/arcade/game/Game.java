@@ -23,6 +23,7 @@ public class Game implements Comparable {
     private String[] osSpecificLibraryPath;
     private long dataUpdateTime;
 
+    //TODO: Move all info except how to get the game to another class that can be loaded based on file stored in repo
     public Game() {
     }
 
