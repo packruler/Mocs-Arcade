@@ -1,0 +1,54 @@
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import UI.FormattedTableCellFactory?>
+<?import UI.GameFactory?>
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0" fx:controller="UI.Controllers.TableViewController"
+          xmlns:fx="http://javafx.com/fxml">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+    <Label style="-fx-font: NORMAL 20 Tahoma;" text="Browse Games" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <columns>
+            <TableColumn prefWidth="100.0" text="Title" fx:id="titleColumn">
+                <cellFactory>
+                    <FormattedTableCellFactory alignment="CENTER"/>
+                </cellFactory>
+                <cellValueFactory>
+                    <PropertyValueFactory property="title"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="100.0" text="Developer">
+                <cellValueFactory>
+                    <PropertyValueFactory property="developer"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="200.0" text="Short Description">
+                <cellValueFactory>
+                    <PropertyValueFactory property="shortDescription"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <GameFactory title="Awesome RPG" developer="Final Fantasy 7" shortDescription="Sony"/>
+                <GameFactory title="Awesome Firt Person Shooter" developer="Counter Strike" shortDescription="Valve"/>
+                <GameFactory title="Full of trolls" developer="League of Legends" shortDescription="Riot Games"/>
+                <GameFactory title="Super buggy alpha game" developer="H1Z1" shortDescription="Daybreak Games"/>
+                <GameFactory title="Best game ever" developer="World of Warcraft" shortDescription="Blizzard"/>
+            </FXCollections>
+        </items>
+        <sortOrder>
+            <fx:reference source="titleColumn"/>
+        </sortOrder>
+    </TableView>
+</GridPane>
