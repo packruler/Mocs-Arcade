@@ -1,7 +1,12 @@
 package edu.utc.arcade.game;
 
+import com.google.gson.Gson;
 import edu.utc.arcade.git.GameGitHandler;
 import edu.utc.arcade.logging.Log;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 /**
  * Created by Ethan Leisinger on 1/5/2016.
@@ -14,14 +19,11 @@ public class Game implements Comparable {
     private String shortDescription = "";
     private String gitAddress;
     private String gitBranch;
-    private boolean local;
-    private String executablePath;
-    private String libraryPath;
-    private String format;
     private String[] operatingSystems;
-    private String[] osSpecificExecutablePath;
-    private String[] osSpecificLibraryPath;
+    private boolean local;
     private long dataUpdateTime;
+
+    private LaunchInfo launchInfo;
 
     //TODO: Move all info except how to get the game to another class that can be loaded based on file stored in repo
     public Game() {
@@ -142,72 +144,6 @@ public class Game implements Comparable {
     }
 
     /**
-     * Is this Game available locally
-     *
-     * @return True if Game is available locally
-     */
-    public boolean isLocal() {
-        return local;
-    }
-
-    /**
-     * Set whether or not Game is now available locally
-     *
-     * @param local True if Game is local
-     */
-    public void setLocal(boolean local) {
-        this.local = local;
-    }
-
-    /**
-     * Get the localized path of Game executable
-     *
-     * @return Path of executable
-     */
-    public String getExecutablePath() {
-        return executablePath;
-    }
-
-    /**
-     * Set the localized path of Game executable
-     * -Should only be used for easy setup of adding a game to remote library-
-     *
-     * @param executablePath Localized path to executable
-     *                       Example: <i>Repo</i>/build/executable.jar should be build/executable.jar
-     */
-    public void setExecutablePath(String executablePath) {
-        this.executablePath = executablePath;
-    }
-
-    public String getLibraryPath() {
-        return libraryPath;
-    }
-
-    public void setLibraryPath(String libraryPath) {
-        this.libraryPath = libraryPath;
-    }
-
-    /**
-     * -Unsure if will be used-
-     * Will specify the format of a Game ie Jar vs .exe
-     *
-     * @return
-     */
-    public String getFormat() {
-        return format;
-    }
-
-    /**
-     * -Unsure if will be used-
-     * Will specify the format of a Game ie Jar vs .exe
-     *
-     * @param format
-     */
-    public void setFormat(String format) {
-        this.format = format;
-    }
-
-    /**
      * Get array of Operating Systems supported by this Game
      *
      * @return Array of Operating Systems supported
@@ -232,46 +168,21 @@ public class Game implements Comparable {
     }
 
     /**
-     * Get array of Operating System specific executable path.
-     * This should be arranged so that required paths are ordered according to the Operating Systems array
+     * Is this Game available locally
      *
-     * @return Array of Operating System specific executable paths.
+     * @return True if Game is available locally
      */
-    public String[] getOsSpecificExecutablePath() {
-        return osSpecificExecutablePath;
+    public boolean isLocal() {
+        return local;
     }
 
     /**
-     * Set array of Operating System specific executable path.
-     * <p>
-     * -Should only be used for easy setup of adding a game to remote library-
+     * Set whether or not Game is now available locally
      *
-     * @param osSpecificExecutablePath This should be arranged so that required paths are ordered according to the Operating Systems array
-     *                                 If no OS specific executable required use <i>null</i> or "" for that position
+     * @param local True if Game is local
      */
-    public void setOsSpecificExecutablePath(String[] osSpecificExecutablePath) {
-        this.osSpecificExecutablePath = osSpecificExecutablePath;
-    }
-
-    /**
-     * Get array of Operating System specific library path
-     * This should be arranged so that required paths are ordered according to the Operating Systems array
-     *
-     * @return Array of Operating Systems supported
-     */
-    public String[] getOsSpecificLibraryPath() {
-        return osSpecificLibraryPath;
-    }
-
-    /**
-     * Set array of Operating System specific library path
-     * -Should only be used for easy setup of adding a game to remote library-
-     *
-     * @param osSpecificLibraryPath This should be arranged so that required paths are ordered according to the Operating Systems array
-     *                              If no OS specific library required use <i>null</i> or "" for that position
-     */
-    public void setOsSpecificLibraryPath(String[] osSpecificLibraryPath) {
-        this.osSpecificLibraryPath = osSpecificLibraryPath;
+    public void setLocal(boolean local) {
+        this.local = local;
     }
 
     /**
@@ -292,8 +203,38 @@ public class Game implements Comparable {
         this.dataUpdateTime = dataUpdateTime;
     }
 
-    public void updateData(Game game) {
-        //TODO: Setup how updates occur
+    public boolean updateData(Game game) {
+        if (getDataUpdateTime() >= game.getDataUpdateTime())
+            return false;
+
+        setDescription(game.getDescription());
+        setShortDescription(game.getShortDescription());
+        setGitAddress(game.getGitAddress());
+        setGitBranch(game.getGitBranch());
+        setDataUpdateTime(game.getDataUpdateTime());
+        return true;
+    }
+
+    public boolean loadLaunchInfo() {
+        if (!local)
+            return false;
+
+        File infoLocation = new File("local/" + developer + "/" + title + "/launchInfo.json");
+        if (!infoLocation.exists())
+            return false;
+        try {
+            FileReader reader = new FileReader(infoLocation);
+            launchInfo = new Gson().fromJson(reader, LaunchInfo.class);
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            launchInfo = null;
+            return false;
+        }
+    }
+
+    public LaunchInfo getLaunchInfo() {
+        return launchInfo;
     }
 
     public int countBehind() {
@@ -305,11 +246,13 @@ public class Game implements Comparable {
     }
 
     public boolean update() {
+        if (!needUpdate())
+            return false;
+
         boolean updatedGit = GameGitHandler.pull(this);
-        boolean updatedData = GameLibrary.getInstance().updateGameData(this);
         Log.i("Updated Git? " + updatedGit);
-        Log.i("Updated Data? " + updatedData);
-        return updatedGit || updatedData;
+        loadLaunchInfo();
+        return updatedGit;
     }
 
     @Override

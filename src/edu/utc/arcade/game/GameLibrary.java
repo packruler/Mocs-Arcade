@@ -4,7 +4,10 @@ import com.google.gson.Gson;
 import edu.utc.arcade.logging.Log;
 import edu.utc.arcade.settings.Settings;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -47,8 +50,10 @@ public class GameLibrary {
             if (REMOTE_LIBRARY.exists()) {
                 reader = new FileReader(REMOTE_LIBRARY);
                 gameArray = gson.fromJson(reader, Game[].class);
-                library.addAll(Arrays.asList(gameArray));
+                boolean updatedGames = library.addAll(Arrays.asList(gameArray));
                 reader.close();
+                if (updatedGames)
+                    saveGson();
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -94,9 +99,5 @@ public class GameLibrary {
                 return cur;
         }
         return null;
-    }
-
-    public boolean updateGameData(Game game) {
-        return library.updateGameData(game);
     }
 }

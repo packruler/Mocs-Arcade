@@ -9,11 +9,11 @@ public class PathHandler {
         if (pos == -1)
             throw new RuntimeException("Game not supported by this OS");
 
-        if (game.getOsSpecificExecutablePath()[pos] != null
-                && !game.getOsSpecificExecutablePath()[pos].isEmpty())
-            return game.getOsSpecificExecutablePath()[pos];
+        if (game.getLaunchInfo().getOsSpecificExecutablePath()[pos] != null
+                && !game.getLaunchInfo().getOsSpecificExecutablePath()[pos].isEmpty())
+            return game.getLaunchInfo().getOsSpecificExecutablePath()[pos];
 
-        return game.getExecutablePath();
+        return game.getLaunchInfo().getExecutablePath();
     }
 
     public static String GET_LIBRARY_PATH(Game game) {
@@ -21,10 +21,10 @@ public class PathHandler {
         if (pos == -1)
             throw new RuntimeException("Game not supported by this OS");
 
-        if (game.getOsSpecificLibraryPath()[pos] != null
-                && !game.getOsSpecificLibraryPath()[pos].isEmpty())
-            return game.getOsSpecificLibraryPath()[pos];
+        if (game.getLaunchInfo().getOsSpecificLibraryPath()[pos] != null
+                && !game.getLaunchInfo().getOsSpecificLibraryPath()[pos].isEmpty())
+            return game.getLaunchInfo().getOsSpecificLibraryPath()[pos];
 
-        return game.getExecutablePath();
+        return game.getLaunchInfo().getExecutablePath();
     }
 }

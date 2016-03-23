@@ -13,13 +13,13 @@ public class Jar {
     public static String[] getExecutableString(Game game) {
         LinkedList<String> cmdList = new LinkedList<>();
         File gameDir = new File("local/" + game.getDeveloper() + "/" + game.getTitle());
-        File libs = new File(gameDir.getPath() + "/" + game.getLibraryPath());
+        File libs = new File(gameDir.getPath() + "/" + game.getLaunchInfo().getLibraryPath());
         cmdList.add("java");
-        if (game.getLibraryPath() != null)
+        if (game.getLaunchInfo().getLibraryPath() != null)
             cmdList.add("-Djava.library.path=" + libs.getAbsolutePath());
 
         cmdList.add("-jar");
-        cmdList.add(gameDir.getAbsolutePath() + "/" + game.getExecutablePath());
+        cmdList.add(gameDir.getAbsolutePath() + "/" + game.getLaunchInfo().getExecutablePath());
         String[] cmdArray = new String[cmdList.size()];
         return cmdList.toArray(cmdArray);
     }

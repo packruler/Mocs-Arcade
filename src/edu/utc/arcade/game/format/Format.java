@@ -12,7 +12,7 @@ public abstract class Format {
 
 
     public static String[] getExecutable(Game game) {
-        switch (game.getFormat()) {
+        switch (game.getLaunchInfo().getFormat()) {
             case JAR:
                 return Jar.getExecutableString(game);
         }

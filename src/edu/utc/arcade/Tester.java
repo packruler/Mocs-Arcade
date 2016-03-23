@@ -6,6 +6,7 @@ import edu.utc.arcade.game.OSCheck;
 import edu.utc.arcade.git.GameGitHandler;
 import edu.utc.arcade.logging.Log;
 import edu.utc.arcade.settings.Settings;
+import net.java.games.input.ControllerEnvironment;
 
 import java.io.IOException;
 
@@ -16,6 +17,8 @@ public class Tester {
     public static void main(String[] args) {
         GameLibrary library = GameLibrary.getInstance();
 
+        Log.i("Is supported? " + ControllerEnvironment.getDefaultEnvironment().isSupported());
+        net.java.games.input.Controller[] controllers = ControllerEnvironment.getDefaultEnvironment().getControllers();
         Settings settings = Settings.getInstance();
         assert (settings != null);
         String pass = "TEST";
@@ -39,7 +42,7 @@ public class Tester {
 //                } catch (IOException | InterruptedException e) {
 //                    e.printStackTrace();
 //                }
-//                break;
+                break;
             }
         }
         try {
