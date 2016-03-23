@@ -1,5 +1,6 @@
 package edu.utc.arcade;
 
+import com.google.gson.Gson;
 import edu.utc.arcade.game.LaunchInfo;
 import edu.utc.arcade.logging.Log;
 
@@ -15,7 +16,7 @@ public class LaunchInfoCreator {
         Scanner scanner = new Scanner(System.in);
 
 
-        String answer = "";
+        String answer;
         Log.i("What is the format of your game?");
         Log.i("(Supported formats: Jar, C, C++)");
         answer = scanner.nextLine();
@@ -58,7 +59,6 @@ public class LaunchInfoCreator {
             Log.i("If Location: <REPOSITORY DIRECTORY>/game.jar");
             Log.i("Enter: \"game.jar\"");
             launchInfo.setExecutablePath(scanner.next());
-            Log.i("Entered path: \"" + launchInfo.getExecutablePath() + "\"");
         }
 
         Log.i("Does your game require a library included in the repository? (y/n)");
@@ -92,5 +92,8 @@ public class LaunchInfoCreator {
             Log.i("What is the path of library relative to repository?");
             launchInfo.setExecutablePath(scanner.next());
         }
+        String output = new Gson().toJson(launchInfo);
+        Log.i("JSON string:");
+        Log.i(output);
     }
 }
