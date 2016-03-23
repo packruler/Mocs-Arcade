@@ -1,4 +1,4 @@
-<?import edu.utc.arcade.gui.FormattedTableCellFactory?>
+<?import edu.utc.arcade.gui.*?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.cell.PropertyValueFactory?>
