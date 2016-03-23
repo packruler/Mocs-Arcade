@@ -1,11 +1,11 @@
-package edu.utc.arcade.UI.Controllers;
+package edu.utc.arcade.gui.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.text.Text;
 
 /**
- * Created by Various on 3/21/2016.
+ * Created by Chris Sims on 3/23/16.
  */
 public class KioskModeViewController {
     @FXML private Text actiontarget;

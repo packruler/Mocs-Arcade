@@ -7,7 +7,7 @@
 <?import javafx.scene.control.cell.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" fx:controller="UI.Controllers.MainMenuViewController" xmlns:fx="http://javafx.com/fxml">
+<VBox alignment="CENTER" spacing="20.0" fx:controller="edu.utc.arcade.gui.Controllers.MainMenuViewController" xmlns:fx="http://javafx.com/fxml">
         <Button fx:id="BrowseGamesButton" onAction="#handleSubmitButtonAction" prefWidth="350.0" minWidth="200" text="Browse Games"/>
         <Button fx:id="KioskModeButton" onAction="#handleSubmitButtonAction" prefWidth="350.0" minWidth="200" text="Kiosk Mode"/>
         <Button fx:id="SettingsButton" onAction="#handleSubmitButtonAction" prefWidth="350.0" minWidth="200" text="Settings"/>

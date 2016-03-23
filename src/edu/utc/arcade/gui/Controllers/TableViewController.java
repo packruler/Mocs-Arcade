@@ -1,12 +1,15 @@
-package edu.utc.arcade.UI.Controllers;
+package edu.utc.arcade.gui.Controllers;
 
-import UI.GameFactory;
+import edu.utc.arcade.gui.GameFactory;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
+/**
+ * Created by Chris Sims on 3/23/16.
+ */
 public class TableViewController {
     @FXML
     private TableView<GameFactory> tableView;

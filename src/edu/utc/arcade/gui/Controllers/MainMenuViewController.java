@@ -1,15 +1,13 @@
-package edu.utc.arcade.UI.Controllers;
+package edu.utc.arcade.gui.Controllers;
 
-import UI.UIMain;
+import edu.utc.arcade.gui.UIMain;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
-import sun.applet.Main;
 
 /**
- * Created by Various on 3/21/2016.
+ * Created by Chris Sims on 3/23/16.
  */
 public class MainMenuViewController {
 

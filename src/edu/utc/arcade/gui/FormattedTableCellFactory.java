@@ -1,4 +1,4 @@
-package edu.utc.arcade.UI;
+package edu.utc.arcade.gui;
 
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -8,7 +8,9 @@ import javafx.scene.text.TextAlignment;
 import javafx.util.Callback;
 
 import java.text.Format;
-
+/**
+ * Created by Chris Sims on 3/23/16.
+ */
 public class FormattedTableCellFactory<S, T> implements Callback<TableColumn<S, T>, TableCell<S, T>> {
 
     private TextAlignment alignment;

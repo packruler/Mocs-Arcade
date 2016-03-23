@@ -1,7 +1,9 @@
-package edu.utc.arcade.UI;
+package edu.utc.arcade.gui;
 
 import javafx.beans.property.SimpleStringProperty;
-
+/**
+ * Created by Chris Sims on 3/23/16.
+ */
 public class GameFactory {
 
     private final SimpleStringProperty title = new SimpleStringProperty("");

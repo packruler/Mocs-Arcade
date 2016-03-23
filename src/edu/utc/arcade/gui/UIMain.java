@@ -1,4 +1,4 @@
-package edu.utc.arcade.UI;
+package edu.utc.arcade.gui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,6 +6,9 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+/**
+ * Created by Chris Sims on 3/23/16.
+ */
 public class UIMain extends Application {
 
     public static Pane BrowseGamesPane, MainMenuPane, SettingsPane, KioskModePane;
@@ -26,10 +29,10 @@ public class UIMain extends Application {
         //this builds the browse games screen below, this needs to be called when the browsegames button is pushed
         //can set it up here, but set the scene when the button is pushed
 
-        Pane MainMenuPane = (Pane) FXMLLoader.load(getClass().getResource("../../../../res/Views/MainMenuView.fxml"));
-        Pane BrowseGamesPane = (Pane) FXMLLoader.load(getClass().getResource("../../../../res/Views/TableView.fxml"));
-        Pane SettingsPane = (Pane) FXMLLoader.load(getClass().getResource("../../../../res/Views/SettingsView.fxml"));
-        Pane KioskModePane = (Pane) FXMLLoader.load(getClass().getResource("../../../../res/Views/KioskModeView.fxml"));
+        Pane MainMenuPane = (Pane) FXMLLoader.load(getClass().getResource("views/MainMenuView.fxml"));
+        Pane BrowseGamesPane = (Pane) FXMLLoader.load(getClass().getResource("views/BrowseGamesView.fxml"));
+        Pane SettingsPane = (Pane) FXMLLoader.load(getClass().getResource("views/SettingsView.fxml"));
+        Pane KioskModePane = (Pane) FXMLLoader.load(getClass().getResource("views/KioskModeView.fxml"));
 
         Scene myScene = new Scene(MainMenuPane);
         BrowseGamesScene = new Scene(BrowseGamesPane);
@@ -38,7 +41,7 @@ public class UIMain extends Application {
 
 
         primaryStage.setScene(myScene);
-        myScene.getStylesheets().add(UIMain.class.getResource("Css/MainMenuView.css").toExternalForm());
+        myScene.getStylesheets().add(UIMain.class.getResource("css/MainMenuView.css").toExternalForm());
         primaryStage.show();
     }
 
