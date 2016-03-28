@@ -1,5 +1,5 @@
 .root {
-      -fx-background-image: url("../../../../../res/menu.png");
+      -fx-background-image: url("../../../../../res/backgrounds/mainScreenBG.jpg");
       -fx-background-repeat: no-repeat;
       -fx-background-size: 100% 100%;
  }

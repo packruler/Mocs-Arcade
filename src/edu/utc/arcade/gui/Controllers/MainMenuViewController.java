@@ -12,18 +12,20 @@ import javafx.scene.control.Button;
 public class MainMenuViewController {
 
     @FXML
-    private Button BrowseGamesButton, KioskModeButton, SettingsButton, ExitButton;
+    private Button BrowseGamesButton, KioskModeButton, SettingsButton, ExitButton, HomeButton;
 
     public void handleSubmitButtonAction(ActionEvent event) {
+
         if (event.getSource()==BrowseGamesButton)
             UIMain.setScene(UIMain.BrowseGamesScene);
         if (event.getSource()==KioskModeButton)
             UIMain.setScene(UIMain.KioskModeScene);
-        if (event.getSource()==SettingsButton)
-            UIMain.setScene(UIMain.SettingsScene);
+
+
+//        if (event.getSource()==SettingsButton)
+//            UIMain.setScene(UIMain.SettingsScene);
         if (event.getSource()==ExitButton)
             Platform.exit();
-
     }
 
 }
