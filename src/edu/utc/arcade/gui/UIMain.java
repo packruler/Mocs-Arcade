@@ -1,13 +1,13 @@
 package edu.utc.arcade.gui;
 
+import edu.utc.arcade.game.GameLibrary;
+import edu.utc.arcade.logging.Log;
 import javafx.application.Application;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.stage.Window;
-
-import javax.management.monitor.Monitor;
 
 /**
  * Created by Chris Sims on 3/23/16.
@@ -27,7 +27,6 @@ public class UIMain extends Application {
         //BrowseGamesScene=new Scene(BrowseGamesPane, 800, 600);
 
 
-
         primaryStage.setTitle("Mocs Arcade Cabinet");
         //this builds the browse games screen below, this needs to be called when the browsegames button is pushed
         //can set it up here, but set the scene when the button is pushed
@@ -36,6 +35,10 @@ public class UIMain extends Application {
 
         Pane MainMenuPane = (Pane) FXMLLoader.load(getClass().getResource("views/MainMenuView.fxml"));
         Pane BrowseGamesPane = (Pane) FXMLLoader.load(getClass().getResource("views/BrowseGamesView.fxml"));
+        ObservableList list = ((javafx.scene.control.TableView) BrowseGamesPane.getChildren().get(2)).getItems();
+        Log.i("Size: " + list.size());
+        list.remove(0, list.size());
+        list.addAll(GameLibrary.getInstance().getLibraryList());
         //Pane SettingsPane = (Pane) FXMLLoader.load(getClass().getResource("views/SettingsView.fxml"));
         Pane KioskModePane = (Pane) FXMLLoader.load(getClass().getResource("views/KioskModeView.fxml"));
 

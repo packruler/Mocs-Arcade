@@ -2,13 +2,15 @@ package edu.utc.arcade.game;
 
 import com.google.gson.Gson;
 import edu.utc.arcade.logging.Log;
-import edu.utc.arcade.settings.Settings;
 
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by Ethan Leisinger on 1/5/2016.
@@ -81,15 +83,15 @@ public class GameLibrary {
     }
 
     public List<Game> getLibraryList() {
-        if (!Settings.getInstance().isKioskMode())
+//        if (!Settings.getInstance().isKioskMode())
             return library.getList();
 
-        List<Game> list = new LinkedList<>();
-        for (Game game : library.getList()) {
-            if (game.isLocal())
-                list.add(game);
-        }
-        return list;
+//        List<Game> list = new LinkedList<>();
+//        for (Game game : library.getList()) {
+//            if (game.isLocal())
+//                list.add(game);
+//        }
+//        return list;
     }
 
     public Game getGame(String title, String developer) {
