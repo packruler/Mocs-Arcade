@@ -25,11 +25,9 @@
               <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
               <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4">
                  <children>
-                     <Button onAction="#handleSubmitButtonAction" text="Sign In" />
+                     <Button fx:id="submit" onAction="#handleSubmitButtonAction" text="Sign In" />
                  </children>
               </HBox>
-      
-              <Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="6" />
           </children>
          <columnConstraints>
             <ColumnConstraints />
