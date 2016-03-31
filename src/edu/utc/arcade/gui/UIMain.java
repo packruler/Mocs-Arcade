@@ -1,6 +1,7 @@
 package edu.utc.arcade.gui;
 
 import edu.utc.arcade.game.GameLibrary;
+import edu.utc.arcade.settings.Settings;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -51,8 +52,10 @@ public class UIMain extends Application {
         primaryStage.setHeight(1000);
         primaryStage.setWidth(1000);
 
-        primaryStage.setScene(mainMenuScene);
-        //primaryStage.setFullScreen(true);
+        if (Settings.isKioskMode())
+            setScene(browseGamesScene);
+        else
+            setScene(mainMenuScene);
 
         primaryStage.show();
     }
