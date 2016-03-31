@@ -34,12 +34,12 @@ public class UIMain extends Application {
 
         //TODO: add back button to screens
 
-        Pane mainMenuPane = (Pane) FXMLLoader.load(getClass().getResource("views/MainMenuView.fxml"));
-        Pane browseGamesPane = (Pane) FXMLLoader.load(getClass().getResource("views/BrowseGamesView.fxml"));
+        Pane mainMenuPane = FXMLLoader.load(getClass().getResource("views/MainMenuView.fxml"));
+        Pane browseGamesPane = FXMLLoader.load(getClass().getResource("views/BrowseGamesView.fxml"));
         GAME_DISPLAY_LIST = ((javafx.scene.control.TableView) browseGamesPane.getChildren().get(2)).getItems();
         updateGameDisplayList();
         //Pane SettingsPane = (Pane) FXMLLoader.load(getClass().getResource("views/SettingsView.fxml"));
-        Pane kioskModePane = (Pane) FXMLLoader.load(getClass().getResource("views/KioskModeView.fxml"));
+        Pane kioskModePane = FXMLLoader.load(getClass().getResource("views/KioskModeView.fxml"));
 
         mainMenuScene = new Scene(mainMenuPane);
         mainMenuScene.getStylesheets().add(UIMain.class.getResource("css/MainMenuView.css").toExternalForm());
