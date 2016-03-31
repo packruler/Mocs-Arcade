@@ -49,21 +49,24 @@ public class UIMain extends Application {
         primaryStage.setHeight(1000);
         primaryStage.setWidth(1000);
 
-        if (Settings.isKioskMode())
-            showBrowseGamesScene();
-        else
-            showMainMenu();
-
         primaryStage.show();
         Log.i("Startup time took: " + (System.currentTimeMillis() - startTime) + " ms");
 
         //Preload the unnecessary  scenes after the stage is loaded
         startTime = System.currentTimeMillis();
+
+        if (Settings.isKioskMode())
+            showBrowseGamesScene();
+        else
+            showMainMenu();
+
         if (Settings.isKioskMode())
             MainMenu.getInstance();
         else
             BrowseGames.getScene();
+
         KioskMode.getScene();
+
         Log.i("Preload time took: " + (System.currentTimeMillis() - startTime) + " ms");
     }
 

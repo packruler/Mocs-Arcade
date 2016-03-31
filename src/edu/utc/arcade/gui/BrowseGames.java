@@ -38,7 +38,10 @@ public class BrowseGames {
             Pane pane = FXMLLoader.load(getClass().getResource("views/BrowseGamesView.fxml"));
             scene = new Scene(pane);
             scene.getStylesheets().add(UIMain.class.getResource("css/BrowseGamesView.css").toExternalForm());
+
             list = ((javafx.scene.control.TableView) pane.getChildren().get(2)).getItems();
+            list.remove(0, list.size());
+            list.addAll(GameLibrary.getLibrary());
         } catch (IOException e) {
 //            Log.e(e.getMessage());
             e.printStackTrace();
