@@ -16,15 +16,15 @@ public class MainMenuViewController {
 
     public void handleSubmitButtonAction(ActionEvent event) {
 
-        if (event.getSource()==BrowseGamesButton)
-            UIMain.setScene(UIMain.browseGamesScene);
-        if (event.getSource()==KioskModeButton)
-            UIMain.setScene(UIMain.kioskModeScene);
+        if (event.getSource() == BrowseGamesButton)
+            UIMain.showBrowseGamesScene();
+        if (event.getSource() == KioskModeButton)
+            UIMain.showKioskPasswordScene();
 
 
 //        if (event.getSource()==SettingsButton)
 //            UIMain.setScene(UIMain.SettingsScene);
-        if (event.getSource()==ExitButton)
+        if (event.getSource() == ExitButton)
             Platform.exit();
     }
 

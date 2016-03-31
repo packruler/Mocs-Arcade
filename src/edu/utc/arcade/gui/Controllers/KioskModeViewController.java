@@ -8,6 +8,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 
+import static edu.utc.arcade.settings.Settings.isKioskMode;
+
 /**
  * Created by Chris Sims on 3/23/16.
  */
@@ -29,15 +31,18 @@ public class KioskModeViewController {
 
     private void homeClick() {
         passwordField.setText("");
-        UIMain.setScene(UIMain.mainMenuScene);
+        if (Settings.isKioskMode())
+            UIMain.showBrowseGamesScene();
+        else
+            UIMain.showMainMenu();
     }
 
     private void submit() {
         Settings settings = Settings.getInstance();
-        if (!settings.isKioskMode()) {
+        if (!isKioskMode()) {
             if (settings.enterKioskMode(passwordField.getText())) {
                 UIMain.updateGameDisplayList();
-                UIMain.setScene(UIMain.browseGamesScene);
+                UIMain.showBrowseGamesScene();
             } else {
                 Log.e("Did not enter kiosk mode");
             }
@@ -45,7 +50,7 @@ public class KioskModeViewController {
         } else {
             if (settings.exitKioskMode(passwordField.getText())) {
                 UIMain.updateGameDisplayList();
-                UIMain.setScene(UIMain.mainMenuScene);
+                UIMain.showMainMenu();
             } else {
                 Log.e("Incorrect password");
             }

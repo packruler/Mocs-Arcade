@@ -10,7 +10,7 @@
 <Pane prefHeight="443.0" prefWidth="718.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="edu.utc.arcade.gui.Controllers.KioskModeViewController">
     <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0">
         <children>
-            <Button fx:id="HomeButton" mnemonicParsing="false" onAction="#handleSubmitButtonAction" text="Home" />
+            <Button fx:id="HomeButton" mnemonicParsing="false" onAction="#handleSubmitButtonAction" text="Back" />
         </children>
     </HBox>
     <children>

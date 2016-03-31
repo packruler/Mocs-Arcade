@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 public class UIMain extends Application {
 
     public static Pane BrowseGamesPane, MainMenuPane, SettingsPane, KioskModePane;
-    public static Scene mainMenuScene, browseGamesScene, kioskModeScene, SettingsScene;
+    private static Scene mainMenuScene, browseGamesScene, kioskModeScene;
     private static ObservableList GAME_DISPLAY_LIST;
     private static Stage PRIMARY;
 
@@ -66,6 +66,18 @@ public class UIMain extends Application {
 
         PRIMARY.setScene(newScene);
         //PRIMARY.setFullScreen(true);
+    }
+
+    public static void showBrowseGamesScene() {
+        setScene(browseGamesScene);
+    }
+
+    public static void showMainMenu() {
+        setScene(mainMenuScene);
+    }
+
+    public static void showKioskPasswordScene() {
+        setScene(kioskModeScene);
     }
 
     public static void main(String[] args) {

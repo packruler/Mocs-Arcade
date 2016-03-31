@@ -2,6 +2,7 @@ package edu.utc.arcade.gui.Controllers;
 
 import edu.utc.arcade.gui.GameFactory;
 import edu.utc.arcade.gui.UIMain;
+import edu.utc.arcade.settings.Settings;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -45,7 +46,14 @@ public class BrowseGamesViewController {
     }
 
     public void handleSubmitButtonAction(ActionEvent event) {
-        if (event.getSource()==HomeButton)
-            UIMain.setScene(UIMain.mainMenuScene);
+        if (event.getSource() == HomeButton)
+            backClick();
+    }
+
+    private void backClick() {
+        if (Settings.isKioskMode())
+            UIMain.showKioskPasswordScene();
+        else
+            UIMain.showMainMenu();
     }
 }

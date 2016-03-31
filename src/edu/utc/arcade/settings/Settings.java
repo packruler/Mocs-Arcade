@@ -57,8 +57,8 @@ public class Settings {
         return true;
     }
 
-    public boolean isKioskMode() {
-        return inKioskMode;
+    public static boolean isKioskMode() {
+        return getInstance().inKioskMode;
     }
 
     public boolean enterKioskMode(String password) {
