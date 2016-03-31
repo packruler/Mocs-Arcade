@@ -18,7 +18,7 @@ public class Tester {
         GameLibrary library = GameLibrary.getInstance();
 
         Log.i("Is supported? " + ControllerEnvironment.getDefaultEnvironment().isSupported());
-        net.java.games.input.Controller[] controllers = ControllerEnvironment.getDefaultEnvironment().getControllers();
+//        net.java.games.input.Controller[] controllers = ControllerEnvironment.getDefaultEnvironment().getControllers();
         Settings settings = Settings.getInstance();
         assert (settings != null);
         String pass = "TEST";

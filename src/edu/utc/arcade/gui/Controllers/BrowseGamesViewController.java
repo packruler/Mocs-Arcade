@@ -46,6 +46,6 @@ public class BrowseGamesViewController {
 
     public void handleSubmitButtonAction(ActionEvent event) {
         if (event.getSource()==HomeButton)
-            UIMain.setScene(UIMain.MainMenuScene);
+            UIMain.setScene(UIMain.mainMenuScene);
     }
 }

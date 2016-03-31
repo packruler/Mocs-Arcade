@@ -17,9 +17,9 @@ public class MainMenuViewController {
     public void handleSubmitButtonAction(ActionEvent event) {
 
         if (event.getSource()==BrowseGamesButton)
-            UIMain.setScene(UIMain.BrowseGamesScene);
+            UIMain.setScene(UIMain.browseGamesScene);
         if (event.getSource()==KioskModeButton)
-            UIMain.setScene(UIMain.KioskModeScene);
+            UIMain.setScene(UIMain.kioskModeScene);
 
 
 //        if (event.getSource()==SettingsButton)

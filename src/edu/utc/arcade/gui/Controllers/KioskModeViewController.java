@@ -4,7 +4,6 @@ import edu.utc.arcade.gui.UIMain;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 
 /**
@@ -19,6 +18,6 @@ public class KioskModeViewController {
     @FXML
     public void handleSubmitButtonAction(ActionEvent event) {
         if (event.getSource()==HomeButton)
-            UIMain.setScene(UIMain.MainMenuScene);
+            UIMain.setScene(UIMain.mainMenuScene);
     }
 }
