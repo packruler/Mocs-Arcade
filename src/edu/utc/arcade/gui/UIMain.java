@@ -48,8 +48,8 @@ public class UIMain extends Application {
 
 //        Settings.getInstance();
 
-        primaryStage.setHeight(1000);
-        primaryStage.setWidth(1000);
+        primaryStage.setHeight(720);
+        primaryStage.setWidth(1280);
 
         primaryStage.show();
         Log.i("Startup time took: " + (System.currentTimeMillis() - startTime) + " ms");
