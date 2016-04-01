@@ -46,6 +46,8 @@ public class UIMain extends Application {
 //        kioskModeScene.getStylesheets().add(UIMain.class.getResource("css/KioskModeView.css").toExternalForm());
         //SettingsScene = new Scene(SettingsPane);
 
+//        Settings.getInstance();
+
         primaryStage.setHeight(1000);
         primaryStage.setWidth(1000);
 
