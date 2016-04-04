@@ -30,6 +30,10 @@ public class LaunchInfo {
         this.executablePath = executablePath;
     }
 
+    /**
+     * Get the path to the library required to run the Game properly
+     * @return
+     */
     public String getLibraryPath() {
         return libraryPath;
     }

@@ -203,6 +203,12 @@ public class Game implements Comparable {
         this.dataUpdateTime = dataUpdateTime;
     }
 
+    /**
+     * Update the game metadata information
+     *
+     * @param game
+     * @return
+     */
     public boolean updateData(Game game) {
         if (getDataUpdateTime() >= game.getDataUpdateTime())
             return false;
@@ -215,6 +221,11 @@ public class Game implements Comparable {
         return true;
     }
 
+    /**
+     * Load LaunchInfo class data from the game repo
+     *
+     * @return true if the LaunchInfo was loaded correctly
+     */
     public boolean loadLaunchInfo() {
         if (!local)
             return false;
@@ -233,10 +244,18 @@ public class Game implements Comparable {
         }
     }
 
+    /**
+     * Get the LaunchInfo related to this Game
+     * @return LaunchInfo related to this Game
+     */
     public LaunchInfo getLaunchInfo() {
         return launchInfo;
     }
 
+    /**
+     * Get the number of commits the local repo is behind
+     * @return
+     */
     public int countBehind() {
         return GameGitHandler.countBehind(this);
     }

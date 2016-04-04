@@ -58,7 +58,7 @@ public class LaunchInfoCreator {
             Log.i("Example:");
             Log.i("If Location: <REPOSITORY DIRECTORY>/game.jar");
             Log.i("Enter: \"game.jar\"");
-            launchInfo.setExecutablePath(scanner.next());
+            launchInfo.setExecutablePath(scanner.nextLine());
         }
 
         Log.i("Does your game require a library included in the repository? (y/n)");
@@ -67,27 +67,42 @@ public class LaunchInfoCreator {
             Log.i("Please enter \'n\' or \'y\'");
             answer = scanner.nextLine();
         }
-        if (answer.equals("y")) {
-            LinkedList<String> paths = new LinkedList<>();
-            Log.i("Please enter the first path of library relative to repository: (Use path for Operating System in postion 0 of supported Operating Systems)");
-            Log.i("Example:");
-            Log.i("If Location: <REPOSITORY DIRECTORY>/game.jar");
-            Log.i("Enter: \"game.jar\"");
-            paths.add(scanner.nextLine());
 
-            while (answer.equals("y")) {
-                Log.i("Please enter the path of the library relative to position " + (paths.size()));
-                paths.add(scanner.nextLine());
-                Log.i("Are there any more libraries to add?");
+        if (answer.equals("y")) {
+            Log.i("Does your game require a different library for each individual Operating System supported? (y/n)");
+            answer = scanner.nextLine();
+            while (!answer.equals("y") && !answer.equals("n")) {
+                Log.i("Please enter \'n\' or \'y\'");
                 answer = scanner.nextLine();
-                while (!answer.equals("y") && !answer.equals("n")) {
-                    Log.i("Please enter \'n\' or \'y\'");
-                    answer = scanner.nextLine();
-                }
             }
-            String[] pathArray = new String[paths.size()];
-            paths.toArray(pathArray);
-            launchInfo.setOsSpecificExecutablePath(pathArray);
+            if (answer.equals("y")) {
+                LinkedList<String> paths = new LinkedList<>();
+                Log.i("Please enter the first path of library relative to repository: (Use path for Operating System in postion 0 of supported Operating Systems)");
+                Log.i("Example:");
+                Log.i("If Location: <REPOSITORY DIRECTORY>/libs/");
+                Log.i("Enter: \"libs\"");
+                paths.add(scanner.nextLine());
+
+                while (answer.equals("y")) {
+                    Log.i("Please enter the path of the library relative to position " + (paths.size()));
+                    paths.add(scanner.nextLine());
+                    Log.i("Are there any more libraries to add?");
+                    answer = scanner.nextLine();
+                    while (!answer.equals("y") && !answer.equals("n")) {
+                        Log.i("Please enter \'n\' or \'y\'");
+                        answer = scanner.nextLine();
+                    }
+                }
+                String[] pathArray = new String[paths.size()];
+                paths.toArray(pathArray);
+                launchInfo.setOsSpecificExecutablePath(pathArray);
+            } else {
+                Log.i("Please enter the first path of library relative to repository: (Use path for Operating System in postion 0 of supported Operating Systems)");
+                Log.i("Example:");
+                Log.i("If Location: <REPOSITORY DIRECTORY>/libs/");
+                Log.i("Enter: \"libs\"");
+                launchInfo.setLibraryPath(scanner.nextLine());
+            }
         } else {
             Log.i("What is the path of library relative to repository?");
             launchInfo.setExecutablePath(scanner.next());
