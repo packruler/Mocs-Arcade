@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
+import javafx.scene.input.KeyEvent;
 
 import static edu.utc.arcade.settings.Settings.isKioskMode;
 
@@ -27,6 +28,16 @@ public class KioskModeViewController {
             homeClick();
         else if (event.getSource() == submit)
             submit();
+    }
+
+    @FXML
+    private void keyListener(KeyEvent event) {
+        switch (event.getCode()) {
+            case ENTER:
+                submit();
+                event.consume();
+                break;
+        }
     }
 
     private void homeClick() {
