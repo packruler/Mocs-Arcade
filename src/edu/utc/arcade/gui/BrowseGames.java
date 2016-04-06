@@ -39,7 +39,7 @@ public class BrowseGames {
             scene = new Scene(pane);
             scene.getStylesheets().add(UIMain.class.getResource("css/BrowseGamesView.css").toExternalForm());
 
-            list = ((javafx.scene.control.TableView) pane.getChildren().get(2)).getItems();
+            list = ((javafx.scene.control.TableView) pane.lookup("#tableView")).getItems();
             list.remove(0, list.size());
             list.addAll(GameLibrary.getLibrary());
         } catch (IOException e) {
