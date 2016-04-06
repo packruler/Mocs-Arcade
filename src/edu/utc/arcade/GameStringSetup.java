@@ -8,6 +8,8 @@ import edu.utc.arcade.game.format.Format;
 import edu.utc.arcade.logging.Log;
 
 /**
+ * This class is intended to make it easier for game developers to create properly formatted JSON Strings to be used
+ * with this library
  * Created by Ethan Leisinger on 4/6/16.
  */
 public class GameStringSetup {
