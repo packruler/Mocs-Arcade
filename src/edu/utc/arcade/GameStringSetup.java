@@ -24,7 +24,7 @@ public class GameStringSetup {
         else
             game = new Game();
 
-        //COMMENT OUT ANY LINES THAT YOU DO NOT WANT TO CHANGE
+        //Comment out any lines that you do not want to change if the data is loaded from a previous JSON String
         game.setTitle("TITLE");
         game.setDeveloper("DEVELOPER");
         game.setGitAddress("http://github.com/<DEVELOPER>/<REPOSITORY>");
