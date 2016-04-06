@@ -10,6 +10,8 @@ public class LaunchInfo {
     private String[] osSpecificExecutablePath;
     private String[] osSpecificLibraryPath;
 
+    private transient Game game;
+
     /**
      * Get the localized path of Game executable
      *
@@ -32,6 +34,7 @@ public class LaunchInfo {
 
     /**
      * Get the path to the library required to run the Game properly
+     *
      * @return
      */
     public String getLibraryPath() {
@@ -61,6 +64,7 @@ public class LaunchInfo {
     public void setFormat(String format) {
         this.format = format;
     }
+
     /**
      * Get array of Operating System specific executable path.
      * This should be arranged so that required paths are ordered according to the Operating Systems array

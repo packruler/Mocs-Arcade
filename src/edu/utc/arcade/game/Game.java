@@ -246,14 +246,40 @@ public class Game implements Comparable {
 
     /**
      * Get the LaunchInfo related to this Game
+     *
      * @return LaunchInfo related to this Game
      */
     public LaunchInfo getLaunchInfo() {
         return launchInfo;
     }
 
+    public String getLibraryPath() {
+        String path = launchInfo.getLibraryPath();
+        if (path != null)
+            return path;
+
+        String[] pathArray = launchInfo.getOsSpecificLibraryPath();
+        if (pathArray != null)
+            return pathArray[OSCheck.getProperOsArrayPosition(this)];
+
+        return null;
+    }
+
+    public String getExecutablePath() {
+        String path = launchInfo.getExecutablePath();
+        if (path != null)
+            return path;
+
+        String[] pathArray = launchInfo.getOsSpecificExecutablePath();
+        if (pathArray != null)
+            return pathArray[OSCheck.getProperOsArrayPosition(this)];
+
+        return null;
+    }
+
     /**
      * Get the number of commits the local repo is behind
+     *
      * @return
      */
     public int countBehind() {

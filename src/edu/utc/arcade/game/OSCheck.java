@@ -1,5 +1,7 @@
 package edu.utc.arcade.game;
 
+import edu.utc.arcade.logging.Log;
+
 /**
  * Created by Ethan Leisinger on 1/20/16.
  */
@@ -16,11 +18,12 @@ public class OSCheck {
      * @param game Game to check for support of current system
      * @return True if and only if Game supports current OS and Architecture
      */
-    public static boolean IS_COMPATIBLE(Game game) {
-        return GET_PROPER_OS_ARRAY_POSITION(game) != -1;
+    public static boolean isCompatible(Game game) {
+        return getProperOsArrayPosition(game) != -1;
     }
 
-    public static int GET_PROPER_OS_ARRAY_POSITION(Game game) {
+    public static int getProperOsArrayPosition(Game game) {
+        Log.i(game.toString());
         String[] osArray = game.getOperatingSystems();
         String os = System.getProperty("os.name");
 

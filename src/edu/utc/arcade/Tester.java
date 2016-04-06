@@ -34,7 +34,7 @@ public class Tester {
                 Log.i("Update: " + game.needUpdate());
                 Log.i("Updated: " + game.update());
 
-                Log.i("Is compatible? " + OSCheck.IS_COMPATIBLE(game));
+                Log.i("Is compatible? " + OSCheck.isCompatible(game));
                 Log.i("Updated? " + GameGitHandler.pull(game));
 //                try {
 //                    Process process = GameLauncher.LAUNCH(game);

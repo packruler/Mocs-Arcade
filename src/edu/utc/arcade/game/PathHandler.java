@@ -5,7 +5,7 @@ package edu.utc.arcade.game;
  */
 public class PathHandler {
     public static String GET_EXECUTABLE_PATH(Game game) {
-        int pos = OSCheck.GET_PROPER_OS_ARRAY_POSITION(game);
+        int pos = OSCheck.getProperOsArrayPosition(game);
         if (pos == -1)
             throw new RuntimeException("Game not supported by this OS");
 
@@ -17,7 +17,7 @@ public class PathHandler {
     }
 
     public static String GET_LIBRARY_PATH(Game game) {
-        int pos = OSCheck.GET_PROPER_OS_ARRAY_POSITION(game);
+        int pos = OSCheck.getProperOsArrayPosition(game);
         if (pos == -1)
             throw new RuntimeException("Game not supported by this OS");
 

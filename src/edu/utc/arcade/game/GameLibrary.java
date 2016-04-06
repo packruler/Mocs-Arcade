@@ -8,7 +8,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Ethan Leisinger on 1/5/2016.
@@ -21,6 +23,11 @@ public class GameLibrary {
     private static final File REMOTE_LIBRARY = new File("./gameLibrary.json");
     private static GameLibrary INSTANCE;
 
+    /**
+     * Retrieve an instance of GameLibrary. If there is not an instance created a new one will be created
+     *
+     * @return instance of GameLibrary
+     */
     public static GameLibrary getInstance() {
         if (INSTANCE == null)
             INSTANCE = new GameLibrary();
@@ -60,6 +67,11 @@ public class GameLibrary {
         }
     }
 
+    /**
+     * Store the current library data to ./local/library.json
+     *
+     * @throws IOException
+     */
     public void saveGson() throws IOException {
         if (!LIBRARY_DIRECTORY.exists())
             Log.i("Game Directory Created" + LIBRARY_DIRECTORY.mkdir());
@@ -72,22 +84,34 @@ public class GameLibrary {
         writer.close();
     }
 
+    /**
+     * Add a Game to the library. If a game with the same name from the same developer is already in the library check
+     * check to see if that Game data needs to be updated
+     *
+     * @param game
+     */
     public void addGame(Game game) {
         library.add(game);
     }
 
+    /**
+     * Get the current library from a static state
+     *
+     * @return List of Games in the library instance.
+     */
     public static List<Game> getLibrary() {
         return getInstance().getLibraryList();
     }
 
     public List<Game> getLibraryList() {
-        if (!Settings.getInstance().isKioskMode())
-            return library.getList();
-
         List<Game> list = new LinkedList<>();
         for (Game game : library.getList()) {
-            if (game.isLocal())
-                list.add(game);
+            if (OSCheck.isCompatible(game))
+                if (Settings.isKioskMode()) {
+                    if (game.isLocal())
+                        list.add(game);
+                } else
+                    list.add(game);
         }
         return list;
     }
