@@ -51,7 +51,7 @@ public class GameStringSetup {
         // Example: <REPO>/out/Game.jar      Enter: "out/Game.jar"
 
         //Do NOT use the next method if the path is dependant of the OS it is running on
-        launchInfo.setExecutablePath("PATH");
+//        launchInfo.setExecutablePath("PATH");
 
         //If the executable path changes based on the OS it is running on enter the relative paths in to the osArray in
         // the same order as they are in the supported OS array
@@ -65,7 +65,7 @@ public class GameStringSetup {
         // Example: <REPO>/libs     Enter: "libs"
 
         //Do NOT use the next method if the path is dependant of the OS it is running on
-        launchInfo.setLibraryPath("PATH");
+//        launchInfo.setLibraryPath("PATH");
 
         //If the library path changes based on the OS it is running on enter the relative paths in to the osArray in
         // the same order as they are in the supported OS array
