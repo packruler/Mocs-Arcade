@@ -300,6 +300,18 @@ public class Game implements Comparable {
         return updatedGit;
     }
 
+    public String getStatus() {
+        if (isLocal())
+            if (needUpdate())
+                return "Update";
+            else
+                return "Installed";
+        else if (OSCheck.isCompatible(this))
+            return "Available";
+        else
+            return "Not Available";
+    }
+
     @Override
     public String toString() {
         return title + " | " + developer;
