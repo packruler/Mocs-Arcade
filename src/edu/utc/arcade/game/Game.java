@@ -300,6 +300,14 @@ public class Game implements Comparable {
         return updatedGit;
     }
 
+    /**
+     * Get the status of a Game
+     *
+     * @return Available - if the Game can be installed on the current system
+     * Not Available - if the Game can not be installed on the current system
+     * Update - if the Game is installed but is >1 commit behind the git repo
+     * Installed if the Game is installed and up to date on the git repo
+     */
     public String getStatus() {
         if (isLocal())
             if (needUpdate())
@@ -314,7 +322,7 @@ public class Game implements Comparable {
 
     @Override
     public String toString() {
-        return title + " | " + developer;
+        return title + " by " + developer;
     }
 
     @Override
