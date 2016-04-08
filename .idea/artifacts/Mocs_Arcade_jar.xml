@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact name="Mocs-Arcade:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/jar</output-path>
+    <root id="root">
+      <element id="archive" name="Mocs-Arcade.jar">
+        <element id="module-output" name="Mocs-Arcade" />
+      </element>
+      <element id="library" level="project" name="net.java.jinput:jinput:2.0.6" />
+      <element id="library" level="project" name="org.eclipse.jgit:org.eclipse.jgit:4.2.0.201601211800-r" />
+      <element id="library" level="project" name="com.google.code.gson:gson:2.6.2" />
+    </root>
+  </artifact>
+</component>
