@@ -36,11 +36,6 @@ public class SystemGitUpdater {
             commands.add("java");
             commands.add("-jar");
             commands.add(arcade.getAbsolutePath());
-            StringBuilder stringBuilder = new StringBuilder();
-            for (String string : commands) {
-                stringBuilder.append(string);
-            }
-            Log.i(stringBuilder.toString());
             String[] commandArray = new String[commands.size()];
             ProcessBuilder builder = new ProcessBuilder(commands.toArray(commandArray));
             Log.i(builder.toString());
