@@ -106,12 +106,12 @@ public class GameLibrary {
     public List<Game> getLibraryList() {
         List<Game> list = new LinkedList<>();
         for (Game game : library.getList()) {
-            if (OSCheck.isCompatible(game))
-                if (Settings.isKioskMode()) {
-                    if (game.isLocal())
-                        list.add(game);
-                } else
+//            if (OSCheck.isCompatible(game))
+            if (Settings.isKioskMode()) {
+                if (game.isLocal())
                     list.add(game);
+            } else
+                list.add(game);
         }
         return list;
     }
