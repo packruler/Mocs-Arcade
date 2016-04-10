@@ -7,14 +7,15 @@ import edu.utc.arcade.game.Game;
  */
 public abstract class Format {
     public static final String JAR = "Jar";
-    public static final String C = "C";
-    public static final String CPP = "C++";
+    public static final String SIMPLE_RUN = "Simple Run";
 
 
     public static String[] getExecutable(Game game) {
         switch (game.getLaunchInfo().getFormat()) {
             case JAR:
                 return Jar.getExecutableString(game);
+            case SIMPLE_RUN:
+                return SimpleRun.getExecutableString(game);
         }
         return new String[0];
     }
