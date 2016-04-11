@@ -20,24 +20,26 @@ public class GameStringSetup {
         Game game = null;
         LaunchInfo launchInfo = null;
         if (oldGameJsonString != null)
-            game = gson.fromJson("OLD GAME JSON STRING", Game.class);
+            game = gson.fromJson(oldGameJsonString, Game.class);
         else
             game = new Game();
 
         //Comment out any lines that you do not want to change if the data is loaded from a previous JSON String
-        game.setTitle("TITLE");
+        game.setTitle("Example Game 3");
         game.setDeveloper("DEVELOPER");
         game.setGitAddress("http://github.com/<DEVELOPER>/<REPOSITORY>");
         game.setGitBranch("BRANCH");
-        game.setDescription("FULL DESCRIPTION");
+        game.setDescription("This is an example of how a game that is not installed will be displayed");
         game.setShortDescription("SHORT DESCRIPTION");
         game.setDataUpdateTime(System.currentTimeMillis());
 
         //Set the size of following array to number of Operating Systems supported then set the values of the Array to
         //to the Operating Systems and the architecture it is supported on
-        String[] osArray = new String[2];
+        String[] osArray = new String[4];
         osArray[0] = OSCheck.WINDOWS + "." + OSCheck.AMD64;
         osArray[1] = OSCheck.WINDOWS + "." + OSCheck.I386;
+        osArray[2] = OSCheck.LINUX + "." + OSCheck.AMD64;
+        osArray[3] = OSCheck.LINUX + "." + OSCheck.I386;
         game.setOperatingSystems(osArray);
         osArray = new String[osArray.length];
 
@@ -60,6 +62,8 @@ public class GameStringSetup {
         // If the executable path is not dependant on the OS comment the following section out
         osArray[0] = "out/Windows/AMD64";
         osArray[1] = "out/Windows/I386";
+        osArray[2] = "out/Linux/AMD64";
+        osArray[3] = "out/Linux/I386";
         launchInfo.setOsSpecificExecutablePath(osArray);
         osArray = new String[osArray.length];
 
@@ -74,6 +78,8 @@ public class GameStringSetup {
         // If the library path is not dependant on the OS comment the following section out
         osArray[0] = "libs/Windows/AMD64";
         osArray[1] = "libs/Windows/I386";
+        osArray[2] = "libs/Linux/AMD64";
+        osArray[3] = "libs/Linux/I386";
         launchInfo.setOsSpecificLibraryPath(osArray);
 
         Log.i("Game JSON String:");
