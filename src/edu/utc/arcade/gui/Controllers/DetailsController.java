@@ -9,7 +9,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-import javax.print.DocFlavor;
 import java.io.IOException;
 
 /**
@@ -37,7 +36,6 @@ public class DetailsController {
         Button source = (Button) event.getSource();
 
         Game game = DetailsScene.getInstance().getGame();
-        Log.i(source.getId() + ": " + game);
 
         switch (source.getId()) {
             case BACK:
@@ -63,12 +61,10 @@ public class DetailsController {
     }
 
     private void updateClick() {
-        Log.i("update");
         DetailsScene.getInstance().getGame().update();
     }
 
     private void playClick() {
-        Log.i("play");
         try {
             DetailsScene.getInstance().getGame().launch();
         } catch (IOException e) {

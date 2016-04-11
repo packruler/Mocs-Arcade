@@ -376,7 +376,8 @@ public class Game implements Comparable {
                 return "Update";
             else
                 return "Installed";
-        else if (OSCheck.isCompatible(this))
+
+        if (OSCheck.isCompatible(this))
             return "Available";
         else
             return "Not Available";
