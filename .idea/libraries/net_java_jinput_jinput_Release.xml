@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="net.java.jinput:jinput:Release" type="repository">
+    <properties maven-id="net.java.jinput:jinput:RELEASE" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jinput-2.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jutils-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jinput-platform-2.0.6-natives-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jinput-platform-2.0.6-natives-windows.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jinput-platform-2.0.6-natives-osx.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
