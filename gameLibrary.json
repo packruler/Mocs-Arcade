@@ -41,9 +41,7 @@
     "gitBranch": "BRANCH",
     "operatingSystems": [
       "Windows.amd64",
-      "Windows.i386",
-      "Linux.amd64",
-      "Linux.i386"
+      "Windows.i386"
     ],
     "local": false,
     "dataUpdateTime": 1460335503782
