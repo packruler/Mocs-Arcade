@@ -4,7 +4,7 @@
     "developer": "Packruler",
     "description": "",
     "gitAddress": "https://github.com/packruler/Video-Game-Design.git",
-    "local": true,
+    "local": false,
     "executablePath": "Video Game Design.jar",
     "libraryPath": "libs",
     "format": "Jar",
@@ -17,27 +17,51 @@
     "dataUpdateTime": 0
   },
   {
-    "title": "REALLLY LONG TITLE",
-    "developer": "",
-    "description": "",
-    "shortDescription": "",
+    "title": "Example Game 1",
+    "developer": "DEVELOPER",
+    "description": "This is an example of how a game that is not installed will be displayed",
+    "shortDescription": "SHORT DESCRIPTION",
+    "gitAddress": "http://github.com/\u003cDEVELOPER\u003e/\u003cREPOSITORY\u003e",
+    "gitBranch": "BRANCH",
+    "operatingSystems": [
+      "Windows.amd64",
+      "Windows.i386",
+      "Linux.amd64",
+      "Linux.i386"
+    ],
     "local": false,
-    "dataUpdateTime": 0
+    "dataUpdateTime": 1460335452988
   },
   {
-    "title": "Test1",
-    "developer": "",
-    "description": "",
-    "shortDescription": "",
+    "title": "Example Game 2",
+    "developer": "DEVELOPER",
+    "description": "This is an example of how a game that is not installed will be displayed",
+    "shortDescription": "SHORT DESCRIPTION",
+    "gitAddress": "http://github.com/\u003cDEVELOPER\u003e/\u003cREPOSITORY\u003e",
+    "gitBranch": "BRANCH",
+    "operatingSystems": [
+      "Windows.amd64",
+      "Windows.i386",
+      "Linux.amd64",
+      "Linux.i386"
+    ],
     "local": false,
-    "dataUpdateTime": 0
+    "dataUpdateTime": 1460335503782
   },
   {
-    "title": "Test2",
-    "developer": "",
-    "description": "",
-    "shortDescription": "",
+    "title": "Example Game 3",
+    "developer": "DEVELOPER",
+    "description": "This is an example of how a game that is not installed will be displayed",
+    "shortDescription": "SHORT DESCRIPTION",
+    "gitAddress": "http://github.com/\u003cDEVELOPER\u003e/\u003cREPOSITORY\u003e",
+    "gitBranch": "BRANCH",
+    "operatingSystems": [
+      "Windows.amd64",
+      "Windows.i386",
+      "Linux.amd64",
+      "Linux.i386"
+    ],
     "local": false,
-    "dataUpdateTime": 0
+    "dataUpdateTime": 1460335530933
   }
 ]
