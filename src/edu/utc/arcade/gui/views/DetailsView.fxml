@@ -17,8 +17,8 @@
         </HBox>
         <Button fx:id="play" layoutX="129.0" layoutY="327.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="69.0"
                 text="Play" onAction="#handleSubmitButtonAction"/>
-        <Button fx:id="update" layoutX="268.0" layoutY="327.0" mnemonicParsing="false" text="Update" prefHeight="31.0"
-                prefWidth="69.0" onAction="#handleSubmitButtonAction"/>
+        <Button fx:id="update" layoutX="264.0" layoutY="327.0" mnemonicParsing="false" text="Update" prefHeight="31.0"
+                prefWidth="78.0" onAction="#handleSubmitButtonAction"/>
         <Button fx:id="install" layoutX="391.0" layoutY="327.0" mnemonicParsing="false" prefHeight="31.0"
                 prefWidth="89.0" text="Uninstall" onAction="#handleSubmitButtonAction"/>
         <Label layoutX="77.0" layoutY="42.0" prefHeight="21.0" prefWidth="46.0" text="Title: "/>

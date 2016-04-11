@@ -47,6 +47,7 @@ public class GameGitHandler {
             Log.i("Cloned");
             //Set Game 'local' value to true indicating that the game is available locally
             game.setLocal(true);
+            result.close();
             return true;
         } catch (GitAPIException e) {
             e.printStackTrace();
@@ -70,6 +71,7 @@ public class GameGitHandler {
 
         try {
             Git git = Git.open(directory);
+            git.close();
             return git.pull().call().isSuccessful();
         } catch (Exception e) {
             e.printStackTrace();
@@ -95,6 +97,7 @@ public class GameGitHandler {
             Git git = Git.open(directory);
             git.fetch().call();
             BranchTrackingStatus status = BranchTrackingStatus.of(git.getRepository(), git.getRepository().getBranch());
+            git.close();
             return status.getBehindCount();
         } catch (Exception e) {
             e.printStackTrace();

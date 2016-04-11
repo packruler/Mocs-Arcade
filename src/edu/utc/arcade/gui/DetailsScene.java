@@ -47,7 +47,13 @@ public class DetailsScene {
             installButton.setText("Install");
         } else {
             playButton.setDisable(false);
-            updateButton.setDisable(false);
+            if (!game.needUpdate()) {
+                updateButton.setDisable(true);
+                updateButton.setText("Up To Date");
+            } else {
+                updateButton.setDisable(false);
+                updateButton.setText("Update");
+            }
             installButton.setText("Uninstall");
         }
     }

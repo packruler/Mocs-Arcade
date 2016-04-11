@@ -5,9 +5,10 @@
       <element id="archive" name="Mocs-Arcade.jar">
         <element id="module-output" name="Mocs-Arcade" />
       </element>
-      <element id="library" level="project" name="net.java.jinput:jinput:Release" />
-      <element id="library" level="project" name="org.eclipse.jgit:org.eclipse.jgit:Release" />
+      <element id="library" level="project" name="org.apache.directory.studio:org.apache.commons.io:2.4" />
       <element id="library" level="project" name="com.google.code.gson:gson:Release" />
+      <element id="library" level="project" name="org.eclipse.jgit:org.eclipse.jgit:Release" />
+      <element id="library" level="project" name="net.java.jinput:jinput:Release" />
     </root>
   </artifact>
 </component>

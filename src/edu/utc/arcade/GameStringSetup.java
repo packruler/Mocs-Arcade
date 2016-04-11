@@ -25,9 +25,10 @@ public class GameStringSetup {
             game = new Game();
 
         //Comment out any lines that you do not want to change if the data is loaded from a previous JSON String
-        game.setTitle("Example Game 3");
-        game.setDeveloper("DEVELOPER");
-        game.setGitAddress("http://github.com/<DEVELOPER>/<REPOSITORY>");
+
+        game.setTitle("Hockey");
+        game.setDeveloper("Packruler");
+        game.setGitAddress("http://github.com/packruler/");
         game.setGitBranch("BRANCH");
         game.setDescription("This is an example of how a game that is not installed will be displayed");
         game.setShortDescription("SHORT DESCRIPTION");
