@@ -1,13 +1,11 @@
 package edu.utc.arcade.gui;
 
 import edu.utc.arcade.game.Game;
-import javafx.fxml.FXML;
+import edu.utc.arcade.settings.Settings;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
@@ -51,9 +49,10 @@ public class DetailsScene {
                 updateButton.setDisable(true);
                 updateButton.setText("Up To Date");
             } else {
-                updateButton.setDisable(false);
+                updateButton.setDisable(Settings.isKioskMode());
                 updateButton.setText("Update");
             }
+            installButton.setDisable(Settings.isKioskMode());
             installButton.setText("Uninstall");
         }
     }

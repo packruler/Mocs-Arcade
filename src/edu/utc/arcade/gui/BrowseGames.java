@@ -2,7 +2,6 @@ package edu.utc.arcade.gui;
 
 import edu.utc.arcade.game.Game;
 import edu.utc.arcade.game.GameLibrary;
-import edu.utc.arcade.logging.Log;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -61,7 +60,6 @@ public class BrowseGames {
             return row ;
         });
         } catch (IOException e) {
-//            Log.e(e.getMessage());
             e.printStackTrace();
         }
     }
