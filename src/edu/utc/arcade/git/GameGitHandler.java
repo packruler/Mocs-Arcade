@@ -30,6 +30,7 @@ public class GameGitHandler {
      * @return True if cloned successfully
      */
     public static boolean clone(Game game) {
+        Log.i("Clone: " + game);
         File directory = new File(GameLibrary.LIBRARY_DIRECTORY.getPath()
                 + "/" + game.getDeveloper()
                 + "/" + game.getTitle());

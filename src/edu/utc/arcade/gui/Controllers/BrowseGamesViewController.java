@@ -30,20 +30,20 @@ public class BrowseGamesViewController {
     @FXML
     private Button HomeButton;
 
-    @FXML
-    protected void addGame(ActionEvent event) {
-        ObservableList<GameFactory> data = tableView.getItems();
-        data.add(new GameFactory(titleField.getText(),
-                developerField.getText(),
-                descriptionField.getText(),
-                shortDescriptionField.getText()
-        ));
-
-        titleField.setText("");
-        developerField.setText("");
-        descriptionField.setText("");
-        shortDescriptionField.setText("");
-    }
+//    @FXML
+//    protected void addGame(ActionEvent event) {
+//        ObservableList<GameFactory> data = tableView.getItems();
+//        data.add(new GameFactory(titleField.getText(),
+//                developerField.getText(),
+//                descriptionField.getText(),
+//                shortDescriptionField.getText()
+//        ));
+//
+//        titleField.setText("");
+//        developerField.setText("");
+//        descriptionField.setText("");
+//        shortDescriptionField.setText("");
+//    }
 
     public void handleSubmitButtonAction(ActionEvent event) {
         if (event.getSource() == HomeButton)

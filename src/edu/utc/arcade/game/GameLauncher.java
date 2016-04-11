@@ -17,7 +17,7 @@ public class GameLauncher {
      * @param game The game that should be launched
      * @return The length of time the game ran.
      */
-    public static Process LAUNCH(Game game) throws IOException {
+    public static Process launch(Game game) throws IOException {
         //Use Format class to get a command String array to pass to Runtime.exec()
         String[] cmdArray = Format.getExecutable(game);
 

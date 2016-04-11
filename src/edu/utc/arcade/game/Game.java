@@ -3,6 +3,7 @@ package edu.utc.arcade.game;
 import com.google.gson.Gson;
 import edu.utc.arcade.git.GameGitHandler;
 import edu.utc.arcade.logging.Log;
+import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.FileReader;
@@ -25,7 +26,6 @@ public class Game implements Comparable {
 
     private LaunchInfo launchInfo;
 
-    //TODO: Move all info except how to get the game to another class that can be loaded based on file stored in repo
     public Game() {
     }
 
@@ -73,7 +73,9 @@ public class Game implements Comparable {
      * @return Description of the Game
      */
     public String getDescription() {
-        return description;
+        if (description != null && description.length() > 0)
+            return description;
+        return shortDescription;
     }
 
     /**
@@ -92,7 +94,9 @@ public class Game implements Comparable {
      * @return Short description of the game
      */
     public String getShortDescription() {
-        return shortDescription;
+        if (shortDescription != null && shortDescription.length() > 0)
+            return shortDescription;
+        return description;
     }
 
     /**
@@ -236,6 +240,7 @@ public class Game implements Comparable {
         try {
             FileReader reader = new FileReader(infoLocation);
             launchInfo = new Gson().fromJson(reader, LaunchInfo.class);
+            reader.close();
             return true;
         } catch (IOException e) {
             e.printStackTrace();
@@ -250,6 +255,7 @@ public class Game implements Comparable {
      * @return LaunchInfo related to this Game
      */
     public LaunchInfo getLaunchInfo() {
+        Log.i(launchInfo == null ? "null" : "good");
         return launchInfo;
     }
 
@@ -290,6 +296,11 @@ public class Game implements Comparable {
         return countBehind() > 0;
     }
 
+    /**
+     * Use git pull on Game repo
+     *
+     * @return If the git pull ran successfully
+     */
     public boolean update() {
         if (!needUpdate())
             return false;
@@ -298,6 +309,57 @@ public class Game implements Comparable {
         Log.i("Updated Git? " + updatedGit);
         loadLaunchInfo();
         return updatedGit;
+    }
+
+    /**
+     * Install the game using {@link GameGitHandler#clone(Game)}
+     *
+     * @return true if success
+     */
+    public boolean install() {
+        Log.i("Install: " + toString());
+        if (!GameGitHandler.clone(this))
+            return false;
+        try {
+            setLocal(true);
+            loadLaunchInfo();
+            GameLibrary.getInstance().saveGson();
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    /**
+     * Launch the Game using {@link GameLauncher#launch(Game)}
+     *
+     * @return The result of {@link GameLauncher#launch(Game)}
+     * @throws IOException
+     */
+    public Process launch() throws IOException {
+        return GameLauncher.launch(this);
+    }
+
+    /**
+     * Delete the Game directory
+     *
+     * @return Result of {@link File#delete()}
+     */
+    public boolean uninstall() {
+        File gameDir = new File("local/" + getDeveloper() + "/" + getTitle());
+
+        try {
+            launchInfo = null;
+            FileUtils.deleteDirectory(gameDir);
+
+            setLocal(false);
+            GameLibrary.getInstance().saveGson();
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     /**

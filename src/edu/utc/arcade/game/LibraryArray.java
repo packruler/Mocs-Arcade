@@ -20,14 +20,12 @@ public class LibraryArray {
      */
     public boolean add(Game newGame) {
         int pos = libraryList.indexOf(newGame);
-        boolean updated = (pos != -1);
+        if (pos != -1)
+            return libraryList.get(pos).updateData(newGame);
 
-        if (updated)
-            updated = libraryList.get(pos).updateData(newGame);
-        else
-            libraryList.add(newGame);
-
-        return updated;
+        newGame.loadLaunchInfo();
+        libraryList.add(newGame);
+        return false;
     }
 
     /**
@@ -55,6 +53,7 @@ public class LibraryArray {
 
     /**
      * Get a list of Games in library
+     *
      * @param localOnly If true only Games that are installed locally will be included in the List
      * @return List of Games in library
      */

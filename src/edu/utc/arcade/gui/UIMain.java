@@ -52,7 +52,7 @@ public class UIMain extends Application {
 
     public static void setScene(Scene newScene) {
         PRIMARY.setScene(newScene);
-        PRIMARY.setFullScreen(true);
+//        PRIMARY.setFullScreen(true);
     }
 
     public static void showBrowseGamesScene() {

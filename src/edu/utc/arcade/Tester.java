@@ -31,7 +31,7 @@ public class Tester {
 //                Log.i("Is compatible? " + OSCheck.isCompatible(game));
 //                Log.i("Updated? " + GameGitHandler.pull(game));
 //                try {
-//                    Process process = GameLauncher.LAUNCH(game);
+//                    Process process = GameLauncher.launch(game);
 //                    process.waitFor();
 //                } catch (IOException | InterruptedException e) {
 //                    e.printStackTrace();

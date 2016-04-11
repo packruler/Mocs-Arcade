@@ -4,7 +4,7 @@
     "developer": "Packruler",
     "description": "",
     "gitAddress": "https://github.com/packruler/Video-Game-Design.git",
-    "local": true,
+    "local": false,
     "executablePath": "Video Game Design.jar",
     "libraryPath": "libs",
     "format": "Jar",
