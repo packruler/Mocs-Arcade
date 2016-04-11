@@ -3,8 +3,6 @@
       -fx-background-repeat: no-repeat;
       -fx-background-size: 100% 100%;
  }
- #tableView{
-      -fx-position: absolute;
-       -fx-left: 100px;
-       -fx-top: 150px;
- }
+ .table-view{
+       -fx-alignment: center;
+       }

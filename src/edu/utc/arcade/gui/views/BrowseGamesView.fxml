@@ -23,10 +23,10 @@ TODO: center the table on the screen when the screen is resized
             <Button fx:id="HomeButton" mnemonicParsing="false" onAction="#handleSubmitButtonAction" text="Home" />
          </children>
       </HBox>
-       <Label layoutX="341.0" layoutY="57.0" style="-fx-font: NORMAL 20 Tahoma;" text="Browse Games" textFill="#f8f8f8" underline="true" />
-      <TableView fx:id="tableView" layoutX="224" layoutY="107.0" prefHeight="390.0" prefWidth="365.0">
+       <Label layoutX="540.0" layoutY="158.0" style="-fx-font: NORMAL 20 Tahoma;" text="Browse Games" textFill="#f8f8f8" underline="true" />
+      <TableView fx:id="tableView" layoutX="330.0" layoutY="200.0" prefHeight="309.0" prefWidth="551.0">
         <columns>
-          <TableColumn fx:id="titleColumn" prefWidth="120.0" text="Title">
+          <TableColumn fx:id="titleColumn" editable="false" prefWidth="120.0" text="Title">
               <cellFactory>
                   <FormattedTableCellFactory alignment="CENTER" />
               </cellFactory>
@@ -42,6 +42,14 @@ TODO: center the table on the screen when the screen is resized
             <TableColumn prefWidth="136.0" text="Description">
                 <cellValueFactory>
                     <PropertyValueFactory property="shortDescription" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="status" editable="false" prefWidth="120.0" text="Status">
+                <cellFactory>
+                    <FormattedTableCellFactory alignment="CENTER" />
+                </cellFactory>
+                <cellValueFactory>
+                    <PropertyValueFactory property="status" />
                 </cellValueFactory>
             </TableColumn>
         </columns>
