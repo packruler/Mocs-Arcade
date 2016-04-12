@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_Release.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_Release.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/net_java_jinput_jinput_Release.xml" afterPath="$PROJECT_DIR$/.idea/libraries/net_java_jinput_jinput_Release.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_eclipse_jgit_org_eclipse_jgit_Release.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_eclipse_jgit_org_eclipse_jgit_Release.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gameLibrary.json" afterPath="$PROJECT_DIR$/gameLibrary.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/game/Game.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/game/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/BrowseGames.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/BrowseGames.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/DetailsScene.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/DetailsScene.java" />
     </list>
     <ignored path="Mocs-Arcade.iws" />
@@ -54,8 +47,8 @@
       <file leaf-file-name="DetailsScene.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/DetailsScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+            <state relative-caret-position="434">
+              <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -967,7 +960,7 @@
       <updated>1460334857979</updated>
       <workItem from="1460334860301" duration="9977000" />
       <workItem from="1460379246222" duration="3058000" />
-      <workItem from="1460489619102" duration="2277000" />
+      <workItem from="1460489619102" duration="2354000" />
     </task>
     <task id="LOCAL-00001" summary="Update game library for display">
       <created>1460335602598</created>
@@ -1004,11 +997,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460379707055</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Games that are not compatible are now shown but cannot be installed">
+      <created>1460491938167</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1460491938167</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15312000" />
+    <option name="totallyTimeSpent" value="15389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1077,7 +1077,8 @@
     <MESSAGE value="Update background" />
     <MESSAGE value="Install, Uninstall, Play working" />
     <MESSAGE value="Disable uninstall/update in kiosk mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Disable uninstall/update in kiosk mode" />
+    <MESSAGE value="Games that are not compatible are now shown but cannot be installed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Games that are not compatible are now shown but cannot be installed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1691,8 +1692,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/DetailsScene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+        <state relative-caret-position="434">
+          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

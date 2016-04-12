@@ -56,7 +56,6 @@ public class DetailsScene {
                 updateButton.setDisable(Settings.isKioskMode());
                 updateButton.setText("Update");
             }
-//            installButton.setDisable(!OSCheck.isCompatible(game) || Settings.isKioskMode());
             installButton.setText("Uninstall");
         }
     }
