@@ -56,6 +56,7 @@ public class DetailsScene {
                 updateButton.setDisable(Settings.isKioskMode());
                 updateButton.setText("Update");
             }
+            installButton.setDisable(Settings.isKioskMode());
             installButton.setText("Uninstall");
         }
     }
