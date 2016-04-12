@@ -8,6 +8,7 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 
 /**
  * Created by Ethan Leisinger on 1/5/2016.
@@ -222,6 +223,7 @@ public class Game implements Comparable {
         setGitAddress(game.getGitAddress());
         setGitBranch(game.getGitBranch());
         setDataUpdateTime(game.getDataUpdateTime());
+        setOperatingSystems(game.getOperatingSystems());
         return true;
     }
 
@@ -376,7 +378,6 @@ public class Game implements Comparable {
                 return "Update";
             else
                 return "Installed";
-
         if (OSCheck.isCompatible(this))
             return "Available";
         else

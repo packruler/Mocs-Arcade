@@ -41,24 +41,22 @@ public class BrowseGames {
             Pane pane = FXMLLoader.load(getClass().getResource("views/BrowseGamesView.fxml"));
             scene = new Scene(pane);
             scene.getStylesheets().add(UIMain.class.getResource("css/BrowseGamesView.css").toExternalForm());
-            TableView tableView = (TableView) pane.getChildren().get(2);
+            TableView tableView = (TableView) pane.lookup("#tableView");
             list = tableView.getItems();
             list.remove(0, list.size());
             list.addAll(GameLibrary.getLibrary());
             tableView.setRowFactory(tv -> {
                 TableRow<Game> row = new TableRow<>();
-            row.setOnMouseClicked(event -> {
-                if (event.getClickCount() == 2 && (! row.isEmpty()) ) {
-                    Game game = row.getItem();
-                    DetailsScene detailsScene=DetailsScene.getInstance();
-                    detailsScene.setGame(game);
-                    //Log.i("this is not null bitch: "+(detailsScene!=null));
-//                    System.out.println(game);
-                    UIMain.setScene(DetailsScene.getScene());
-                }
+                row.setOnMouseClicked(event -> {
+                    if (event.getClickCount() == 2 && (!row.isEmpty())) {
+                        Game game = row.getItem();
+                        DetailsScene detailsScene = DetailsScene.getInstance();
+                        detailsScene.setGame(game);
+                        UIMain.setScene(DetailsScene.getScene());
+                    }
+                });
+                return row;
             });
-            return row ;
-        });
         } catch (IOException e) {
             e.printStackTrace();
         }

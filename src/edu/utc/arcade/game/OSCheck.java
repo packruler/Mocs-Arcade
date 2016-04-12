@@ -31,6 +31,7 @@ public class OSCheck {
         if (os.contains(WINDOWS))
             os = WINDOWS;
         String arch = System.getProperty("os.arch");
+        Log.i("Current OS: " + os + " | " + arch);
 
         for (int x = 0; x < osArray.length; x++) {
             //If current supported OS in array contains the System OS name and System architecture current system is supported
