@@ -8,7 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/DetailsScene.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/DetailsScene.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java" />
     </list>
     <ignored path="Mocs-Arcade.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DetailsScene.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DetailsScene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/DetailsScene.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="451">
@@ -151,11 +151,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OSCheck.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OSCheck.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="36" column="126" selection-start-line="36" selection-start-column="126" selection-end-line="36" selection-end-column="126" />
+            <state relative-caret-position="504">
+              <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
               <folding>
                 <element signature="e#644#645#0" expanded="true" />
                 <element signature="e#703#704#0" expanded="true" />
@@ -192,13 +192,13 @@
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/KioskModeView.fxml" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/KioskModeViewController.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/BrowseGamesView.fxml" />
-        <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/BrowseGames.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/Game.java" />
         <option value="$PROJECT_DIR$/local/library.json" />
         <option value="$PROJECT_DIR$/gameLibrary.json" />
         <option value="$PROJECT_DIR$/build.properties" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/DetailsScene.java" />
+        <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java" />
       </list>
     </option>
   </component>
@@ -961,7 +961,7 @@
       <updated>1460334857979</updated>
       <workItem from="1460334860301" duration="9977000" />
       <workItem from="1460379246222" duration="3058000" />
-      <workItem from="1460489619102" duration="2807000" />
+      <workItem from="1460489619102" duration="2961000" />
     </task>
     <task id="LOCAL-00001" summary="Update game library for display">
       <created>1460335602598</created>
@@ -1012,11 +1012,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460491983680</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix uninstall in kiosk mode">
+      <created>1460492442989</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1460492442989</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15842000" />
+    <option name="totallyTimeSpent" value="15996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1086,7 +1093,8 @@
     <MESSAGE value="Install, Uninstall, Play working" />
     <MESSAGE value="Disable uninstall/update in kiosk mode" />
     <MESSAGE value="Games that are not compatible are now shown but cannot be installed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Games that are not compatible are now shown but cannot be installed" />
+    <MESSAGE value="Fix uninstall in kiosk mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix uninstall in kiosk mode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1558,17 +1566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="36" column="126" selection-start-line="36" selection-start-column="126" selection-end-line="36" selection-end-column="126" />
-          <folding>
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/BrowseGames.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
@@ -1668,6 +1665,17 @@
           <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+          <folding>
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
           </folding>
         </state>
       </provider>
