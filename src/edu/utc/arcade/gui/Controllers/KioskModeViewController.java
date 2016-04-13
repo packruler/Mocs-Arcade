@@ -21,13 +21,13 @@ public class KioskModeViewController {
     @FXML
     private PasswordField passwordField;
     @FXML
-    private Button HomeButton;
+    private Button homeButton;
     @FXML
     private Button submit;
 
     @FXML
-    public void handleSubmitButtonAction(ActionEvent event) {
-        if (event.getSource() == HomeButton)
+    public void handleButtonAction(ActionEvent event) {
+        if (event.getSource() == homeButton)
             homeClick();
         else if (event.getSource() == submit)
             submit();

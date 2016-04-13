@@ -11,38 +11,40 @@
 TODO: center the password fields on the screen when the screen is resized
 -->
 
-<Pane prefHeight="443.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utc.arcade.gui.Controllers.KioskModeViewController">
-   <children>
-       <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0">
-           <children>
-               <Button fx:id="HomeButton" mnemonicParsing="false" onAction="#handleSubmitButtonAction" text="Back" />
-           </children>
-       </HBox>
-          <GridPane prefHeight="600.0" prefWidth="1200.0" alignment="CENTER"  vgap="10">
-              <padding>
-               <Insets bottom="10" left="25" right="25" top="25" />
+<Pane prefHeight="443.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.utc.arcade.gui.Controllers.KioskModeViewController">
+    <children>
+        <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <Button fx:id="homeButton" onAction="#handleButtonAction" text="Back"/>
+            </children>
+        </HBox>
+        <GridPane prefHeight="600.0" prefWidth="1200.0" alignment="CENTER" vgap="10">
+            <padding>
+                <Insets bottom="10" left="25" right="25" top="25"/>
             </padding>
-             <children>
-                 <Label style="-fx-font: NORMAL 20 Tahoma;" text="Welcome" textFill="#f8f8f8" underline="true" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
-                 <Label text="Password: " textFill="white" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                 <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                 <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <children>
+                <Label style="-fx-font: NORMAL 20 Tahoma;" text="Welcome" textFill="#f8f8f8" underline="true"
+                       GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0"/>
+                <Label text="Password: " textFill="white" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4">
                     <children>
-                        <Button fx:id="submit" onAction="#handleSubmitButtonAction" text="Sign In" />
+                        <Button fx:id="submit" onAction="#handleButtonAction" text="Sign In"/>
                     </children>
-                 </HBox>
-             </children>
-         <columnConstraints>
-            <ColumnConstraints />
-            <ColumnConstraints />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-         </rowConstraints>
-          </GridPane>
-   </children>
+                </HBox>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+    </children>
 </Pane>
