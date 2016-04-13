@@ -4,10 +4,11 @@ import edu.utc.arcade.game.Game;
 import edu.utc.arcade.gui.DetailsScene;
 import edu.utc.arcade.gui.UIMain;
 import edu.utc.arcade.logging.Log;
-import edu.utc.arcade.settings.Settings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 import java.io.IOException;
 
@@ -53,11 +54,14 @@ public class DetailsController {
         }
     }
 
+    @FXML
+    public void onKeyPress(KeyEvent event) {
+        if (event.getCode() == KeyCode.ESCAPE)
+            backClick();
+    }
+
     private void backClick() {
-        if (Settings.isKioskMode())
-            UIMain.showKioskPasswordScene();
-        else
-            UIMain.showBrowseGamesScene();
+        UIMain.showBrowseGamesScene();
     }
 
     private void updateClick() {
