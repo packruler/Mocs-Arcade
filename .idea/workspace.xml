@@ -8,9 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/SettingsView.fxml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_Release.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_Release.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/net_java_jinput_jinput_Release.xml" afterPath="$PROJECT_DIR$/.idea/libraries/net_java_jinput_jinput_Release.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_eclipse_jgit_org_eclipse_jgit_Release.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_eclipse_jgit_org_eclipse_jgit_Release.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Mocs-Arcade.iws" />
@@ -974,7 +971,7 @@
       <workItem from="1460334860301" duration="9977000" />
       <workItem from="1460379246222" duration="3058000" />
       <workItem from="1460489619102" duration="2961000" />
-      <workItem from="1460555741112" duration="75000" />
+      <workItem from="1460555741112" duration="165000" />
     </task>
     <task id="LOCAL-00001" summary="Update game library for display">
       <created>1460335602598</created>
@@ -1032,11 +1029,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460492442989</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Remove unused SettingsView">
+      <created>1460555865322</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1460555865322</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16071000" />
+    <option name="totallyTimeSpent" value="16161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3200" height="1765" extended-state="6" />
@@ -1107,7 +1111,8 @@
     <MESSAGE value="Disable uninstall/update in kiosk mode" />
     <MESSAGE value="Games that are not compatible are now shown but cannot be installed" />
     <MESSAGE value="Fix uninstall in kiosk mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix uninstall in kiosk mode" />
+    <MESSAGE value="Remove unused SettingsView" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unused SettingsView" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
