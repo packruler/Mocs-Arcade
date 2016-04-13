@@ -2,23 +2,12 @@ package edu.utc.arcade.gui;
 
 import edu.utc.arcade.game.Game;
 import edu.utc.arcade.game.OSCheck;
-import edu.utc.arcade.logging.Log;
 import edu.utc.arcade.settings.Settings;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBoxBuilder;
-import javafx.scene.text.Text;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
-
-import java.awt.*;
-import java.util.Arrays;
 
 import java.io.IOException;
 
@@ -100,9 +89,5 @@ public class DetailsScene {
 //            Log.e(e.getMessage());
             e.printStackTrace();
         }
-    }
-
-    public void setInstallDisable(boolean disable) {
-        installButton.setDisable(disable);
     }
 }
