@@ -5,11 +5,19 @@ import edu.utc.arcade.gui.DetailsScene;
 import edu.utc.arcade.gui.UIMain;
 import edu.utc.arcade.logging.Log;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.VBoxBuilder;
+import javafx.scene.text.Text;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 
 /**
@@ -34,25 +42,57 @@ public class DetailsController {
         if (!(event.getSource() instanceof Button))
             return;
 
-        Button source = (Button) event.getSource();
+        final Stage myDialog = new Stage();
+        myDialog.initModality(Modality.WINDOW_MODAL);
 
-        Game game = DetailsScene.getInstance().getGame();
+            Button yesButton = new Button("Yes");
+            Button noButton = new Button("No");
 
-        switch (source.getId()) {
-            case BACK:
-                backClick();
-                break;
-            case PLAY:
-                playClick();
-                break;
-            case UPDATE:
-                updateClick();
-                break;
-            case INSTALL:
-                installClick();
-                break;
-        }
+            yesButton.setOnAction(new EventHandler<ActionEvent>() {
+
+                @Override
+                public void handle(ActionEvent arg0) {
+                    myDialog.close();
+                }
+
+            });
+
+            noButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {myDialog.close();}
+            });
+
+            Scene myDialogScene = new Scene(VBoxBuilder.create()
+                    .children(new Text("WAIT! Are you sure you want to do this?."), yesButton, noButton)
+                    .alignment(Pos.CENTER)
+                    .build());
+
+            myDialog.setScene(myDialogScene);
+            myDialog.show();
+
+
+    Button source = (Button) event.getSource();
+
+    Game game = DetailsScene.getInstance().getGame();
+
+    switch(source.getId())
+
+    {
+        case BACK:
+            backClick();
+            break;
+        case PLAY:
+            playClick();
+            break;
+        case UPDATE:
+            updateClick();
+            break;
+        case INSTALL:
+            installClick();
+            break;
     }
+
+}
 
     @FXML
     public void onKeyPress(KeyEvent event) {
@@ -75,6 +115,7 @@ public class DetailsController {
             e.printStackTrace();
         }
     }
+
 
     private void installClick() {
         DetailsScene scene = DetailsScene.getInstance();
