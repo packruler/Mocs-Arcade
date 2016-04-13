@@ -16,49 +16,51 @@
 TODO: center the table on the screen when the screen is resized
 -->
 
-<Pane prefHeight="600" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utc.arcade.gui.Controllers.BrowseGamesViewController">
-   <children>
-      <HBox layoutX="14.0" layoutY="20.0" prefHeight="100.0" prefWidth="200.0">
-         <children>
-            <Button fx:id="HomeButton" mnemonicParsing="false" onAction="#handleSubmitButtonAction" text="Home" />
-         </children>
-      </HBox>
-       <Label layoutX="540.0" layoutY="158.0" style="-fx-font: NORMAL 20 Tahoma;" text="Browse Games" textFill="#f8f8f8" underline="true" />
-      <TableView fx:id="tableView" layoutX="330.0" layoutY="200.0" prefHeight="309.0" prefWidth="551.0">
-        <columns>
-          <TableColumn fx:id="titleColumn" editable="false" prefWidth="120.0" text="Title">
-              <cellFactory>
-                  <FormattedTableCellFactory alignment="CENTER" />
-              </cellFactory>
-              <cellValueFactory>
-                    <PropertyValueFactory property="title" />
-              </cellValueFactory>
-          </TableColumn>
-          <TableColumn prefWidth="108.0" text="Developer">
-              <cellValueFactory>
-                    <PropertyValueFactory property="developer" />
-              </cellValueFactory>
-          </TableColumn>
-            <TableColumn prefWidth="136.0" text="Description">
-                <cellValueFactory>
-                    <PropertyValueFactory property="shortDescription" />
-                </cellValueFactory>
-            </TableColumn>
-            <TableColumn fx:id="status" editable="false" prefWidth="120.0" text="Status">
-                <cellFactory>
-                    <FormattedTableCellFactory alignment="CENTER" />
-                </cellFactory>
-                <cellValueFactory>
-                    <PropertyValueFactory property="status" />
-                </cellValueFactory>
-            </TableColumn>
-        </columns>
-          <sortOrder>
-          <fx:reference source="titleColumn" />
-          </sortOrder>
-         <columnResizePolicy>
-            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-         </columnResizePolicy>
-      </TableView>
-   </children>
+<Pane prefHeight="600" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.utc.arcade.gui.Controllers.BrowseGamesViewController">
+    <children>
+        <HBox layoutX="14.0" layoutY="20.0" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <Button fx:id="homeButton" mnemonicParsing="false" onAction="#handleButtonAction" text="Home"/>
+            </children>
+        </HBox>
+        <Label layoutX="540.0" layoutY="158.0" style="-fx-font: NORMAL 20 Tahoma;" text="Browse Games"
+               textFill="#f8f8f8" underline="true"/>
+        <TableView fx:id="tableView" layoutX="330.0" layoutY="200.0" prefHeight="309.0" prefWidth="551.0">
+            <columns>
+                <TableColumn fx:id="titleColumn" editable="false" prefWidth="120.0" text="Title">
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="CENTER"/>
+                    </cellFactory>
+                    <cellValueFactory>
+                        <PropertyValueFactory property="title"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="108.0" text="Developer">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="developer"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="136.0" text="Description">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="shortDescription"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="status" editable="false" prefWidth="120.0" text="Status">
+                    <cellFactory>
+                        <FormattedTableCellFactory alignment="CENTER"/>
+                    </cellFactory>
+                    <cellValueFactory>
+                        <PropertyValueFactory property="status"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+            <sortOrder>
+                <fx:reference source="titleColumn"/>
+            </sortOrder>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+    </children>
 </Pane>

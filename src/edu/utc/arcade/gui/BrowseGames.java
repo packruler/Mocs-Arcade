@@ -2,6 +2,7 @@ package edu.utc.arcade.gui;
 
 import edu.utc.arcade.game.Game;
 import edu.utc.arcade.game.GameLibrary;
+import edu.utc.arcade.settings.Settings;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -48,17 +49,33 @@ public class BrowseGames {
             tableView.setRowFactory(tv -> {
                 TableRow<Game> row = new TableRow<>();
                 row.setOnMouseClicked(event -> {
-                    if (event.getClickCount() == 2 && (!row.isEmpty())) {
-                        Game game = row.getItem();
-                        DetailsScene detailsScene = DetailsScene.getInstance();
-                        detailsScene.setGame(game);
-                        UIMain.setScene(DetailsScene.getScene());
-                    }
+                    if (event.getClickCount() == 2 && !row.isEmpty())
+                        loadDetails(row.getItem());
                 });
                 return row;
+            });
+            tableView.setOnKeyReleased(event -> {
+                switch (event.getCode()) {
+                    case SPACE:
+                        loadDetails((Game) tableView.getSelectionModel().getSelectedItem());
+                        break;
+                    case ESCAPE:
+                        if (Settings.isKioskMode())
+                            UIMain.showKioskPasswordScene();
+                        else
+                            UIMain.showMainMenu();
+                        break;
+                }
+
             });
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void loadDetails(Game game) {
+        DetailsScene detailsScene = DetailsScene.getInstance();
+        detailsScene.setGame(game);
+        UIMain.setScene(DetailsScene.getScene());
     }
 }

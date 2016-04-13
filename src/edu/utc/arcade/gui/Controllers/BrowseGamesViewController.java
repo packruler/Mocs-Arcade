@@ -3,7 +3,6 @@ package edu.utc.arcade.gui.Controllers;
 import edu.utc.arcade.gui.GameFactory;
 import edu.utc.arcade.gui.UIMain;
 import edu.utc.arcade.settings.Settings;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -28,25 +27,10 @@ public class BrowseGamesViewController {
     @FXML
     private TextField shortDescriptionField;
     @FXML
-    private Button HomeButton;
+    private Button homeButton;
 
-//    @FXML
-//    protected void addGame(ActionEvent event) {
-//        ObservableList<GameFactory> data = tableView.getItems();
-//        data.add(new GameFactory(titleField.getText(),
-//                developerField.getText(),
-//                descriptionField.getText(),
-//                shortDescriptionField.getText()
-//        ));
-//
-//        titleField.setText("");
-//        developerField.setText("");
-//        descriptionField.setText("");
-//        shortDescriptionField.setText("");
-//    }
-
-    public void handleSubmitButtonAction(ActionEvent event) {
-        if (event.getSource() == HomeButton)
+    public void handleButtonAction(ActionEvent event) {
+        if (event.getSource() == homeButton)
             backClick();
     }
 

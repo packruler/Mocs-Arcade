@@ -27,6 +27,7 @@ public class KioskModeViewController {
 
     @FXML
     public void handleButtonAction(ActionEvent event) {
+        Log.i(event.getSource().toString());
         if (event.getSource() == homeButton)
             homeClick();
         else if (event.getSource() == submit)
