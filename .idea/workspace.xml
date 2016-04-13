@@ -8,8 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/DetailsController.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/DetailsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/DetailsView.fxml" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/DetailsView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/BrowseGamesViewController.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/BrowseGamesViewController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/KioskModeViewController.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/KioskModeViewController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/BrowseGamesView.fxml" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/BrowseGamesView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/KioskModeView.fxml" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/KioskModeView.fxml" />
     </list>
     <ignored path="Mocs-Arcade.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,6 +34,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="KioskModeView.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/views/KioskModeView.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="14" column="103" selection-start-line="14" selection-start-column="103" selection-end-line="14" selection-end-column="103" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DetailsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/DetailsController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -42,6 +57,28 @@
                 <element signature="e#1582#1583#0" expanded="true" />
                 <element signature="e#1627#1628#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KioskModeViewController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/KioskModeViewController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrowseGamesViewController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/BrowseGamesViewController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="667">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,7 +103,7 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
+              <caret line="19" column="105" selection-start-line="19" selection-start-column="105" selection-end-line="19" selection-end-column="105" />
               <folding />
             </state>
           </provider>
@@ -100,13 +137,13 @@
         <option value="$PROJECT_DIR$/build.properties" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/DetailsScene.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java" />
-        <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/KioskModeView.fxml" />
-        <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/KioskModeViewController.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/BrowseGames.java" />
-        <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/BrowseGamesViewController.java" />
-        <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/BrowseGamesView.fxml" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/DetailsController.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/DetailsView.fxml" />
+        <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/KioskModeView.fxml" />
+        <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/KioskModeViewController.java" />
+        <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/BrowseGamesViewController.java" />
+        <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/BrowseGamesView.fxml" />
       </list>
     </option>
   </component>
@@ -869,7 +906,7 @@
       <workItem from="1460334860301" duration="9977000" />
       <workItem from="1460379246222" duration="3058000" />
       <workItem from="1460489619102" duration="2961000" />
-      <workItem from="1460555741112" duration="2994000" />
+      <workItem from="1460555741112" duration="3506000" />
     </task>
     <task id="LOCAL-00001" summary="Update game library for display">
       <created>1460335602598</created>
@@ -955,11 +992,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460563169550</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Beginning work on controller support adding support to keypress">
+      <created>1460563381336</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1460563381336</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18990000" />
+    <option name="totallyTimeSpent" value="19502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3200" height="1765" extended-state="6" />
@@ -1033,7 +1077,8 @@
     <MESSAGE value="Remove unused SettingsView" />
     <MESSAGE value="trying to fix KioskMode back button not working on click" />
     <MESSAGE value="Begging on work to support KeyStrokes to prepare for controller support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Begging on work to support KeyStrokes to prepare for controller support" />
+    <MESSAGE value="Beginning work on controller support adding support to keypress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beginning work on controller support adding support to keypress" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1507,25 +1552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/views/KioskModeView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="18" column="87" selection-start-line="18" selection-start-column="87" selection-end-line="18" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/KioskModeViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/BrowseGames.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="959">
@@ -1533,14 +1559,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/BrowseGamesViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1567,13 +1585,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/views/KioskModeView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="14" column="103" selection-start-line="14" selection-start-column="103" selection-end-line="14" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/KioskModeViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/BrowseGamesViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/views/BrowseGamesView.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
+          <caret line="19" column="105" selection-start-line="19" selection-start-column="105" selection-end-line="19" selection-end-column="105" />
           <folding />
         </state>
       </provider>

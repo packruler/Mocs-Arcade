@@ -8,6 +8,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
 
 /**
@@ -28,6 +30,12 @@ public class BrowseGamesViewController {
     private TextField shortDescriptionField;
     @FXML
     private Button homeButton;
+
+    @FXML
+    public void onKeyPress(KeyEvent event) {
+        if (event.getCode() == KeyCode.ESCAPE)
+            backClick();
+    }
 
     public void handleButtonAction(ActionEvent event) {
         if (event.getSource() == homeButton)
