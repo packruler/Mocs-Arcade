@@ -1,7 +1,9 @@
 package edu.utc.arcade.gui;
 
+import edu.utc.arcade.git.SystemGitUpdater;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
@@ -28,6 +30,12 @@ public class MainMenu {
             Pane mainMenuPane = FXMLLoader.load(getClass().getResource("views/MainMenuView.fxml"));
             scene = new Scene(mainMenuPane);
             scene.getStylesheets().add(UIMain.class.getResource("css/MainMenuView.css").toExternalForm());
+
+            if (!SystemGitUpdater.needUpdate()) {
+                Button button = (Button) scene.lookup("#updateButton");
+//                button.setDisable(true);
+                button.setText("Up to date");
+            }
         } catch (IOException e) {
 //            Log.e(e.getMessage());
             e.printStackTrace();

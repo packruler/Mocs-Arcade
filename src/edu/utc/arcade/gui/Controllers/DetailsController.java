@@ -4,7 +4,9 @@ import edu.utc.arcade.game.Game;
 import edu.utc.arcade.gui.DetailsScene;
 import edu.utc.arcade.gui.UIMain;
 import edu.utc.arcade.gui.VerifyDialog;
+import edu.utc.arcade.gui.utils.ThreadHandler;
 import edu.utc.arcade.logging.Log;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -69,7 +71,21 @@ public class DetailsController {
     }
 
     private void updateClick() {
-        DetailsScene.getInstance().getGame().update();
+        update.setText("Updating...");
+        update.setDisable(true);
+        ThreadHandler.run(new Runnable() {
+            @Override
+            public void run() {
+                final DetailsScene scene = DetailsScene.getInstance();
+                final Game game = scene.getGame();
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        scene.setGame(game);
+                    }
+                });
+            }
+        });
     }
 
     private void playClick() {
@@ -82,16 +98,33 @@ public class DetailsController {
 
 
     private void installClick() {
-        DetailsScene scene = DetailsScene.getInstance();
+        final DetailsScene scene = DetailsScene.getInstance();
         Game game = scene.getGame();
         if (game.isLocal())
             uninstall(game);
         else
-            game.install();
-        scene.setGame(game);
+            install(game);
     }
 
-    private void uninstall(Game game) {
+    private void install(final Game game) {
+        final DetailsScene scene = DetailsScene.getInstance();
+        install.setText("Installing...");
+        install.setDisable(true);
+        ThreadHandler.run(new Runnable() {
+            @Override
+            public void run() {
+                game.install();
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        scene.setGame(game);
+                    }
+                });
+            }
+        });
+    }
+
+    private void uninstall(final Game game) {
         VerifyDialog.display(new VerifyDialog.VerifyListener() {
             @Override
             public void onDismiss(boolean allowed) {
@@ -99,8 +132,21 @@ public class DetailsController {
                 if (!allowed)
                     return;
 
-                game.uninstall();
-                DetailsScene.getInstance().setGame(game);
+                final DetailsScene scene = DetailsScene.getInstance();
+                install.setText("Uninstalling...");
+                install.setDisable(true);
+                ThreadHandler.run(new Runnable() {
+                    @Override
+                    public void run() {
+                        game.uninstall();
+                        Platform.runLater(new Runnable() {
+                            @Override
+                            public void run() {
+                                scene.setGame(game);
+                            }
+                        });
+                    }
+                });
             }
         });
     }

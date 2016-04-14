@@ -1,6 +1,8 @@
 package edu.utc.arcade.gui.Controllers;
 
+import edu.utc.arcade.git.SystemGitUpdater;
 import edu.utc.arcade.gui.UIMain;
+import edu.utc.arcade.gui.utils.ThreadHandler;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,19 +14,25 @@ import javafx.scene.control.Button;
 public class MainMenuViewController {
 
     @FXML
-    private Button BrowseGamesButton, KioskModeButton, UpdateButton, ExitButton, HomeButton;
+    private Button browseGamesButton, kioskModeButton, updateButton, exitButton;
 
     public void handleSubmitButtonAction(ActionEvent event) {
 
-        if (event.getSource() == BrowseGamesButton)
+        if (event.getSource() == browseGamesButton)
             UIMain.showBrowseGamesScene();
-        if (event.getSource() == KioskModeButton)
+        else if (event.getSource() == kioskModeButton)
             UIMain.showKioskPasswordScene();
+        else if (event.getSource() == updateButton) {
+            updateButton.setText("Updating...");
+            updateButton.setDisable(true);
+            ThreadHandler.run(new Runnable() {
+                @Override
+                public void run() {
+                    SystemGitUpdater.update();
 
-//       update button scene code
-//        if (event.getSource()==UpdateButton)
-//            UIMain.setScene(UIMain.UpdateScene);
-        if (event.getSource() == ExitButton)
+                }
+            });
+        } else if (event.getSource() == exitButton)
             Platform.exit();
     }
 

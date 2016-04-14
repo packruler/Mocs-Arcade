@@ -8,8 +8,8 @@
 <?import javafx.scene.layout.*?>
 
 <VBox alignment="CENTER" spacing="20.0" fx:controller="edu.utc.arcade.gui.Controllers.MainMenuViewController" xmlns:fx="http://javafx.com/fxml">
-        <Button fx:id="BrowseGamesButton" onAction="#handleSubmitButtonAction" prefWidth="350.0" minWidth="200" text="Browse Games"/>
-        <Button fx:id="KioskModeButton" onAction="#handleSubmitButtonAction" prefWidth="350.0" minWidth="200" text="Kiosk Mode"/>
-        <Button fx:id="UpdateButton" onAction="#handleSubmitButtonAction" prefWidth="350.0" minWidth="200" text="Update"/>
-        <Button fx:id="ExitButton" onAction="#handleSubmitButtonAction" prefWidth="350.0" minWidth="200" text="Exit"/>
+        <Button fx:id="browseGamesButton" onAction="#handleSubmitButtonAction" prefWidth="350.0" minWidth="200" text="Browse Games"/>
+        <Button fx:id="kioskModeButton" onAction="#handleSubmitButtonAction" prefWidth="350.0" minWidth="200" text="Kiosk Mode"/>
+        <Button fx:id="updateButton" onAction="#handleSubmitButtonAction" prefWidth="350.0" minWidth="200" text="Update"/>
+        <Button fx:id="exitButton" onAction="#handleSubmitButtonAction" prefWidth="350.0" minWidth="200" text="Exit"/>
 </VBox>

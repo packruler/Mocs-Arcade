@@ -12,6 +12,10 @@ import java.util.LinkedList;
  */
 public class SystemGitUpdater {
 
+    public static boolean needUpdate() {
+        return countBehind() > 0;
+    }
+
     public static int countBehind() {
         try {
             File directory = new File("");
