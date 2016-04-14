@@ -33,7 +33,7 @@ public class MainMenu {
 
             if (!SystemGitUpdater.needUpdate()) {
                 Button button = (Button) scene.lookup("#updateButton");
-//                button.setDisable(true);
+                button.setDisable(true);
                 button.setText("Up to date");
             }
         } catch (IOException e) {

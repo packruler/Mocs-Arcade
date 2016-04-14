@@ -6,19 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="Added multi-threaded support&#10;Now loading the system is done with a ThreadPool&#10;As is updating/installing/uninstalling of games">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_6_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/net_java_jinput_jinput_2_0_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_eclipse_jgit_org_eclipse_jgit_4_3_0_201604071810_r.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_Release.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/net_java_jinput_jinput_Release.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/org_eclipse_jgit_org_eclipse_jgit_Release.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Mocs_Arcade_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Mocs_Arcade_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Simple_Logging_Facade_for_Java_1_7_21.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Simple_Logging_Facade_for_Java_1_7_21.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/org_apache_directory_studio_org_apache_commons_io_2_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_directory_studio_org_apache_commons_io_2_4.xml" />
+    <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mocs-Arcade.iml" afterPath="$PROJECT_DIR$/Mocs-Arcade.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/MainMenu.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/MainMenu.java" />
     </list>
     <ignored path="Mocs-Arcade.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gameLibrary.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gameLibrary.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gameLibrary.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="812">
@@ -91,16 +81,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="812">
-              <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#547#548#0" expanded="false" />
-                <element signature="e#589#590#0" expanded="false" />
-              </folding>
+              <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -183,10 +169,10 @@
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/VerifyDialog.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/git/SystemGitUpdater.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/utils/ThreadHandler.java" />
-        <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/MainMenuViewController.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/UIMain.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/DetailsController.java" />
+        <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/MainMenu.java" />
       </list>
     </option>
   </component>
@@ -907,7 +893,7 @@
       <workItem from="1460573535389" duration="1475000" />
       <workItem from="1460579682029" duration="5713000" />
       <workItem from="1460596219917" duration="239000" />
-      <workItem from="1460646025992" duration="1335000" />
+      <workItem from="1460646025992" duration="1388000" />
     </task>
     <task id="LOCAL-00001" summary="Update game library for display">
       <created>1460335602598</created>
@@ -1021,15 +1007,22 @@
       <option name="project" value="LOCAL" />
       <updated>1460595635235</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fixed some issues with libraries">
+      <created>1460647513464</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1460647513464</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28873000" />
+    <option name="totallyTimeSpent" value="28926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3200" height="1765" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1039,11 +1032,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16554509" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16554509" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2491951" sideWeight="0.4967742" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2491951" sideWeight="0.4967742" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24946696" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1110,7 +1103,8 @@
     <MESSAGE value="Beginning work on controller support adding support to keypress" />
     <MESSAGE value="Move verification to separate class with a listener" />
     <MESSAGE value="Added multi-threaded support&#10;Now loading the system is done with a ThreadPool&#10;As is updating/installing/uninstalling of games" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added multi-threaded support&#10;Now loading the system is done with a ThreadPool&#10;As is updating/installing/uninstalling of games" />
+    <MESSAGE value="Fixed some issues with libraries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some issues with libraries" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1431,18 +1425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#547#548#0" expanded="false" />
-            <element signature="e#589#590#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/MainMenuViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
@@ -1492,6 +1474,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="812">
           <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/gui/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
           <folding />
         </state>
       </provider>
