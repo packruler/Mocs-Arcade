@@ -1,7 +1,6 @@
 package edu.utc.arcade.gui;
 
 import edu.utc.arcade.gui.utils.ThreadHandler;
-import edu.utc.arcade.logging.Log;
 import edu.utc.arcade.settings.Settings;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -16,7 +15,6 @@ public class UIMain extends Application {
     //    Stage stage;
     @Override
     public void start(Stage primaryStage) throws Exception {
-        long startTime = System.currentTimeMillis();
         PRIMARY = primaryStage;
 
 
@@ -26,10 +24,6 @@ public class UIMain extends Application {
         primaryStage.setWidth(1280);
 
         primaryStage.show();
-        Log.i("Startup time took: " + (System.currentTimeMillis() - startTime) + " ms");
-
-        //Preload the unnecessary  scenes after the stage is loaded
-        startTime = System.currentTimeMillis();
 
         Settings.getInstance();
 
@@ -61,8 +55,6 @@ public class UIMain extends Application {
                 DetailsScene.getInstance();
             }
         });
-
-        Log.i("Preload time took: " + (System.currentTimeMillis() - startTime) + " ms");
     }
 
     public static void updateGameDisplayList() {
