@@ -1,8 +1,11 @@
 package edu.utc.arcade.git;
 
+import edu.utc.arcade.gui.MainMenu;
 import edu.utc.arcade.logging.Log;
+import javafx.scene.control.Button;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.lib.BranchTrackingStatus;
+import org.eclipse.jgit.merge.MergeStrategy;
 
 import java.io.File;
 import java.util.LinkedList;
@@ -33,8 +36,11 @@ public class SystemGitUpdater {
         try {
             File directory = new File("");
             Git git = Git.open(directory);
-            if (!git.pull().call().isSuccessful())
+            git.pull().setStrategy(MergeStrategy.THEIRS);
+            if (!git.pull().call().isSuccessful()) {
+                ((Button) MainMenu.getScene().lookup("#updateButton")).setText("ERROR");
                 return;
+            }
             File arcade = new File("Mocs-Arcade.jar");
             LinkedList<String> commands = new LinkedList<>();
             commands.add("java");
@@ -42,7 +48,6 @@ public class SystemGitUpdater {
             commands.add(arcade.getAbsolutePath());
             String[] commandArray = new String[commands.size()];
             ProcessBuilder builder = new ProcessBuilder(commands.toArray(commandArray));
-            Log.i(builder.toString());
             Process process = builder.start();
             Log.i(process.isAlive() ? "Alive" : "FAIL");
             System.exit(0);
