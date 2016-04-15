@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#onKeyPress"
       prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="edu.utc.arcade.gui.Controllers.DetailsController">
+      fx:controller="edu.utc.arcade.gui.controllers.DetailsController">
     <children>
         <HBox layoutX="14.0" layoutY="20.0" prefHeight="31.0" prefWidth="77.0">
             <children>

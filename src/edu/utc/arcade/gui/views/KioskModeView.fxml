@@ -8,7 +8,7 @@ TODO: center the password fields on the screen when the screen is resized
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <Pane prefHeight="443.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="edu.utc.arcade.gui.Controllers.KioskModeViewController" onKeyReleased="#onKeyPress">
+      fx:controller="edu.utc.arcade.gui.controllers.KioskModeViewController" onKeyReleased="#onKeyPress">
     <children>
         <HBox layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0">
             <children>

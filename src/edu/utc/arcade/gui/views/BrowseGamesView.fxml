@@ -10,7 +10,7 @@ TODO: center the table on the screen when the screen is resized
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <Pane prefHeight="600" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="edu.utc.arcade.gui.Controllers.BrowseGamesViewController" onKeyReleased="#onKeyPress">
+      fx:controller="edu.utc.arcade.gui.controllers.BrowseGamesViewController" onKeyReleased="#onKeyPress">
     <children>
         <HBox layoutX="14.0" layoutY="20.0" prefHeight="100.0" prefWidth="200.0">
             <children>
