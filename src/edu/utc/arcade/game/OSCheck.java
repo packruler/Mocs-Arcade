@@ -23,7 +23,6 @@ public class OSCheck {
     }
 
     public static int getProperOsArrayPosition(Game game) {
-        Log.i(game.toString());
         String[] osArray = game.getOperatingSystems();
         String os = System.getProperty("os.name");
 

@@ -308,7 +308,6 @@ public class Game implements Comparable {
             return false;
 
         boolean updatedGit = GameGitHandler.pull(this);
-        Log.i("Updated Git? " + updatedGit);
         loadLaunchInfo();
         return updatedGit;
     }
