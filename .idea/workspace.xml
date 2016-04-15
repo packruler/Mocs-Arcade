@@ -851,7 +851,7 @@
       <workItem from="1460579682029" duration="5713000" />
       <workItem from="1460596219917" duration="239000" />
       <workItem from="1460646025992" duration="4543000" />
-      <workItem from="1460678200651" duration="1267000" />
+      <workItem from="1460678200651" duration="1324000" />
     </task>
     <task id="LOCAL-00001" summary="Update game library for display">
       <created>1460335602598</created>
@@ -1007,11 +1007,18 @@
       <option name="project" value="LOCAL" />
       <updated>1460678730471</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Optimize imports">
+      <created>1460679519032</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1460679519032</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33348000" />
+    <option name="totallyTimeSpent" value="33405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1102,7 +1109,8 @@
     <MESSAGE value="Fixed supported systems field" />
     <MESSAGE value="remove unnecessary logging" />
     <MESSAGE value="optimize imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimize imports" />
+    <MESSAGE value="Optimize imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimize imports" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
