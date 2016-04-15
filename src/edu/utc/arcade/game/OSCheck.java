@@ -1,7 +1,5 @@
 package edu.utc.arcade.game;
 
-import edu.utc.arcade.logging.Log;
-
 /**
  * Created by Ethan Leisinger on 1/20/16.
  */

@@ -8,7 +8,6 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 
 /**
  * Created by Ethan Leisinger on 1/5/2016.
