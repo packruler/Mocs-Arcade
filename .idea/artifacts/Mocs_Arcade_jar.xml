@@ -9,7 +9,6 @@
       <element id="library" level="project" name="org.apache.directory.studio:org.apache.commons.io:2.4" />
       <element id="library" level="project" name="com.google.code.gson:gson:2.6.2" />
       <element id="library" level="project" name="org.eclipse.jgit:org.eclipse.jgit:4.3.0.201604071810-r" />
-      <element id="library" level="project" name="net.java.jinput:jinput:2.0.6" />
     </root>
   </artifact>
 </component>
