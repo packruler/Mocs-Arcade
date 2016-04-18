@@ -4,6 +4,7 @@ import edu.utc.arcade.game.Game;
 import edu.utc.arcade.gui.DetailsScene;
 import edu.utc.arcade.gui.UIMain;
 import edu.utc.arcade.gui.utils.ThreadHandler;
+import edu.utc.arcade.logging.Log;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -39,12 +40,9 @@ public class DetailsController {
             return;
 
         Button source = (Button) event.getSource();
+        Log.i(source.getText());
 
-        Game game = DetailsScene.getInstance().getGame();
-
-        switch (source.getId())
-
-        {
+        switch (source.getId()) {
             case BACK:
                 backClick();
                 break;
@@ -79,6 +77,7 @@ public class DetailsController {
             public void run() {
                 final DetailsScene scene = DetailsScene.getInstance();
                 final Game game = scene.getGame();
+                game.update();
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
