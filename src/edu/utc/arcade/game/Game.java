@@ -8,7 +8,6 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 
 /**
  * Created by Ethan Leisinger on 1/5/2016.
@@ -308,7 +307,6 @@ public class Game implements Comparable {
             return false;
 
         boolean updatedGit = GameGitHandler.pull(this);
-        Log.i("Updated Git? " + updatedGit);
         loadLaunchInfo();
         return updatedGit;
     }

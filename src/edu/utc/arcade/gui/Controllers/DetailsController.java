@@ -1,19 +1,20 @@
-package edu.utc.arcade.gui.Controllers;
+package edu.utc.arcade.gui.controllers;
 
 import edu.utc.arcade.game.Game;
 import edu.utc.arcade.gui.DetailsScene;
 import edu.utc.arcade.gui.UIMain;
-import edu.utc.arcade.gui.VerifyDialog;
 import edu.utc.arcade.gui.utils.ThreadHandler;
-import edu.utc.arcade.logging.Log;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
 import java.io.IOException;
+import java.util.Optional;
 
 /**
  * Created by Various on 4/4/2016.
@@ -125,29 +126,27 @@ public class DetailsController {
     }
 
     private void uninstall(final Game game) {
-        VerifyDialog.display(new VerifyDialog.VerifyListener() {
-            @Override
-            public void onDismiss(boolean allowed) {
-                Log.i("onDismiss: " + allowed);
-                if (!allowed)
-                    return;
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation");
+        alert.setHeaderText("Are you sure you want to remove \"" + game.getTitle() + "\"?");
 
-                final DetailsScene scene = DetailsScene.getInstance();
-                install.setText("Uninstalling...");
-                install.setDisable(true);
-                ThreadHandler.run(new Runnable() {
-                    @Override
-                    public void run() {
-                        game.uninstall();
-                        Platform.runLater(new Runnable() {
-                            @Override
-                            public void run() {
-                                scene.setGame(game);
-                            }
-                        });
-                    }
-                });
-            }
-        });
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK) {
+            final DetailsScene scene = DetailsScene.getInstance();
+            install.setText("Uninstalling...");
+            install.setDisable(true);
+            ThreadHandler.run(new Runnable() {
+                @Override
+                public void run() {
+                    game.uninstall();
+                    Platform.runLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            scene.setGame(game);
+                        }
+                    });
+                }
+            });
+        }
     }
 }

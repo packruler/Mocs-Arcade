@@ -1,4 +1,4 @@
-package edu.utc.arcade.gui.Controllers;
+package edu.utc.arcade.gui.controllers;
 
 import edu.utc.arcade.gui.UIMain;
 import edu.utc.arcade.logging.Log;

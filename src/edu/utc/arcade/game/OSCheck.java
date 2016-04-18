@@ -1,7 +1,5 @@
 package edu.utc.arcade.game;
 
-import edu.utc.arcade.logging.Log;
-
 /**
  * Created by Ethan Leisinger on 1/20/16.
  */
@@ -23,7 +21,6 @@ public class OSCheck {
     }
 
     public static int getProperOsArrayPosition(Game game) {
-        Log.i(game.toString());
         String[] osArray = game.getOperatingSystems();
         String os = System.getProperty("os.name");
 

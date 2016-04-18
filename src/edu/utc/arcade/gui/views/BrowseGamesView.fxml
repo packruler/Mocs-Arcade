@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.paint.*?>
-<?import java.lang.*?>
-<?import javafx.collections.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.cell.*?>
-<?import edu.utc.arcade.gui.*?>
-<?import javafx.collections.FXCollections?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.cell.PropertyValueFactory?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
 <!--
 TODO: center the table on the screen when the screen is resized
 -->
 
+<?import edu.utc.arcade.gui.FormattedTableCellFactory?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <Pane prefHeight="600" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="edu.utc.arcade.gui.Controllers.BrowseGamesViewController" onKeyReleased="#onKeyPress">
+      fx:controller="edu.utc.arcade.gui.controllers.BrowseGamesViewController" onKeyReleased="#onKeyPress">
     <children>
         <HBox layoutX="14.0" layoutY="20.0" prefHeight="100.0" prefWidth="200.0">
             <children>

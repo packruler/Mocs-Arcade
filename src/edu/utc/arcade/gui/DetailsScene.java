@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 /**
  * Created by Various on 4/4/2016.
@@ -41,7 +42,7 @@ public class DetailsScene {
         titleField.setText(game.getTitle());
         developerField.setText(game.getDeveloper());
         descriptionField.setText(game.getDescription());
-        //supportedSystemsField.setText(Arrays.toString(game.getOperatingSystems()));
+        supportedSystemsField.setText(Arrays.toString(game.getOperatingSystems()));
 
         if (!game.isLocal()) {
             playButton.setDisable(true);
@@ -59,7 +60,7 @@ public class DetailsScene {
             }
             installButton.setDisable(Settings.isKioskMode());
             installButton.setText("Uninstall");
-            
+
         }
     }
 
@@ -85,6 +86,7 @@ public class DetailsScene {
             playButton = (Button) scene.lookup("#play");
             updateButton = (Button) scene.lookup("#update");
             installButton = (Button) scene.lookup("#install");
+            supportedSystemsField = (Label) scene.lookup("#supportedSystemsField");
         } catch (IOException e) {
 //            Log.e(e.getMessage());
             e.printStackTrace();
