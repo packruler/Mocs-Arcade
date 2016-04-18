@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 public class UIMain extends Application {
     private static Stage PRIMARY;
 
-    //    Stage stage;
     @Override
     public void start(Stage primaryStage) throws Exception {
         PRIMARY = primaryStage;
@@ -55,6 +54,12 @@ public class UIMain extends Application {
                 DetailsScene.getInstance();
             }
         });
+    }
+
+    @Override
+    public void stop() throws Exception {
+        super.stop();
+        System.exit(0);
     }
 
     public static void updateGameDisplayList() {
