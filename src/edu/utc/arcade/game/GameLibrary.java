@@ -57,9 +57,9 @@ public class GameLibrary {
             if (REMOTE_LIBRARY.exists()) {
                 reader = new FileReader(REMOTE_LIBRARY);
                 gameArray = gson.fromJson(reader, Game[].class);
-                boolean updatedGames = library.addAll(Arrays.asList(gameArray));
                 reader.close();
-                if (updatedGames)
+
+                if (library.addAll(Arrays.asList(gameArray)))
                     saveGson();
             }
         } catch (IOException e) {

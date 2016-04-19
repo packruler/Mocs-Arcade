@@ -6,9 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="">
+    <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="Minor tweaks">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/game/Game.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/game/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/game/GameLibrary.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/game/GameLibrary.java" />
     </list>
     <ignored path="Mocs-Arcade.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,12 +51,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/Game.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="376">
               <caret line="386" column="42" selection-start-line="386" selection-start-column="42" selection-end-line="386" selection-end-column="42" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameLibrary.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/GameLibrary.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LibraryArray.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/LibraryArray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="986">
+              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+              <folding>
+                <element signature="e#1334#1335#0" expanded="true" />
+                <element signature="e#1368#1369#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,36 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OSCheck.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-              <folding>
-                <element signature="e#1363#1364#0" expanded="true" />
-                <element signature="e#1415#1416#0" expanded="true" />
-                <element signature="e#1468#1469#0" expanded="true" />
-                <element signature="e#1520#1521#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Format.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/format/Format.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="638">
               <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Jar.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/format/Jar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="24" column="5" selection-start-line="12" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -192,6 +192,7 @@
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/format/Format.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/DetailsScene.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/Game.java" />
+        <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/GameLibrary.java" />
       </list>
     </option>
   </component>
@@ -959,7 +960,7 @@
       <workItem from="1461008668037" duration="3100000" />
       <workItem from="1461011798743" duration="262000" />
       <workItem from="1461016193681" duration="1194000" />
-      <workItem from="1461072675466" duration="2040000" />
+      <workItem from="1461072675466" duration="3348000" />
     </task>
     <task id="LOCAL-00001" summary="Update game library for display">
       <created>1460335602598</created>
@@ -1143,11 +1144,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461074416141</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Change status support for web based games">
+      <created>1461074772259</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1461074772259</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38762000" />
+    <option name="totallyTimeSpent" value="40070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3200" height="1765" extended-state="6" />
@@ -1241,7 +1249,8 @@
     <MESSAGE value="Fix Game updating" />
     <MESSAGE value="Add libraries to repo" />
     <MESSAGE value="Added support for web based games" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added support for web based games" />
+    <MESSAGE value="Change status support for web based games" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change status support for web based games" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1301,20 +1310,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="1" column="77" selection-start-line="1" selection-start-column="77" selection-end-line="1" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/GameLibrary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/LibraryArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1583,6 +1578,27 @@
         <state relative-caret-position="376">
           <caret line="386" column="42" selection-start-line="386" selection-start-column="42" selection-end-line="386" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/LibraryArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+          <folding>
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/GameLibrary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
