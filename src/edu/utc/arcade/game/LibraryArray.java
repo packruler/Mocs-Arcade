@@ -25,7 +25,7 @@ public class LibraryArray {
 
         newGame.loadLaunchInfo();
         libraryList.add(newGame);
-        return false;
+        return true;
     }
 
     /**
