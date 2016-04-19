@@ -384,6 +384,9 @@ public class Game implements Comparable {
      * Installed if the Game is installed and up to date on the git repo
      */
     public String getStatus() {
+        if (gitBranch != null && gitBranch.equals(Format.CHROME))
+            return "Online";
+
         if (isLocal())
             if (needUpdate())
                 return "Update";
