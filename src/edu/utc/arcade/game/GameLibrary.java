@@ -80,7 +80,7 @@ public class GameLibrary {
             Log.i("New File created: " + LOCAL_LIBRARY.createNewFile());
 
         FileWriter writer = new FileWriter(LOCAL_LIBRARY);
-        writer.write(new Gson().toJson(library.getList().toArray()));
+        writer.write(new Gson().toJson(library.getList(true).toArray()));
         writer.close();
     }
 
