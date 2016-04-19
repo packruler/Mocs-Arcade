@@ -33,22 +33,6 @@
     "developer": "DEVELOPER",
     "description": "This is an example of how a game that is not installed will be displayed",
     "shortDescription": "SHORT DESCRIPTION",
-    "gitAddress": "http://google.com",
-    "gitBranch": "Chrome",
-    "operatingSystems": [
-      "Windows.amd64",
-      "Windows.i386",
-      "Linux.amd64",
-      "Linux.i386"
-    ],
-    "local": true,
-    "dataUpdateTime": 1460335503787
-  },
-  {
-    "title": "Example Game 3",
-    "developer": "DEVELOPER",
-    "description": "This is an example of how a game that is not installed will be displayed",
-    "shortDescription": "SHORT DESCRIPTION",
     "gitAddress": "http://github.com/\u003cDEVELOPER\u003e/\u003cREPOSITORY\u003e",
     "gitBranch": "BRANCH",
     "operatingSystems": [
@@ -58,6 +42,22 @@
       "Linux.i386"
     ],
     "local": false,
+    "dataUpdateTime": 1460335530933
+  },
+  {
+    "title": "Web based example",
+    "developer": "DEVELOPER",
+    "description": "This is an example of how a web based game will work",
+    "shortDescription": "This will be opened with Google Chrome",
+    "gitAddress": "http://google.com",
+    "gitBranch": "Chrome",
+    "operatingSystems": [
+      "Windows.amd64",
+      "Windows.i386",
+      "Linux.amd64",
+      "Linux.i386"
+    ],
+    "local": true,
     "dataUpdateTime": 1460335530933
   }
 ]
