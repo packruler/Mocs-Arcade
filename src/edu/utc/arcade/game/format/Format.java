@@ -10,14 +10,17 @@ public abstract class Format {
     public static final String JAR = "Jar";
     //In almost all other cases use "Simple Run"
     public static final String SIMPLE_RUN = "Simple Run";
+    public static final String CHROME = "Chrome";
 
 
     public static String[] getExecutable(Game game) {
-        switch (game.getLaunchInfo().getFormat()) {
+        switch (game.getFormat()) {
             case JAR:
                 return Jar.getExecutableString(game);
             case SIMPLE_RUN:
                 return SimpleRun.getExecutableString(game);
+            case CHROME:
+                return Chrome.getExecutableString(game);
         }
         return new String[0];
     }

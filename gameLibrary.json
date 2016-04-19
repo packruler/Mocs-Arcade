@@ -33,16 +33,16 @@
     "developer": "DEVELOPER",
     "description": "This is an example of how a game that is not installed will be displayed",
     "shortDescription": "SHORT DESCRIPTION",
-    "gitAddress": "http://github.com/\u003cDEVELOPER\u003e/\u003cREPOSITORY\u003e",
-    "gitBranch": "BRANCH",
+    "gitAddress": "http://google.com",
+    "gitBranch": "Chrome",
     "operatingSystems": [
       "Windows.amd64",
       "Windows.i386",
       "Linux.amd64",
       "Linux.i386"
     ],
-    "local": false,
-    "dataUpdateTime": 1460335503786
+    "local": true,
+    "dataUpdateTime": 1460335503787
   },
   {
     "title": "Example Game 3",

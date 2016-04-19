@@ -2,6 +2,7 @@ package edu.utc.arcade.gui;
 
 import edu.utc.arcade.game.Game;
 import edu.utc.arcade.game.OSCheck;
+import edu.utc.arcade.game.format.Format;
 import edu.utc.arcade.settings.Settings;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -58,7 +59,9 @@ public class DetailsScene {
                 updateButton.setDisable(Settings.isKioskMode());
                 updateButton.setText("Update");
             }
-            installButton.setDisable(Settings.isKioskMode());
+
+            installButton.setDisable(Settings.isKioskMode() ||
+                    game.getFormat().equals(Format.CHROME));
             installButton.setText("Uninstall");
 
         }

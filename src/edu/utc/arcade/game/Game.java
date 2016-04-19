@@ -1,6 +1,7 @@
 package edu.utc.arcade.game;
 
 import com.google.gson.Gson;
+import edu.utc.arcade.game.format.Format;
 import edu.utc.arcade.git.GameGitHandler;
 import edu.utc.arcade.logging.Log;
 import org.apache.commons.io.FileUtils;
@@ -234,6 +235,8 @@ public class Game implements Comparable {
     public boolean loadLaunchInfo() {
         if (!local)
             return false;
+        if (launchInfo != null)
+            return true;
 
         File infoLocation = new File("local/" + developer + "/" + title + "/launchInfo.json");
         if (!infoLocation.exists())
@@ -258,6 +261,16 @@ public class Game implements Comparable {
     public LaunchInfo getLaunchInfo() {
         Log.i(launchInfo == null ? "null" : "good");
         return launchInfo;
+    }
+
+    public String getFormat() {
+        if (loadLaunchInfo())
+            return launchInfo.getFormat();
+
+        if (getGitBranch().equals(Format.CHROME))
+            return Format.CHROME;
+
+        return null;
     }
 
     public String getLibraryPath() {
