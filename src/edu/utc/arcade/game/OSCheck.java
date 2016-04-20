@@ -44,4 +44,6 @@ public class OSCheck {
     public static String getCurrentArchitecture() {
         return System.getProperty("os.arch");
     }
+
+
 }
