@@ -23,17 +23,7 @@ public class GameStringSetup {
 
         Scanner scanner = new Scanner(System.in);
         String answer;
-//        Log.i("Would you like to modify an existing Game JSON String? (y/n)");
-//        String answer = scanner.nextLine();
-//        while (!answer.equals("y") && !answer.equals("n")) {
-//            Log.i("Please enter \'y\' or \'n\'");
-//            answer = scanner.nextLine();
-//        }
-//        if (answer.equals("y")) {
-//            Log.i("Please input the current JSON String");
-//            oldGameJsonString = scanner.nextLine();
-//            game = gson.fromJson(oldGameJsonString, Game.class);
-//        } else
+
         game = new Game();
 
         //Comment out any lines that you do not want to change if the data is loaded from a previous JSON String
@@ -74,18 +64,6 @@ public class GameStringSetup {
         }
         game.setOperatingSystems(osArray.toArray(new String[osArray.size()]));
 
-
-//        Log.i("Would you like to modify an existing LaunchInfo JSON String? (y/n)");
-//        answer = scanner.nextLine();
-//        while (!answer.equals("y") && !answer.equals("n")) {
-//            Log.i("Please enter \'y\' or \'n\'");
-//            answer = scanner.nextLine();
-//        }
-//        if (answer.equals("y")) {
-//            Log.i("Please input the current JSON String");
-//            oldGameJsonString = scanner.nextLine();
-//            launchInfo = gson.fromJson(oldGameJsonString, LaunchInfo.class);
-//        } else
         launchInfo = new LaunchInfo();
 
         //Set the format this Game is designed in. The class "Format" has static instances of the supported formats
