@@ -6,9 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="Work on Windows support for launching chrome">
+    <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java" />
     </list>
     <ignored path="Mocs-Arcade.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,7 +71,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OSCheck.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OSCheck.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
@@ -81,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Chrome.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Chrome.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+            <state relative-caret-position="667">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -164,8 +164,8 @@
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/GameLibrary.java" />
         <option value="$PROJECT_DIR$/local/library.json" />
         <option value="$PROJECT_DIR$/gameLibrary.json" />
-        <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java" />
+        <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java" />
       </list>
     </option>
   </component>
@@ -865,7 +865,7 @@
       <workItem from="1461016193681" duration="1194000" />
       <workItem from="1461072675466" duration="4485000" />
       <workItem from="1461082700309" duration="4969000" />
-      <workItem from="1461162813330" duration="2638000" />
+      <workItem from="1461162813330" duration="3188000" />
     </task>
     <task id="LOCAL-00001" summary="Update game library for display">
       <created>1460335602598</created>
@@ -1126,11 +1126,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461164935831</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Work on Windows support for launching chrome">
+      <created>1461165458772</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1461165458772</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48814000" />
+    <option name="totallyTimeSpent" value="49364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3200" height="1765" extended-state="6" />
@@ -1544,18 +1551,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
           <folding />
         </state>
       </provider>
