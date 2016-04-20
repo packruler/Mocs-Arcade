@@ -23,10 +23,6 @@ public class OSCheck {
     public static int getProperOsArrayPosition(Game game) {
         String[] osArray = game.getOperatingSystems();
         String os = getCurrentOS();
-
-        //If the OS name contains Windows make it just Windows for ease of search
-        if (os.contains(WINDOWS))
-            os = WINDOWS;
         String arch = getCurrentArchitecture();
 
         for (int x = 0; x < osArray.length; x++) {
@@ -38,7 +34,12 @@ public class OSCheck {
     }
 
     public static String getCurrentOS() {
-        return System.getProperty("os.name");
+        String os = System.getProperty("os.name");
+
+        //If the OS name contains Windows make it just Windows for ease of search
+        if (os.contains(WINDOWS))
+            os = WINDOWS;
+        return os;
     }
 
     public static String getCurrentArchitecture() {
