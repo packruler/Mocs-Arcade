@@ -60,5 +60,15 @@
     ],
     "local": true,
     "dataUpdateTime": 1460335530933
+  },
+  {
+    "title": "StarJunk",
+    "developer": "StarJunk Developer",
+    "description": "This is a game developed by another Capstone group",
+    "shortDescription": "Side-scrolling space ship game",
+    "gitAddress": "http://mocsarcade.github.io/starjunk/87/ ",
+    "gitBranch": "Chrome",
+    "local": true,
+    "dataUpdateTime": 1461166535488
   }
 ]
