@@ -22,7 +22,7 @@ public class Chrome {
             cmdList.add(URL);
         } else if (OSCheck.getCurrentOS().equals(OSCheck.WINDOWS)) {
             cmdList.add("\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" ");
-            cmdList.add("--kiosk");
+            cmdList.add("-kiosk");
             cmdList.add(URL);
         }
 //        Log.i("\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" ");
