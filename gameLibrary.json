@@ -2,7 +2,8 @@
   {
     "title": "Hockey",
     "developer": "Packruler",
-    "description": "",
+    "description": "This was a game devoloped for Intro to Video Game Design at UTC. It is a two player hockey game similar to table hockey",
+    "shortDescription": "Table hockey game",
     "gitAddress": "https://github.com/packruler/Video-Game-Design.git",
     "local": false,
     "executablePath": "Video Game Design.jar",
