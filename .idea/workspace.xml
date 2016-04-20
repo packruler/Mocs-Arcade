@@ -64,8 +64,8 @@
       <file leaf-file-name="gameLibrary.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gameLibrary.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+            <state relative-caret-position="493">
+              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -776,7 +776,7 @@
       <workItem from="1461011798743" duration="262000" />
       <workItem from="1461016193681" duration="1194000" />
       <workItem from="1461072675466" duration="4485000" />
-      <workItem from="1461082700309" duration="4852000" />
+      <workItem from="1461082700309" duration="4925000" />
     </task>
     <task id="LOCAL-00001" summary="Update game library for display">
       <created>1460335602598</created>
@@ -1002,11 +1002,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461086213929</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Update Hockey game">
+      <created>1461162677926</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1461162677926</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46059000" />
+    <option name="totallyTimeSpent" value="46132000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3200" height="1765" extended-state="6" />
@@ -1078,7 +1085,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update background" />
     <MESSAGE value="Install, Uninstall, Play working" />
     <MESSAGE value="Disable uninstall/update in kiosk mode" />
     <MESSAGE value="Games that are not compatible are now shown but cannot be installed" />
@@ -1103,7 +1109,8 @@
     <MESSAGE value="Set up JSON String builder for developers" />
     <MESSAGE value="Local library now only stores locally installed games" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Update Hockey game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Hockey game" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1435,8 +1442,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gameLibrary.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        <state relative-caret-position="493">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
           <folding />
         </state>
       </provider>
