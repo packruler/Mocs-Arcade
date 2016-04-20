@@ -68,7 +68,10 @@
     "shortDescription": "Side-scrolling space ship game",
     "gitAddress": "http://mocsarcade.github.io/starjunk/87/ ",
     "gitBranch": "Chrome",
+    "operatingSystems": [
+      "Chrome"
+    ],
     "local": true,
-    "dataUpdateTime": 1461166535488
+    "dataUpdateTime": 1461166535489
   }
 ]

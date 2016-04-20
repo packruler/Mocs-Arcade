@@ -6,9 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="Work on Windows Chrome launch">
+    <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gameLibrary.json" afterPath="$PROJECT_DIR$/gameLibrary.json" />
     </list>
     <ignored path="Mocs-Arcade.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,8 +34,8 @@
       <file leaf-file-name="GameStringSetup.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/GameStringSetup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4263">
-              <caret line="153" column="17" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
+            <state relative-caret-position="-317">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gameLibrary.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gameLibrary.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gameLibrary.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1073">
-              <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+            <state relative-caret-position="921">
+              <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -81,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Chrome.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Chrome.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+            <state relative-caret-position="29">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -159,13 +159,13 @@
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/gui/DetailsScene.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/Game.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/LibraryArray.java" />
-        <option value="$PROJECT_DIR$/src/edu/utc/arcade/GameStringSetup.java" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/GameLibrary.java" />
         <option value="$PROJECT_DIR$/local/library.json" />
-        <option value="$PROJECT_DIR$/gameLibrary.json" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java" />
+        <option value="$PROJECT_DIR$/src/edu/utc/arcade/GameStringSetup.java" />
+        <option value="$PROJECT_DIR$/gameLibrary.json" />
       </list>
     </option>
   </component>
@@ -865,7 +865,7 @@
       <workItem from="1461016193681" duration="1194000" />
       <workItem from="1461072675466" duration="4485000" />
       <workItem from="1461082700309" duration="4969000" />
-      <workItem from="1461162813330" duration="3345000" />
+      <workItem from="1461162813330" duration="4249000" />
     </task>
     <task id="LOCAL-00001" summary="Update game library for display">
       <created>1460335602598</created>
@@ -1147,25 +1147,53 @@
       <option name="project" value="LOCAL" />
       <updated>1461166069982</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Work on Windows Chrome launch">
+      <created>1461166163019</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1461166163019</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Added StarJunk to library">
+      <created>1461166779818</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1461166779818</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Fix OS not being added">
+      <created>1461166799955</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1461166799955</updated>
+    </task>
+    <task id="LOCAL-00044" summary="clean up">
+      <created>1461166826072</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1461166826072</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49521000" />
+    <option name="totallyTimeSpent" value="50425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3200" height="1765" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32907134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16554509" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16554509" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1223,9 +1251,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix uninstall in kiosk mode" />
-    <MESSAGE value="Remove unused SettingsView" />
-    <MESSAGE value="trying to fix KioskMode back button not working on click" />
     <MESSAGE value="Begging on work to support KeyStrokes to prepare for controller support" />
     <MESSAGE value="Beginning work on controller support adding support to keypress" />
     <MESSAGE value="Move verification to separate class with a listener" />
@@ -1248,7 +1273,10 @@
     <MESSAGE value="Work on Windows support for launching chrome" />
     <MESSAGE value="Ignore workspace" />
     <MESSAGE value="Work on Windows Chrome launch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work on Windows Chrome launch" />
+    <MESSAGE value="Added StarJunk to library" />
+    <MESSAGE value="Fix OS not being added" />
+    <MESSAGE value="clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1509,14 +1537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/GameStringSetup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4263">
-          <caret line="153" column="17" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/GameLibrary.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1160">
@@ -1529,14 +1549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="141" selection-start-line="0" selection-start-column="141" selection-end-line="0" selection-end-column="141" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameLibrary.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1073">
-          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -1575,8 +1587,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="29">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/GameStringSetup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-317">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameLibrary.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="921">
+          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
           <folding />
         </state>
       </provider>
