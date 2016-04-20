@@ -25,6 +25,7 @@ public class Chrome {
             cmdList.add("--kiosk");
             cmdList.add(URL);
         }
+//        Log.i("\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\" ");
 
         String[] cmdArray = new String[cmdList.size()];
         return cmdList.toArray(cmdArray);

@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/game/OSCheck.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java" />
     </list>
     <ignored path="Mocs-Arcade.iws" />
@@ -85,8 +84,8 @@
       <file leaf-file-name="Chrome.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state relative-caret-position="725">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -866,7 +865,7 @@
       <workItem from="1461016193681" duration="1194000" />
       <workItem from="1461072675466" duration="4485000" />
       <workItem from="1461082700309" duration="4969000" />
-      <workItem from="1461162813330" duration="1113000" />
+      <workItem from="1461162813330" duration="1606000" />
     </task>
     <task id="LOCAL-00001" summary="Update game library for display">
       <created>1460335602598</created>
@@ -1106,11 +1105,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461162744706</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Work on Windows support for launching chrome">
+      <created>1461163979559</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1461163979560</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47289000" />
+    <option name="totallyTimeSpent" value="47782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3200" height="1765" extended-state="6" />
@@ -1182,7 +1188,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Install, Uninstall, Play working" />
     <MESSAGE value="Disable uninstall/update in kiosk mode" />
     <MESSAGE value="Games that are not compatible are now shown but cannot be installed" />
     <MESSAGE value="Fix uninstall in kiosk mode" />
@@ -1207,7 +1212,8 @@
     <MESSAGE value="Local library now only stores locally installed games" />
     <MESSAGE value="Cleanup" />
     <MESSAGE value="Update Hockey game" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Hockey game" />
+    <MESSAGE value="Work on Windows support for launching chrome" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work on Windows support for launching chrome" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1534,8 +1540,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/utc/arcade/game/format/Chrome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        <state relative-caret-position="725">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
