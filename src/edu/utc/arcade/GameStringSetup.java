@@ -72,6 +72,7 @@ public class GameStringSetup {
                 answer = scanner.nextLine();
             }
         }
+        game.setOperatingSystems(osArray.toArray(new String[osArray.size()]));
 
 
 //        Log.i("Would you like to modify an existing LaunchInfo JSON String? (y/n)");
