@@ -22,8 +22,7 @@ public class Chrome {
             cmdList.add(URL);
         } else if (OSCheck.getCurrentOS().equals(OSCheck.WINDOWS)) {
             cmdList.add("\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"");
-            cmdList.add("-kiosk");
-            cmdList.add(URL);
+            cmdList.add("-app=" + URL);
         }
 
         String[] cmdArray = new String[cmdList.size()];
