@@ -8,8 +8,6 @@
       <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/KioskModeViewController.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/controllers/KioskModeViewController.java" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/MainMenuViewController.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/controllers/MainMenuViewController.java" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/SettingsViewController.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/controllers/SettingsViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Mocs-Arcade.iml" afterPath="$PROJECT_DIR$/Mocs-Arcade.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/DetailsView.fxml" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/DetailsView.fxml" />
     </list>
     <ignored path="Mocs-Arcade.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -855,12 +853,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1461328877765</updated>
-      <workItem from="1461328886193" duration="2795000" />
+      <workItem from="1461328886193" duration="2848000" />
     </task>
+    <task id="LOCAL-00001" summary="Centered UI">
+      <created>1461332899078</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1461332899078</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2802000" />
+    <option name="totallyTimeSpent" value="2855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3200" height="1765" extended-state="6" />
@@ -930,6 +936,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Centered UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Centered UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
