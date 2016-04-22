@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6e7d21a-e8b2-4b72-930b-b0a8a114723b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/BrowseGamesViewController.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/controllers/BrowseGamesViewController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/DetailsController.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/controllers/DetailsController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/KioskModeViewController.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/controllers/KioskModeViewController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/MainMenuViewController.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/controllers/MainMenuViewController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/Controllers/SettingsViewController.java" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/controllers/SettingsViewController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/DetailsView.fxml" afterPath="$PROJECT_DIR$/src/edu/utc/arcade/gui/views/DetailsView.fxml" />
     </list>
     <ignored path="Mocs-Arcade.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,8 +54,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="30" column="86" selection-start-line="30" selection-start-column="86" selection-end-line="30" selection-end-column="86" />
+            <state relative-caret-position="146">
+              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -853,7 +849,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1461328877765</updated>
-      <workItem from="1461328886193" duration="2848000" />
+      <workItem from="1461328886193" duration="2921000" />
     </task>
     <task id="LOCAL-00001" summary="Centered UI">
       <created>1461332899078</created>
@@ -862,11 +858,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461332899078</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Minor changes">
+      <created>1461332936327</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1461332936327</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2855000" />
+    <option name="totallyTimeSpent" value="2928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3200" height="1765" extended-state="6" />
@@ -939,7 +942,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Centered UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Centered UI" />
+    <MESSAGE value="Minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1289,8 +1293,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="30" column="86" selection-start-line="30" selection-start-column="86" selection-end-line="30" selection-end-column="86" />
+        <state relative-caret-position="146">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
           <folding />
         </state>
       </provider>
