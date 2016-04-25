@@ -1,77 +1,45 @@
-[
-  {
-    "title": "Hockey",
-    "developer": "Packruler",
-    "description": "This was a game devoloped for Intro to Video Game Design at UTC. It is a two player hockey game similar to table hockey",
-    "shortDescription": "Table hockey game",
-    "gitAddress": "https://github.com/packruler/Video-Game-Design.git",
-    "local": false,
-    "executablePath": "Video Game Design.jar",
-    "libraryPath": "libs",
-    "format": "Jar",
-    "operatingSystems": [
+[{
+   "title": "Hockey",
+   "developer": "Packruler",
+   "description": "This was a game devoloped for Intro to Video Game Design at UTC. It is a two player hockey game similar to table hockey",
+   "shortDescription": "Table hockey game",
+   "gitAddress": "https://github.com/packruler/Video-Game-Design.git",
+   "local": false,
+   "executablePath": "Video Game Design.jar",
+   "libraryPath": "libs",
+   "format": "Jar",
+   "operatingSystems": [
       "Windows.i386",
       "Windows.amd64",
       "Linux.i386",
       "Linux.amd64"
-    ],
-    "dataUpdateTime": 1460335452989
-  },
-  {
-    "title": "Example Game 1",
-    "developer": "DEVELOPER",
-    "description": "This is an example of how a game that is not installed will be displayed",
-    "shortDescription": "SHORT DESCRIPTION",
-    "gitAddress": "http://github.com/\u003cDEVELOPER\u003e/\u003cREPOSITORY\u003e",
-    "gitBranch": "BRANCH",
-    "operatingSystems": [
-    ],
-    "local": false,
-    "dataUpdateTime": 1460335452989
-  },
-  {
-    "title": "Example Game 2",
-    "developer": "DEVELOPER",
-    "description": "This is an example of how a game that is not installed will be displayed",
-    "shortDescription": "SHORT DESCRIPTION",
-    "gitAddress": "http://github.com/\u003cDEVELOPER\u003e/\u003cREPOSITORY\u003e",
-    "gitBranch": "BRANCH",
-    "operatingSystems": [
+   ],
+   "dataUpdateTime": 1460335452989
+}, {
+   "title": "Web based example",
+   "developer": "DEVELOPER",
+   "description": "This is an example of how a web based game will work",
+   "shortDescription": "This will be opened with Google Chrome",
+   "gitAddress": "http://google.com",
+   "gitBranch": "Chrome",
+   "operatingSystems": [
       "Windows.amd64",
       "Windows.i386",
       "Linux.amd64",
       "Linux.i386"
-    ],
-    "local": false,
-    "dataUpdateTime": 1460335530934
-  },
-  {
-    "title": "Web based example",
-    "developer": "DEVELOPER",
-    "description": "This is an example of how a web based game will work",
-    "shortDescription": "This will be opened with Google Chrome",
-    "gitAddress": "http://google.com",
-    "gitBranch": "Chrome",
-    "operatingSystems": [
-      "Windows.amd64",
-      "Windows.i386",
-      "Linux.amd64",
-      "Linux.i386"
-    ],
-    "local": true,
-    "dataUpdateTime": 1460335530933
-  },
-  {
-    "title": "StarJunk",
-    "developer": "StarJunk Developer",
-    "description": "This is a game developed by another Capstone group",
-    "shortDescription": "Side-scrolling space ship game",
-    "gitAddress": "http://mocsarcade.github.io/starjunk/87/ ",
-    "gitBranch": "Chrome",
-    "operatingSystems": [
+   ],
+   "local": true,
+   "dataUpdateTime": 1460335530933
+}, {
+   "title": "StarJunk",
+   "developer": "StarJunk Developer",
+   "description": "This is a game developed by another Capstone group",
+   "shortDescription": "Side-scrolling space ship game",
+   "gitAddress": "http://mocsarcade.github.io/starjunk/87/ ",
+   "gitBranch": "Chrome",
+   "operatingSystems": [
       "Chrome"
-    ],
-    "local": true,
-    "dataUpdateTime": 1461166535489
-  }
-]
+   ],
+   "local": true,
+   "dataUpdateTime": 1461166535489
+}]
