@@ -54,8 +54,8 @@
       <file leaf-file-name="gameLibrary.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gameLibrary.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="747">
-              <caret line="46" column="71" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
+            <state relative-caret-position="406">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -1053,7 +1053,7 @@
       <option name="presentableId" value="Default" />
       <updated>1461328877765</updated>
       <workItem from="1461328886193" duration="3193000" />
-      <workItem from="1461593814567" duration="5852000" />
+      <workItem from="1461593814567" duration="5890000" />
     </task>
     <task id="LOCAL-00001" summary="Centered UI">
       <created>1461332899078</created>
@@ -1090,11 +1090,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461598944870</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updated StarJunk info">
+      <created>1461600755373</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1461600755373</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9052000" />
+    <option name="totallyTimeSpent" value="9090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="3200" height="1765" extended-state="6" />
@@ -1170,7 +1177,8 @@
     <MESSAGE value="Minor changes" />
     <MESSAGE value="Make Game ignore LaunchInfo class" />
     <MESSAGE value="Moved from dataUpdateTime to versionNumber" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved from dataUpdateTime to versionNumber" />
+    <MESSAGE value="Updated StarJunk info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated StarJunk info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1557,8 +1565,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gameLibrary.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="46" column="71" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
+        <state relative-caret-position="406">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
           <folding />
         </state>
       </provider>

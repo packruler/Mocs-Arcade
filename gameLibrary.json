@@ -14,32 +14,6 @@
     "versionNumber": 1
   },
   {
-    "title": "Example Game 1",
-    "developer": "DEVELOPER",
-    "description": "This is an example of how a game that is not installed will be displayed",
-    "shortDescription": "SHORT DESCRIPTION",
-    "gitAddress": "http://github.com/\u003cDEVELOPER\u003e/\u003cREPOSITORY\u003e",
-    "gitBranch": "BRANCH",
-    "operatingSystems": [
-    ],
-    "versionNumber": 1
-  },
-  {
-    "title": "Example Game 2",
-    "developer": "DEVELOPER",
-    "description": "This is an example of how a game that is not installed will be displayed",
-    "shortDescription": "SHORT DESCRIPTION",
-    "gitAddress": "http://github.com/\u003cDEVELOPER\u003e/\u003cREPOSITORY\u003e",
-    "gitBranch": "BRANCH",
-    "operatingSystems": [
-      "Windows.amd64",
-      "Windows.i386",
-      "Linux.amd64",
-      "Linux.i386"
-    ],
-    "versionNumber": 0
-  },
-  {
     "title": "StarJunk",
     "developer": "StarJunk Developer",
     "description": "This is a game developed by another Capstone group",
@@ -50,6 +24,6 @@
       "Chrome"
     ],
     "local": true,
-    "versionNumber": 0
+    "versionNumber": 2
   }
 ]
