@@ -9,7 +9,7 @@ In order to install this branch to your computer please ensure you have a Java R
 
 We recommend you use the following command line to clone this branch to your computer.
 
-<code>git clone https://github.com/packruler/Mocs-Arcade.git --branch Release</code>
+<code>git clone https://github.com/packruler/Mocs-Arcade.git --branch Beta-Release</code>
 
 Downloading using git allows up to help keep this software up to date for you as well as the games you install
 
