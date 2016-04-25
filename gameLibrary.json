@@ -15,7 +15,7 @@
   },
   {
     "title": "StarJunk",
-    "developer": "StarJunk Developer",
+    "developer": "NetherFlux Interactive",
     "description": "This is a game developed by another Capstone group",
     "shortDescription": "Side-scrolling space ship game",
     "gitAddress": "https://mocsarcade.github.io/starjunk/demo/index.html ",
@@ -24,6 +24,6 @@
       "Chrome"
     ],
     "local": true,
-    "versionNumber": 3
+    "versionNumber": 4
   }
 ]
