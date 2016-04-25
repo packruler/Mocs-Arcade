@@ -25,7 +25,7 @@ public class Game implements Comparable {
     private boolean local;
     private long dataUpdateTime;
 
-    private LaunchInfo launchInfo;
+    private transient LaunchInfo launchInfo;
 
     public Game() {
     }
