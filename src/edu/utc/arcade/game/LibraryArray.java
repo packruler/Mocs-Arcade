@@ -80,7 +80,7 @@ public class LibraryArray {
 //        Log.i("Update check");
 //        for (Game updatedData : updatedDataList) {
 //            if (updatedData.equals(current) &&
-//                    (current.getDataUpdateTime() < updatedData.getDataUpdateTime())) {
+//                    (current.getVersionNumber() < updatedData.getVersionNumber())) {
 //                current.updateData(updatedData);
 //                return true;
 //            }

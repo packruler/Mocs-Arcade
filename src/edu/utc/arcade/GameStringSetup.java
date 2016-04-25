@@ -39,7 +39,8 @@ public class GameStringSetup {
         game.setShortDescription(scanner.nextLine());
         Log.i("Enter the full description of the game:");
         game.setDescription(scanner.nextLine());
-        game.setDataUpdateTime(System.currentTimeMillis());
+        Log.i("Enter the version number of the game");
+        game.setVersionNumber(scanner.nextInt());
 
         //Set the size of following array to number of Operating Systems supported then set the values of the Array to
         //to the Operating Systems and the architecture it is supported on

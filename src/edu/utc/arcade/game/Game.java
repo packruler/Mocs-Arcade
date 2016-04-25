@@ -23,7 +23,7 @@ public class Game implements Comparable {
     private String gitBranch;
     private String[] operatingSystems;
     private boolean local;
-    private long dataUpdateTime;
+    private long versionNumber;
 
     private transient LaunchInfo launchInfo;
 
@@ -195,17 +195,17 @@ public class Game implements Comparable {
      *
      * @return Most recent time of this instance data being updated
      */
-    public long getDataUpdateTime() {
-        return dataUpdateTime;
+    public long getVersionNumber() {
+        return versionNumber;
     }
 
     /**
      * Set the time of most recent data update of the Game
      *
-     * @param dataUpdateTime
+     * @param versionNumber
      */
-    public void setDataUpdateTime(long dataUpdateTime) {
-        this.dataUpdateTime = dataUpdateTime;
+    public void setVersionNumber(long versionNumber) {
+        this.versionNumber = versionNumber;
     }
 
     /**
@@ -215,14 +215,14 @@ public class Game implements Comparable {
      * @return
      */
     public boolean updateData(Game game) {
-        if (getDataUpdateTime() >= game.getDataUpdateTime())
+        if (getVersionNumber() >= game.getVersionNumber())
             return false;
 
         setDescription(game.getDescription());
         setShortDescription(game.getShortDescription());
         setGitAddress(game.getGitAddress());
         setGitBranch(game.getGitBranch());
-        setDataUpdateTime(game.getDataUpdateTime());
+        setVersionNumber(game.getVersionNumber());
         setOperatingSystems(game.getOperatingSystems());
         return true;
     }
