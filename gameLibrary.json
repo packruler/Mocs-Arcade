@@ -18,7 +18,7 @@
     "developer": "StarJunk Developer",
     "description": "This is a game developed by another Capstone group",
     "shortDescription": "Side-scrolling space ship game",
-    "gitAddress": "https://mocsarcade.github.io/starjunk/100/index.html ",
+    "gitAddress": "https://mocsarcade.github.io/starjunk/demo/index.html ",
     "gitBranch": "Chrome",
     "operatingSystems": [
       "Chrome"
