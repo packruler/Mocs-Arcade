@@ -11,7 +11,7 @@ We recommend you use the following command line to clone this branch to your com
 
 <code>git clone https://github.com/packruler/Mocs-Arcade.git --branch Release</code>
 
-Downloading using git allows up to help keep this software up to date for you as well as the games you install
+Downloading using git allows us to help keep this software up to date for you as well as the games you install
 
 To launch the arcade please open Mocs-Arcade.jar
 If you plan on needing the Log please run it in a command line terminal with:
