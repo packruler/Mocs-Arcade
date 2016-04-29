@@ -18,7 +18,7 @@
     "developer": "NetherFlux Interactive",
     "description": "This is a game developed by another Capstone group",
     "shortDescription": "Side-scrolling space ship game",
-    "gitAddress": "https://mocsarcade.github.io/starjunk/demo/index.html ",
+    "gitAddress": "https://mocsarcade.github.io/starjunk/v0.3",
     "gitBranch": "Chrome",
     "operatingSystems": [
       "Chrome"
