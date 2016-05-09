@@ -8,3 +8,5 @@ Libraries used:
 - The information about the games (ie title, developer, description, etc.) is stored in a JSON file which is handled using Google's GSON library.
 - The games are downloaded and updated using Eclipse's JGit library.
 - Deleting/Uninstalling games is handled using Apache Common's IO library.
+
+To install please use Release branch: https://github.com/packruler/Mocs-Arcade/tree/Release
